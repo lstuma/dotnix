@@ -44,7 +44,7 @@
 
         "tray" = {
           "icons" = {
-            "bluetooth" = "󰂯";
+            "blueman" = "󰂯";
           };
         };
 
