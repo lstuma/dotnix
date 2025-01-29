@@ -101,15 +101,6 @@ tooltip {
 }
 
 #custom-battery {
-  background-color: rgba(0, 0, 255, 0.5);
-}
-
-#custom-battery span {
-  color: red;
-}
-
-#custom-battery > span > span:nth-child(1) {
-  color: @accent4;
 }
 
 #taskbar button.active,
