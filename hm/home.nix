@@ -13,6 +13,7 @@
     ./rofi
     ./dunst
     ./kitty
+    ./hyprpaper
   ];
 
   home.packages = with pkgs; [
