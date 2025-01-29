@@ -20,7 +20,7 @@
         
         modules-left = [ "clock" ];
         modules-center = [ "hyprland/workspaces" ];
-        modules-right = [ "tray" "mpris" "pulseaudio" "bluetooth" "custom/battery" "upower"];
+        modules-right = [ "tray" "mpris" "pulseaudio" "custom/battery" "upower"];
 
         "hyprland/workspaces" = {
           all-outputs = true;
@@ -42,11 +42,10 @@
           };
         };
 
-        "battery" =  {
-          format = "{capacity}% {icon}";
-          tooltip-format = "{time} {icon}";
-          format-charging = "󱐋 {capacity}%";
-          format-icons = [ "" ];
+        "tray" = {
+          "icons" = {
+            "bluetooth" = "󰂯";
+          };
         };
 
         "custom/battery" = {
