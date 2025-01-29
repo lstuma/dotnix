@@ -2,7 +2,12 @@
 {
   home.packages = with pkgs; [
     pamixer
+    playerctl
     libnotify
+    brightnessctl
+    pavucontrol
+    hyprlock
+    hyprshot
   ];
 
   wayland.windowManager.hyprland = {
@@ -78,6 +83,14 @@
         ", xf86audioraisevolume, exec, /usr/bin/env bash $HOME/.config/hyprland/scripts/change-volume.sh up 5"
         ", xf86audiolowervolume, exec, /usr/bin/env bash $HOME/.config/hyprland/scripts/change-volume.sh down 5"
         ", xf86audiomute, exec, /usr/bin/env bash $HOME/.config/hyprland/scripts/change-volume.sh mute"
+        # media control
+        ", xf86AudioPlayPause, exect, playcerctl play-pause"
+        ", xf86AudioNext, exec, playerctl next"
+        ", xf86AudioPrev, exec, playerctl previous"
+        # brightness control 
+        ", xf86MonBrightnessDown, exec, /usr/bin/env $HOME/.config/hyprland/scripts/change-brightness down 5"
+        ", xf86MonBrightnessUp, exec, /usr/bin/env bash $HOME/.config/hyprland/scripts/change-brightness.sh up 5"
+
       ];
       binde = [
         # resize windows
