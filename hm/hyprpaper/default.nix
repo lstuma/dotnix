@@ -9,7 +9,8 @@
       ", $HOME/.config/hypr/wallpaper.png"
     ];
   };
-  file.home."hyprpaper-wallpaper" = {
+
+  home.file."hyprpaper-wallpaper" = {
     source = ./wallpaper.png;
     target = ".config/hypr/wallpaper.png";
   };
