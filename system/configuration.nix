@@ -95,9 +95,6 @@
   #};
   services.pulseaudio = {
     enable = true;
-    alsa.enable = true;
-    alsa.support32Bit = true;
-    pulse.enable = true;
   };
 
   # Allow unfree packages
