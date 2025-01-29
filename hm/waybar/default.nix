@@ -50,7 +50,8 @@
         };
 
         "custom/battery" = {
-          
+          exec = "$HOME/.config/waybar/scripts/battery.sh";
+          interval = 5;
         };
       };
     };
