@@ -100,9 +100,6 @@ tooltip {
   color: @accent9;
 }
 
-#custom-battery {
-}
-
 #taskbar button.active,
 #workspaces button.active {
   animation: gradient_f 20s ease-in infinite;
@@ -167,6 +164,7 @@ tooltip {
 #custom-tty,
 #custom-updater,
 #custom-weather,
+#custom-battery,
 #custom-weather.clearNight,
 #custom-weather.cloudyFoggyDay,
 #custom-weather.cloudyFoggyNight,
