@@ -12,7 +12,7 @@ then
 fi
 if [[ $FULL ]];
 then
-  OUTPUT="<span color=\"#b9f27c\" "
+  OUTPUT="<span color=\"#b9f27c\"> "
 fi
 
 OUTPUT+="$PERCENTAGE<span>%</span></span>"
