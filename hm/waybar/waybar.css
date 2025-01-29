@@ -108,17 +108,9 @@ tooltip {
 
 #taskbar button:hover,
 #workspaces button:hover {
-  background: rgba(0, 0, 0, 0.2);
-  color: @accent3;
   animation: gradient_f 20s ease-in infinite;
   transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682);
   border: none;
-}
-
-#workspaces button.focused {
-  background-color: rgba(0.73, 0.8, 0.86, 0.3);
-  color: @accent2;
-  /* box-shadow: inset 0 -3px #ffffff; */
 }
 
 #workspaces button.urgent {
