@@ -29,5 +29,6 @@
     rofi
     lunarvim
     eza
+    keepassxc
   ];
 }

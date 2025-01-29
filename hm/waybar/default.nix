@@ -42,12 +42,6 @@
           };
         };
 
-        "tray" = {
-          "icons" = {
-            "blueman" = "󰂯";
-          };
-        };
-
         "custom/battery" = {
           exec = "/usr/bin/env bash $HOME/.config/waybar/scripts/battery.sh";
           interval = 5;
