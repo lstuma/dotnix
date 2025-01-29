@@ -2,6 +2,7 @@
 {
   home.packages = with pkgs; [
     waybar
+    sutils
     waybar-mpris
   ];
 
