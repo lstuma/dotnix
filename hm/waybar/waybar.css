@@ -68,7 +68,22 @@ tooltip {
 }
 
 #workspaces button:nth-child(1) {
-  color: red;
+  color: @accent1;
+}
+#workspaces button:nth-child(2) {
+  color: @accent2;
+}
+#workspaces button:nth-child(3) {
+  color: @accent3;
+}
+#workspaces button:nth-child(4) {
+  color: @accent4;
+}
+#workspaces button:nth-child(5) {
+  color: @accent(5);
+}
+#workspaces button:nth-child(6) {
+  color: @accent6;
 }
 
 #taskbar button.active,
