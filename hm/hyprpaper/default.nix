@@ -11,6 +11,6 @@
   };
   file.home."hyprpaper-wallpaper" = {
     source = ./wallpaper.png;
-    target = ".config/hypr/wallpaper.png";
+    target = ".config/hyprpaper/wallpaper.png";
   };
 }
