@@ -1,7 +1,7 @@
 { lib, config, pkgs, ... }:
 {
   home.packages = with pkgs; [
-    bluez
-    blueman
+    #bluez
+    #blueman
   ];
 }

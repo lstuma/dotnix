@@ -85,16 +85,13 @@
 
   # rtkit is optional but recommended
   security.rtkit.enable = true;
-  #services.pipewire = {
-    #enable = true;
-    #alsa.enable = true;
-    #alsa.support32Bit = true;
-    #pulse.enable = true;
+  services.pipewire = {
+    enable = true;
+    alsa.enable = true;
+    alsa.support32Bit = true;
+    pulse.enable = true;
     # If you want to use JACK applications, uncomment this
     #jack.enable = true;
-  #};
-  services.pulseaudio = {
-    enable = true;
   };
 
   # Allow unfree packages
@@ -131,7 +128,7 @@
   # Enable progams here :)
   programs = {
     # i3.enable = true;
-    hyprland.enable = true;
+    # hyprland.enable = true;
     sway.enable = true;
     sway.package = pkgs.swayfx;
     sway.extraOptions = [ "--unsupported-gpu" ];
@@ -165,10 +162,6 @@
 
   # Enable the OpenSSH daemon.
   # services.openssh.enable = true;
-
-  hardware.bluetooth.enable = true; # enables support for Bluetooth
-  hardware.bluetooth.powerOnBoot = true; # powers up the default Bluetooth controller on boot
-  hardware.pulseaudio.enable = true;
 
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];
