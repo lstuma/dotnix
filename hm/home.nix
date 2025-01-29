@@ -14,6 +14,8 @@
     ./dunst
     ./kitty
     ./hyprpaper
+    ./tmux
+    ./hacking-tools
   ];
 
   home.packages = with pkgs; [
@@ -27,13 +29,5 @@
     rofi
     lunarvim
     eza
-
-    nmap
-    dirb
-    gobuster
-    ffuf
-    wfuzz
-    wpscan
-    whatweb
   ];
 }
