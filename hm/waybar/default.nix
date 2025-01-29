@@ -20,7 +20,7 @@
         
         modules-left = [ "clock" ];
         modules-center = [ "hyprland/workspaces" ];
-        modules-right = [ "tray" "mpris" "pulseaudio" "bluetooth" "battery" "upower"];
+        modules-right = [ "tray" "mpris" "pulseaudio" "bluetooth" "custom/battery" "upower"];
 
         "hyprland/workspaces" = {
           all-outputs = true;
@@ -48,10 +48,20 @@
           format-charging = "󱐋 {capacity}%";
           format-icons = [ "" ];
         };
+
+        "custom/battery" = {
+          
+        }
       };
     };
     style = ''
       ${(builtins.readFile ./waybar.css)}
     '';
+  };
+  home.file."waybar-scripts" = {
+    source = ./scripts;
+    target = ".config/waybar/scripts";
+    recursive = true;
+    executable = true;
   };
 }
