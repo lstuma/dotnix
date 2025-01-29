@@ -7,10 +7,10 @@ OUTPUT=""
 
 if [[ $CHARGING ]];
 then
-  OUTPUT+="<span class=\"battery-charge-icon\">󱐋 </span>"
+  OUTPUT+="<span>󱐋 </span>"
 fi
 
-OUTPUT+="<span class=\"battery-charge-number\">$PERCENTAGE<span class=\"batter-charge-percent\">%</span></span>"
+OUTPUT+="<span>$PERCENTAGE<span>%</span></span>"
 
 
 echo -ne "'{\"text\": \"$OUTPUT\"}'"
