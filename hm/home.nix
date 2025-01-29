@@ -10,6 +10,7 @@
     ./sway
     ./waybar
     ./hyprland
+    ./bluetooth
     ./rofi
     ./dunst
     ./kitty
