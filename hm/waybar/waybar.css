@@ -31,7 +31,7 @@ window#waybar {
     transition-property: background-color;
     transition-duration: .5s;
     border-radius: 10px;
-    margin: 5rem;
+    padding: 10px;
 }
 
 window#waybar.hidden {
