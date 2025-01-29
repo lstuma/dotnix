@@ -63,6 +63,8 @@ tooltip {
     border-radius: 9px;
     padding-left: 4px;
     padding-right: 4px;
+    padding-top: 0;
+    padding-bottom: 0;
     animation: gradient_f 20s ease-in infinite;
     transition: all 0.5s cubic-bezier(.55,-0.68,.48,1.682);
 }
@@ -88,6 +90,7 @@ tooltip {
 
 #taskbar button.active,
 #workspaces button.active {
+    color: transparent;
     background-color: @fgcolor;
     animation: gradient_f 20s ease-in infinite;
     transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682);
