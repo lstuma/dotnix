@@ -4,10 +4,19 @@
     hyprpaper
   ];
 
-  services.hyprpaper.settings = {
-    wallpapers = [
-      ", $HOME/.config/hypr/wallpaper.png"
-    ];
+  services.hyprpaper = {
+    enable = true;
+    settings = {
+      ipc = "on";
+
+      preload = [
+        "$HOME/.config/hypr/wallpaper.png"
+      ];
+
+      wallpapers = [
+        ", $HOME/.config/hypr/wallpaper.png"
+      ];
+    };
   };
 
   home.file."hyprpaper-wallpaper" = {
