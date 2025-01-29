@@ -3,14 +3,14 @@
 BATTERY=$(battery)
 CHARGING=$(echo "$BATTERY" | grep "Charging")
 PERCENTAGE=$(echo "$BATTERY" | grep -Eo "[0-9]+")
-OUTPUT=""
 
+OUTPUT="<spann color=\"#ff7a93\">"
 if [[ $CHARGING ]];
 then
-  OUTPUT+="<span>󱐋 </span>"
+  OUTPUT="<span color=\"#7da6ff\">󱐋 "
 fi
 
-OUTPUT+="<span>$PERCENTAGE<span>%</span></span>"
+OUTPUT+="$PERCENTAGE<span>%</span></span>"
 
 
 echo -ne "$OUTPUT"
