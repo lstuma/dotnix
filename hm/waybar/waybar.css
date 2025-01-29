@@ -197,6 +197,7 @@ tooltip {
 }
 
 #clock {
+  padding-top: 6px;
   padding-left: 10px;
   color: @accent2;
 }
