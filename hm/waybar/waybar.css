@@ -80,7 +80,7 @@ tooltip {
   color: @accent4;
 }
 #workspaces button:nth-child(5) {
-  color: @accent(5);
+  color: @accent5;
 }
 #workspaces button:nth-child(6) {
   color: @accent6;
