@@ -15,6 +15,9 @@
 @define-color accent4 #bb9af7;
 @define-color accent5 #7da6ff;
 @define-color accent6 #0db9d7;
+@define-color accent7 #d6c90d;
+@define-color accent8 #d60dbb;
+@define-color accent9 #0dd678;
 
 * {
 font-family: "FiraCode Nerd Font";
@@ -86,6 +89,15 @@ tooltip {
 }
 #workspaces button:nth-child(6) {
   color: @accent6;
+}
+#workspaces button:nth-child(7) {
+  color: @accent7;
+}
+#workspaces button:nth-child(8) {
+  color: @accent8;
+}
+#workspaces button:nth-child(9) {
+  color: @accent9;
 }
 
 #taskbar button.active,
