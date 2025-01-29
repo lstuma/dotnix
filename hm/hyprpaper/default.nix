@@ -11,7 +11,7 @@
         "$HOME/.config/hypr/wallpaper.png"
       ];
 
-      wallpapers = [
+      wallpaper = [
         ", $HOME/.config/hypr/wallpaper.png"
       ];
     };
