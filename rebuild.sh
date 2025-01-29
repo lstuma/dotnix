@@ -14,7 +14,7 @@ YELLOW='\033[1;93m'
 if [[ `git diff` ]]
 then 
   echo -e "${BLUE}rebuild.sh: ${RED}found unsaved changes${NC}";
-  echo -en "${BLUE}rebuild.sh: ${NC}Add and commit changes to git? [${GREEN}y${NC}/${RED}n${NC}]"
+  echo -en "${BLUE}rebuild.sh: ${NC}Add and commit changes to git? [${GREEN}y${NC}/${RED}n${NC}] "
   read yn
   if [[ ! $yn =~ [Yy]+ ]]
   then

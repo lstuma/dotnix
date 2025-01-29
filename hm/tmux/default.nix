@@ -7,7 +7,7 @@
   programs.tmux = {
     enable = true;
     plugins = with pkgs; [
-      tmuxPlugins.tmux-nova
+      #tmuxPlugins.tmux-nova
       tmuxPlugins.better-mouse-mode
       tmuxPlugins.prefix-highlight
       tmuxPlugins.sensible
