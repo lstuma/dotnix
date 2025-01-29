@@ -88,7 +88,7 @@
         ", xf86AudioNext, exec, playerctl next"
         ", xf86AudioPrev, exec, playerctl previous"
         # brightness control 
-        ", xf86MonBrightnessDown, exec, /usr/bin/env bash $HOME/.config/hyprland/scripts/change-brightness down 5"
+        ", xf86MonBrightnessDown, exec, /usr/bin/env bash $HOME/.config/hyprland/scripts/change-brightness.sh down 5"
         ", xf86MonBrightnessUp, exec, /usr/bin/env bash $HOME/.config/hyprland/scripts/change-brightness.sh up 5"
 
       ];
