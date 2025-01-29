@@ -84,7 +84,7 @@
         ", xf86audiolowervolume, exec, /usr/bin/env bash $HOME/.config/hyprland/scripts/change-volume.sh down 5"
         ", xf86audiomute, exec, /usr/bin/env bash $HOME/.config/hyprland/scripts/change-volume.sh mute"
         # media control
-        ", xf86AudioPlayPause, exect, playcerctl play-pause"
+        ", xf86AudioPlayPause, exec, playcerctl play-pause"
         ", xf86AudioNext, exec, playerctl next"
         ", xf86AudioPrev, exec, playerctl previous"
         # brightness control 
