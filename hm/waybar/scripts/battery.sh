@@ -13,5 +13,5 @@ fi
 OUTPUT+="<span>$PERCENTAGE<span>%</span></span>"
 
 
-echo -ne "$OUTPUT"
+#echo -ne "$OUTPUT"
 echo -ne "'{\"text\": \"$OUTPUT\"}'"
