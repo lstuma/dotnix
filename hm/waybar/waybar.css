@@ -101,7 +101,7 @@ tooltip {
 }
 
 #custom-battery > span {
-  color: @accent1;
+  color: red;
 }
 
 #taskbar button.active,
