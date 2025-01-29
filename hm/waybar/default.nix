@@ -1,5 +1,10 @@
 { lib, config, pkgs, ... }:
 {
+  home.packages = with pkgs; [
+    waybar
+    waybar-mpris
+  ];
+
   programs.waybar = {
     enable = true;
     systemd.enable = true;
