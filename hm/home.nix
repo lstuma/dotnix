@@ -12,6 +12,7 @@
     ./hyprland
     ./rofi
     ./dunst
+    ./kitty
   ];
 
   home.packages = with pkgs; [
