@@ -12,8 +12,8 @@
         reload_style_on_change = true;
         
         
-        modules-left = [ "" ];
-        modules-center = [ "clock" "hyprland/workspaces" ];
+        modules-left = [ "clock" ];
+        modules-center = [ "hyprland/workspaces" ];
         modules-right = [ "tray" "mpris" "pulseaudio" "bluetooth" "battery" "upower"];
 
         "hyprland/workspaces" = {
