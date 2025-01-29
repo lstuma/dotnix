@@ -20,56 +20,56 @@
 @define-color accent9 #41d992;
 
 * {
-font-family: "FiraCode Nerd Font";
-font-weight: bold;
-min-height: 0;
-/* set font-size to 100% if font scaling is set to 1.00 using nwg-look */
-font-size: 95%;
-font-feature-settings: '"zero", "ss01", "ss02", "ss03", "ss04", "ss05", "cv31"';
+  font-family: "FiraCode Nerd Font";
+  font-weight: bold;
+  min-height: 0;
+  /* set font-size to 100% if font scaling is set to 1.00 using nwg-look */
+  font-size: 95%;
+  font-feature-settings: '"zero", "ss01", "ss02", "ss03", "ss04", "ss05", "cv31"';
 }
 
 window#waybar {
-    background-color: rgba(0,0,0,0.3);
-    color: #ffffff;
-    transition-property: background-color;
-    transition-duration: .5s;
-    border-radius: 10px;
-    padding: 10px;
+  background-color: rgba(0,0,0,0.3);
+  color: #ffffff;
+  transition-property: background-color;
+  transition-duration: .5s;
+  border-radius: 10px;
+  padding: 10px;
 }
 
 window#waybar.hidden {
-    opacity: 0.1;
+  opacity: 0.1;
 }
 
 window#waybar.empty,
 window#waybar.empty #window {
-    padding: 0px;
-    border: 0px;
-    background-color: transparent;
+  padding: 0px;
+  border: 0px;
+  background-color: transparent;
 }
 
 tooltip {
-    background: #1e1e2e;
-    opacity: 0.6;
-    border-radius: 10px;
-    border-width: 2px;
-    border-style: solid;
-    border-color: #11111b;
+  background: #1e1e2e;
+  opacity: 0.6;
+  border-radius: 10px;
+  border-width: 2px;
+  border-style: solid;
+  border-color: #11111b;
 }
 
 #workspaces button {
-    background-color: transparent;
-    color: #ffffff;
-    box-shadow: none;
-	  text-shadow: none;
-    padding: 0px;
-    border-radius: 9px;
-    padding-left: 4px;
-    padding-right: 4px;
-    padding-top: 0;
-    padding-bottom: 0;
-    animation: gradient_f 20s ease-in infinite;
-    transition: all 0.5s cubic-bezier(.55,-0.68,.48,1.682);
+  background-color: transparent;
+  color: #ffffff;
+  box-shadow: none;
+  text-shadow: none;
+  padding: 0px;
+  border-radius: 9px;
+  padding-left: 4px;
+  padding-right: 4px;
+  padding-top: 0;
+  padding-bottom: 0;
+  animation: gradient_f 20s ease-in infinite;
+  transition: all 0.5s cubic-bezier(.55,-0.68,.48,1.682);
 }
 
 #workspaces button:nth-child(1) {
@@ -102,32 +102,32 @@ tooltip {
 
 #taskbar button.active,
 #workspaces button.active {
-    animation: gradient_f 20s ease-in infinite;
-    transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682);
+  animation: gradient_f 20s ease-in infinite;
+  transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682);
 }
 
 #taskbar button:hover,
 #workspaces button:hover {
-    background: rgba(0, 0, 0, 0.2);
-  	color: @accent3;
-    animation: gradient_f 20s ease-in infinite;
-    transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682);
-    border: none;
+  background: rgba(0, 0, 0, 0.2);
+  color: @accent3;
+  animation: gradient_f 20s ease-in infinite;
+  transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682);
+  border: none;
 }
 
 #workspaces button.focused {
-    background-color: rgba(0.73, 0.8, 0.86, 0.3);
-    color: @accent2;
-    /* box-shadow: inset 0 -3px #ffffff; */
+  background-color: rgba(0.73, 0.8, 0.86, 0.3);
+  color: @accent2;
+  /* box-shadow: inset 0 -3px #ffffff; */
 }
 
 #workspaces button.urgent {
-    background-color: #eb4d4b;
+  background-color: #eb4d4b;
 }
 
 #mode {
-    background-color: #64727D;
-    border-bottom: 3px solid #ffffff;
+  background-color: #64727D;
+  border-bottom: 3px solid #ffffff;
 }
 
 #backlight,
@@ -197,7 +197,8 @@ tooltip {
 }
 
 #clock {
-    color: @accent2;
+  padding-left: 10px;
+  color: @accent2;
 }
 
 #custom-updater {
@@ -221,12 +222,12 @@ tooltip {
 }
 
 #battery.critical:not(.charging) {
-    color: @critical;
-    animation-name: blink;
-    animation-duration: 0.5s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
+  color: @critical;
+  animation-name: blink;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
 }
 
 label:focus {
@@ -240,90 +241,90 @@ label:focus {
 
 #custom-keyboard,
 #cpu {
-    color: @accent1;
+  color: @accent1;
 }
 
 #memory {
-    color: @accent3;
+  color: @accent3;
 }
 
 #backlight {
-    color: #cdd6f4;
+  color: #cdd6f4;
 }
 
 #bluetooth {
-    color: #1e66f5;
+  color: #1e66f5;
 }
 
 #network {
-    color: @accent3;
+  color: @accent3;
 }
 
 #network.disconnected {
-    color: @alert;
+  color: @alert;
 }
 
 #pulseaudio {
-    color: @accent4;
+  color: @accent4;
 }
 
 #pulseaudio-muted {
-    color: @accent2;
+  color: @accent2;
 }
 #wireplumber {
-    color: @accent4;
+  color: @accent4;
 }
 
 #wireplumber-muted {
-    color: @accent2;
+  color: @accent2;
 }
 
 #pluseaudio-source-muted{
-    color: #a0a0a0;
+  color: #a0a0a0;
 }
 
 #custom-power {
-    color: #cc3436;
+  color: #cc3436;
 }
 
 #disk {
-    color: @accent5;
+  color: @accent5;
 }
 #custom-power_profile {
-    color: @accent3;
+  color: @accent3;
 }
 #custom-media {
-    background-color: #66cc99;
-    color: #2a5c45;
-    min-width: 100px;
+  background-color: #66cc99;
+  color: #2a5c45;
+  min-width: 100px;
 }
 
 #custom-weather {
-    color: #66cc99;
+  color: #66cc99;
 }
 
 #custom-lock {
-    color: #ffa000;
+  color: #ffa000;
 }
 
 #keyboard-state,
 #temperature {
-    color: @accent6;
-    /* background-color: #f0932b; */
+  color: @accent6;
+  /* background-color: #f0932b; */
 }
 
 #temperature.critical {
-    background-color: @critical;
+  background-color: @critical;
 }
 
 #tray {
-    /* background-color: #505050; */
+  /* background-color: #505050; */
 }
 
 #custom-hypridle,
 #idle_inhibitor {
 	color: #f9e2af;
-    /*background-color: #2d3436;*/
+  /*background-color: #2d3436;*/
 }
 
 /*-----Indicators----*/
@@ -333,28 +334,28 @@ label:focus {
 }
 
 #mpd {
-    color: #2a5c45;
+  color: #2a5c45;
 }
 
 #mpd.disconnected {
-    background-color: #f53c3c;
+  background-color: #f53c3c;
 }
 
 #mpd.stopped {
-    background-color: #90b1b1;
+  background-color: #90b1b1;
 }
 
 #mpd.paused {
-    background-color: #51a37a;
+  background-color: #51a37a;
 }
 
 #custom-language {
-    color: @accent5;
-    min-width: 16px;
+  color: @accent5;
+  min-width: 16px;
 }
 
 #custom-separator {
-    color: #606060;
+  color: #606060;
 }
 #pulseaudio-slider slider {
 	min-width: 0px;
