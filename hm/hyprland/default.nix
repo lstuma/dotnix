@@ -90,7 +90,6 @@
         # brightness control 
         ", xf86MonBrightnessDown, exec, /usr/bin/env bash $HOME/.config/hyprland/scripts/change-brightness.sh down 5"
         ", xf86MonBrightnessUp, exec, /usr/bin/env bash $HOME/.config/hyprland/scripts/change-brightness.sh up 5"
-
       ];
       binde = [
         # resize windows
