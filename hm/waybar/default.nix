@@ -51,7 +51,7 @@
 
         "custom/battery" = {
           
-        }
+        };
       };
     };
     style = ''
