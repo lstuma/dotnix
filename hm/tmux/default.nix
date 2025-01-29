@@ -15,7 +15,7 @@
           set -g @nova-nerdfonts-left 
           set -g @nova-nerdfonts-right 
 
-          set -g @nova-segment-mode "#{?client_prefix,,}"
+          set -g @nova-segment-mode "#{?client_prefix,,}"
           set -g @nova-segment-mode-colors "#50fa7b #000000"
 
           set -g @nova-segment-whoami "#(whoami)@#h"
