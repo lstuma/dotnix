@@ -8,7 +8,7 @@
 
       dynamic_background_opacity = true;
       background_opacity = "0.7";
-      background_blur = 2;
+      background_blur = 1;
 
       # colors
       foreground = "#f8f8f2";
