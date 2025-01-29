@@ -183,6 +183,10 @@ tooltip {
 	padding-left: 6px;
 }
 
+#custom-battery {
+  padding-right: 14px;
+}
+
 /* If workspaces is the leftmost module, omit left margin */
 .modules-left > widget:first-child > #workspaces {
 }
