@@ -1,4 +1,7 @@
 { lib, config, pkgs, ... }:
 {
-  services.blueman.enable = true;
+  home.packages = with pkgs; [
+    bluez
+    blueman
+  ];
 }
