@@ -43,7 +43,7 @@
         str = "";
       };
       "#entry" = {
-        padding = mkLiteral "5pxp 0px";
+        padding = mkLiteral "5px 0px";
         placeholder = "Search...";
         placeholder-colon = mkLiteral "inherit";
         blink = true;
