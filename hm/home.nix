@@ -33,7 +33,7 @@
     firefox
     kitty
     xterm
-    rofi
+    rofi-wayland
     lunarvim
     eza
     keepassxc
