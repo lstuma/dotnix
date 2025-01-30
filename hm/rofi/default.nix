@@ -4,23 +4,26 @@
     enable = true;
     cycle = true;
     location = "center";
-
-    theme = {
+    
+    theme = 
+    let
+      inherit (config.lib.formats.rasi) mkLiteral;
+    in {
       "#window" = {
         enabled = true;
-        location = "center";
-        anchor = "center";
-        width = "600px";
-        margin = "0px";
-        padding = "5px";
-        border = "0px solid";
-        border-radius = "10px";
+        location = mkLiteral "center";
+        anchor = mkLiteral "center";
+        width = mkLiteral "600px";
+        margin = mkLiteral "0px";
+        padding = mkLiteral "5px";
+        border = mkLiteral "0px solid";
+        border-radius = mkLiteral "10px";
       };
       "#mainbox" = {
         enabled = true;
-        spacing = "10px";
-        margin = "0px";
-        padding = "30px";
+        spacing = mkLiteral "10px";
+        margin = mkLiteral "0px";
+        padding = mkLiteral "30px";
       };
       "#inputbar" = {
         enabled = true;
@@ -40,7 +43,7 @@
         str = "";
       };
       "#entry" = {
-        padding = lib.mkLiteral "10px 0 10px 15px";
+        padding = "10px 0 10px 15px";
         placeholder = "Search...";
         placeholder-colon = "inherit";
         blink = true;
