@@ -37,6 +37,7 @@
       };
       "#prompt" = { 
         enabled = true;
+        margin = "10px";
       };
       "#textbox-prompt-colon" = {
         margin = "5px";
