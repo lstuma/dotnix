@@ -18,7 +18,7 @@ secondary=$blue
 tertiary=$cyan
 
 # prompt
-PS1='%{$primary%}┌─(%{$secondary%}%n%{$reset%} 󱄅 %{$secondary%}%m%{$primary%})-[%{$reset%}%~%{$primary%}]'
+PS1='%{$primary%}┌─(%{$secondary%}%n%{$tertiary%} 󱄅 %{$secondary%}%m%{$primary%})-[%{$reset%}%~%{$primary%}]'
 PS1+=$newline
 PS1+='└─%{$secondary%}$%{$reset%} '
 

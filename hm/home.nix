@@ -15,6 +15,7 @@
     ./tmux
     ./hacking-tools
     ./zsh
+    ./neofetch
     #inputs.stylix.homeManagerModules.stylix
   ];
 
