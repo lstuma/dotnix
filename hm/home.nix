@@ -17,7 +17,7 @@
     #inputs.stylix.homeManagerModules.stylix
   ];
 
-  stylix.target = lib.mkForce {
+  stylix.targets = lib.mkForce {
     hyprland.enable = false;
     kitty.enable = false;
     waybar.enable = false;
