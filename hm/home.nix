@@ -6,7 +6,7 @@
   home.keyboard.layout = "de";
 
   imports = [ 
-    ./hypr
+    #./hypr
     ./sway
     ./waybar
     ./hyprland

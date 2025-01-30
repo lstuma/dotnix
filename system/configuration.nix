@@ -128,7 +128,7 @@
   # Enable progams here :)
   programs = {
     # i3.enable = true;
-    # hyprland.enable = true;
+    hyprland.enable = true;
     sway.enable = true;
     sway.package = pkgs.swayfx;
     sway.extraOptions = [ "--unsupported-gpu" ];
@@ -149,7 +149,7 @@
   # };
 
   services.xserver.enable = true;
-  services.xserver.windowManager.hypr.enable = true;
+  #services.xserver.windowManager.hypr.enable = true;
 
   #services.xserver.windowManage.i3.enable = true;
   #services.xserver.desktopManager.gnome.enable = true;
