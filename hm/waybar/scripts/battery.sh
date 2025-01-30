@@ -8,7 +8,7 @@ PERCENTAGE=$(echo "$BATTERY" | grep -Eo "[0-9]+")
 OUTPUT="<span color=\"#ff7a93\">"
 if [[ $CHARGING ]];
 then
-  OUTPUT="<span color=\"#7da6ff\">󱐋 "
+  OUTPUT="<span color=\"#7da6ff\">󱐋"
 fi
 if [[ $FULL ]];
 then
