@@ -18,7 +18,7 @@
         "dunst"
         "waybar"
         "hyprpaper"
-        "hyprctl setcursor phinger-cursor-light 12"
+        "hyprctl setcursor phinger-cursor-light 16"
       ];
       "$mod" = "SUPER";  
       bind = [

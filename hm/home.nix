@@ -17,8 +17,11 @@
     #inputs.stylix.homeManagerModules.stylix
   ];
 
-  stylix.targets.hyprland.enable = lib.mkForce false;
-  stylix.targets.kitty.enable = lib.mkForce false;
+  stylix.target = lib.mkForce {
+    hyprland.enable = false;
+    kitty.enable = false;
+    waybar.enable = false;
+  };
 
   home.packages = with pkgs; [
     python3
