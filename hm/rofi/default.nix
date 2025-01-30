@@ -4,7 +4,9 @@
     enable = true;
     cycle = true;
     location = "center";
-    
+    extraConfig = {
+      show-icons = true;
+    };
     theme = 
     let
       inherit (config.lib.formats.rasi) mkLiteral;
