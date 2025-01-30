@@ -5,7 +5,11 @@
     cycle = true;
     location = "center";
 
-    theme = {
+    theme = 
+      let
+        inherit (config.home-manager.users.${config.user}.lib.formats.rasi) mkLiteral;
+      in
+      {
       "#window" = {
         enabled = true;
         location = "center";
@@ -29,40 +33,36 @@
         padding = "0px";
         border = "0px solid";
         border-radius = "0px";
+        children = map mkLiteral [
+          "textbox-prompt-colon"
+          "prompt"
+          "entry"
+        ];
       };
       "#prompt" = { 
         enabled = true;
       };
       "#textbox-prompt-colon" = {
-        enabled = true;
-        padding = "5px";
+        margin = "5px";
         expand = false;
         str = "";
       };
       "#entry" = {
-        enabled = true;
         padding = "5px 0px";
         placeholder = "Search...";
         placeholder-colon = "inherit";
       };
       "#num-filtered-rows" = {
-        enabled = true;
         expand = false;
       };
       "#textbox-num-sep" = {
-        enabled = true;
         expand = false; 
         str = "/";
       };
       "#num-rows" = {
-        enabled = true;
         expand = false;
       };
-      "#case-indicator" = {
-        enabled = true;
-      };
       "#listview" = {
-        enabled = true;
         columns = 1;
         lines = 8;
         cycle = true;
@@ -80,17 +80,12 @@
         border-radius = "0px";
       };
       "#scrollbar" = {
-        enabled = true;
         handle-width = "5px";
         border-radius = "10px";
       };
       "#element" = {
-        enabled = true;
-        spacing = "10px";
-        margin = "0px";
-        padding = "10px 20px";
+        padding = "5px 10px";
         border = "0px solid";
-        border-radius = "10px";
       };
       "#element-icon" = {
         size = "24px";
