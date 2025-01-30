@@ -1,14 +1,23 @@
+newline=$'\n'
+reset="%{$reset_color%}"
 bold="%{fg_bold[white]}"
+cyan="%{$fg_bold[cyan]%}"
+blue="%{$fg_bold[blue]%}"
+
+# 256 bit variable-colors
 if [[ $terminfo[colors] -ge 256 ]]; then
-  cyan="%{$fg_bold[cyan]%}"
   pink="%{$bold%}%{$FG[219]%}"
 else
-  cyan="%{$fg_bold[cyan]%}"
   pink="%{$fg_bold[red]%}"
 fi
-NEWLINE=$'\n'
 
-PS1='%{$cyan%}┌─(%{$pink%}%n%{$reset_color%} 󱄅 %{$pink%}%m%{$cyan%})-[%{$reset_color%}%~%{$cyan%}]'
-PS1+=$NEWLINE
-PS1+='└─%{$pink%}$%{$reset_color%} '
+# themeing
+primary=$cyan
+secondary=$blue
+tertiary=$reset
+
+# prompt
+PS1='%{$primary%}┌─(%{$secondary%}%n%{$reset%} 󱄅 %{$secondary%}%m%{$primary%})-[%{$reset%}%~%{$primary%}]'
+PS1+=$newline
+PS1+='└─%{$secondary%}$%{$reset%} '
 
