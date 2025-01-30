@@ -88,7 +88,7 @@
       };
       "#element-icon" = {
         padding = mkLiteral "3px";
-        size = mkLiteral "24px";
+        size = mkLiteral "32px";
       };
       "#element-text" = {
         vertical-align = mkLiteral "0.5";
