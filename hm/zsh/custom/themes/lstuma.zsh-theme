@@ -3,7 +3,7 @@ yellow="%F{yellow}"
 magenta="%F{magenta}"
 pink="%F{red}"
 green="%F{green}"
-reset="$f"
+NEWLINE=$'\n'
 
-PS1='%{$cyan%}┌─(%{$pink%}%n %{$reset%}on %{$pink%}%m%{$cyan%})-[%{$reset%}%~%{$cyan%}]\n└─%{$pink%}$'
+PS1='%{$cyan%}┌─(%{$pink%}%n %{$reset_color%}on %{$pink%}%m%{$cyan%})-[%{$reset_color%}%~%{$cyan%}]%{$newline%}└─%{$pink%}$%{$reset_color%}'
 
