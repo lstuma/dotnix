@@ -82,7 +82,7 @@
         border-radius = mkLiteral "10px";
       };
       "#element" = {
-        padding = mkLiteral "0px";
+        padding = mkLiteral "1px";
         border = mkLiteral "0px solid";
         border-radius = mkLiteral "5px";
       };
