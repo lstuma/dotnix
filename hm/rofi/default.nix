@@ -25,10 +25,11 @@
         enabled = true;
         spacing = mkLiteral "10px";
         margin = mkLiteral "0px";
-        padding = mkLiteral "0px 10px 10px";
+        padding = mkLiteral "2px";
       };
       "#inputbar" = {
         enabled = true;
+        margin = mkLiteral "5px 0px 0px 0px";
         spacing = mkLiteral "10px";
         border-radius = mkLiteral "0px";
         children = map mkLiteral [
@@ -92,7 +93,7 @@
       };
       "#element-text" = {
         veritcal-align = mkLiteral "0.5";
-        horizontal-align = mkLiteral "0.5";
+        horizontal-align = mkLiteral "0.0";
       };
     };
   };
