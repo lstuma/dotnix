@@ -1,6 +1,6 @@
 if [[ $terminfo[colors] -ge 256 ]]; then
   cyan="%{$fg_bold[cyan]%}"
-  pink="%{$FG_bold[225]%}"
+  pink="%{$FG[225]%}"
 else
   cyan="%{$fg_bold[cyan]%}"
   pink="%{$fg_bold[red]%}"
