@@ -72,7 +72,7 @@
     layout = "de";
     variant = "";
   };
-  services.xserver.resolution = [
+  services.xserver.resolutions = [
     {
       x = 3072;
       y = 1920;
