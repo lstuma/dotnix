@@ -25,14 +25,10 @@
       "#inputbar" = {
         enabled = true;
         spacing = "10px";
-        margin = "10px";
-        padding = "0px";
-        border = "0px solid";
         border-radius = "0px";
         children = [
           "textbox-prompt-colon"
           "prompt"
-          "entry"
         ];
       };
       "#prompt" = { 
