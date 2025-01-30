@@ -77,9 +77,12 @@
         margin = "0px";
         padding = "0px";
         border = "0px solid";
+        border-radius = "0px";
       };
       "#scrollbar" = {
         enabled = true;
+        handle-width = "5px";
+        border-radius = "10px";
       };
       "#element" = {
         enabled = true;
