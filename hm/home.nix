@@ -27,6 +27,7 @@
   home.packages = with pkgs; [
     python3
     killall
+    pferd
     signal-desktop
     obsidian
     git
