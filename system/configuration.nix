@@ -14,6 +14,7 @@
 #      "${
 #        (builtins.fetchTarball { url = "https://github.com/numtide/nixos-facter-modules/"; })
 #      }/modules/nixos/facter.nix"
+      ./stylix.nix
     ];
 
 #  config.facter.reportPath = ./facter.json;
