@@ -90,7 +90,7 @@
         size = mkLiteral "24px";
       };
       "#element-text" = {
-        #veritcal-align = mkLiteral "0.7";
+        veritcal-align = mkLiteral "1.0";
         horizontal-align = mkLiteral "0.0";
       };
     };
