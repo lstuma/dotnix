@@ -29,7 +29,6 @@
       };
       "#inputbar" = {
         enabled = true;
-        margin = mkLiteral "5px 0px 0px 0px";
         spacing = mkLiteral "10px";
         border-radius = mkLiteral "0px";
         children = map mkLiteral [
@@ -46,7 +45,7 @@
         str = "";
       };
       "#entry" = {
-        padding = mkLiteral "0px";
+        padding = mkLiteral "5px 0px";
         placeholder = "Search...";
         placeholder-colon = mkLiteral "inherit";
         blink = true;
