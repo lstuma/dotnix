@@ -82,11 +82,12 @@
         border-radius = mkLiteral "10px";
       };
       "#element" = {
-        padding = mkLiteral "5px 5px";
+        padding = mkLiteral "5px";
         border = mkLiteral "0px solid";
         border-radius = mkLiteral "5px";
       };
       "#element-icon" = {
+        padding = mkLiteral "5px";
         size = mkLiteral "24px";
       };
       "#element-text" = {
