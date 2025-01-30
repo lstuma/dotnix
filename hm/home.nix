@@ -16,6 +16,7 @@
     ./hacking-tools
     ./zsh
     ./neofetch
+    ./zed
   ];
 
   stylix.targets = lib.mkForce {
