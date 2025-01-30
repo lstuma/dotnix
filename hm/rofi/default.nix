@@ -40,7 +40,7 @@
         enabled = false;
       };
       "#textbox-prompt-colon" = {
-        padding = mkLiteral "5px 10px";
+        padding = mkLiteral "5px 5px";
         expand = false;
         str = "";
       };
