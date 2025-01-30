@@ -84,6 +84,7 @@
       "#element" = {
         padding = mkLiteral "5px 10px";
         border = mkLiteral "0px solid";
+        border-radius = mkLiteral "5px";
       };
       "#element-icon" = {
         size = mkLiteral "24px";
