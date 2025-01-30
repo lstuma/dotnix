@@ -38,12 +38,12 @@
         enabled = false;
       };
       "#textbox-prompt-colon" = {
-        margin = mkLiteral "10px";
+        padding = mkLiteral "5px 0";
         expand = false;
         str = "";
       };
       "#entry" = {
-        padding = mkLiteral "10px 0 10px 15px";
+        padding = mkLiteral "5pxp 0px";
         placeholder = "Search...";
         placeholder-colon = mkLiteral "inherit";
         blink = true;
