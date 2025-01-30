@@ -7,7 +7,7 @@
     gtk.enable = true;
   };
 
-  wayland.windowManager.hyprland.exec-one = [
+  wayland.windowManager.hyprland.exec-once = [
     "hyprctl setcursor phinger-cursors-light 24"
   ];
 }
