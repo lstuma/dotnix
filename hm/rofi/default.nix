@@ -40,7 +40,7 @@
         str = "";
       };
       "#entry" = {
-        padding = "5px 0px";
+        padding = "10px 5px";
         placeholder = "Search...";
         placeholder-colon = "inherit";
       };
