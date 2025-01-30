@@ -28,12 +28,11 @@
         border-radius = "0px";
         children = [
           "textbox-prompt-colon"
-          "prompt"
+          "entry"
         ];
       };
       "#prompt" = { 
-        enabled = true;
-        margin = "10px";
+        enabled = false;
       };
       "#textbox-prompt-colon" = {
         margin = "5px";
