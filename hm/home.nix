@@ -14,6 +14,7 @@
     ./hyprpaper
     ./tmux
     ./hacking-tools
+    ./zsh
     #inputs.stylix.homeManagerModules.stylix
   ];
 
