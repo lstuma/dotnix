@@ -15,7 +15,7 @@
     ./hyprpaper
     ./tmux
     ./hacking-tools
-    inputs.stylix.homeManagerModules.stylix
+    #inputs.stylix.homeManagerModules.stylix
   ];
 
   stylix.targets.hyprland.enable = lib.mkForce false;

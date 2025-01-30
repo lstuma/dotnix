@@ -12,6 +12,4 @@
       size = 12;
     };  
   };
-
-  stylix.targets.hyprland.enable = false;
 }
