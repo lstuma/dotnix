@@ -12,6 +12,9 @@
 
   wayland.windowManager.hyprland = {
     enable = true;
+    xwayland = {
+      force_zero_scaling = true;
+    };
     settings = {
       input.kb_layout = "de";
       exec-once = [
