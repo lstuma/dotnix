@@ -20,6 +20,7 @@
 
   home.packages = with pkgs; [
     python3
+    killall
     signal-desktop
     obsidian
     git
