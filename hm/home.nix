@@ -8,7 +8,7 @@
   imports = [ 
     ./waybar
     ./hyprland
-    ./rofi
+    #./rofi
     ./dunst
     ./kitty
     ./hyprpaper
