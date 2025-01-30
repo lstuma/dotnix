@@ -17,6 +17,7 @@
       exec-once = [
         "dunst"
         "waybar"
+        "hyprpaper"
       ];
       "$mod" = "SUPER";  
       bind = [
