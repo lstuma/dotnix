@@ -8,6 +8,9 @@
 
     home-manager.url = "github:nix-community/home-manager";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
+
+    stylix.url = "github:danth/stylix";
+    stylix.inputs.nixpkgs.follows = "nixpkgs";
   };
 
   outputs = inputs@{ self, nixpkgs, utils, home-manager, ... }:
@@ -24,6 +27,7 @@
         system = "x86_64-linux";
       	modules = [
 	        self.nixosModules.system
+          inputs.stylix.nixosModules.stylix
 	        home-manager.nixosModules.home-manager
 	        {
 	          home-manager.useGlobalPkgs = true;
