@@ -19,6 +19,7 @@
   ];
 
   stylix.targets.hyprland.enable = lib.mkForce false;
+  stylix.targets.kitty.enable = lib.mkForce false;
 
   home.packages = with pkgs; [
     python3
