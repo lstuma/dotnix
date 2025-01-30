@@ -29,7 +29,7 @@
         padding = "0px";
         border = "0px solid";
         border-radius = "0px";
-        children = map [
+        children = [
           "textbox-prompt-colon"
           "prompt"
           "entry"
