@@ -6,7 +6,6 @@
   home.keyboard.layout = "de";
 
   imports = [ 
-    #./hypr
     ./sway
     ./waybar
     ./hyprland
@@ -14,7 +13,6 @@
     ./dunst
     ./kitty
     ./hyprpaper
-    ./cursor
     ./tmux
     ./hacking-tools
   ];
