@@ -86,8 +86,21 @@
       };
       "#element" = {
         enabled = true;
-
+        spacing = "10px";
+        margin = "0px";
+        padding = "5px 10px";
+        border = "0px solid";
+        border-radius = "10px";
       };
+      "#element-icon" = {
+        size = "24px";
+      };
+      "#element-text" = {
+        veritcal-align = 0.5;
+        horizontal-align = 0.5;
+      };
+      
+
 
     };
   };
