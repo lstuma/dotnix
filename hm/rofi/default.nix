@@ -27,9 +27,9 @@
       };
       "#inputbar" = {
         enabled = true;
-        spacing = "10px";
-        border-radius = "0px";
-        children = [
+        spacing = mkLiteral "10px";
+        border-radius = mkLiteral "0px";
+        children = map mkLiteral [
           "textbox-prompt-colon"
           "entry"
         ];
@@ -38,14 +38,14 @@
         enabled = false;
       };
       "#textbox-prompt-colon" = {
-        margin = "10px";
+        margin = mkLiteral "10px";
         expand = false;
         str = "";
       };
       "#entry" = {
-        padding = "10px 0 10px 15px";
+        padding = mkLiteral "10px 0 10px 15px";
         placeholder = "Search...";
-        placeholder-colon = "inherit";
+        placeholder-colon = mkLiteral "inherit";
         blink = true;
       };
       "#num-filtered-rows" = {
@@ -64,31 +64,31 @@
         cycle = true;
         scrollbar = true;
         dynamic = true;
-        layout = "vertical";
+        layout = mkLiteral "vertical";
         reverse = false;
         fixed-height = true;
         fixed-columns = true; 
 
-        spacing = "5px";
-        margin = "0px";
-        padding = "0px";
-        border = "0px solid";
-        border-radius = "0px";
+        spacing = mkLiteral "5px";
+        margin = mkLiteral "0px";
+        padding = mkLiteral "0px";
+        border = mkLiteral "0px solid";
+        border-radius = mkLiteral "0px";
       };
       "#scrollbar" = {
-        handle-width = "5px";
-        border-radius = "10px";
+        handle-width = mkLiteral "5px";
+        border-radius = mkLiteral "10px";
       };
       "#element" = {
-        padding = "5px 10px";
-        border = "0px solid";
+        padding = mkLiteral "5px 10px";
+        border = mkLiteral "0px solid";
       };
       "#element-icon" = {
-        size = "24px";
+        size = mkLiteral "24px";
       };
       "#element-text" = {
-        veritcal-align = "0.5";
-        horizontal-align = "0.5";
+        veritcal-align = mkLiteral "0.5";
+        horizontal-align = mkLiteral "0.5";
       };
     };
   };
