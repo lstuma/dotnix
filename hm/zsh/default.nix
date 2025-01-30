@@ -18,6 +18,6 @@
 
   home.file."lstuma-zsh-theme" = {
     source = ./lstuma.zsh-theme;
-    target = ".config/.oh-my-zsh/themes/lstuma.zsh-theme";
+    target = "$ZSH/themes/lstuma.zsh-theme";
   };
 }
