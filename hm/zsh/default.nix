@@ -9,7 +9,7 @@
     shellAliases = {
       ll = "eza --color --icons -l";
     };
-    ohMyZsh = {
+    oh-my-zsh = {
       enable = true;
       theme = "lstuma"; 
     };
