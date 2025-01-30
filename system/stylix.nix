@@ -1,10 +1,10 @@
-{ lib, pkgs, ... }:
+{ pkgs, ... }:
 {
   environment.systemPackages = with pkgs; [ base16-schemes ];
 
   stylix = {
     enable = true;
-    base16Scheme = lib.mkForce "${pkgs.base16-schemes}/share/themes/dracula.yaml";
+    base16Scheme = "${pkgs.base16-schemes}/share/themes/dracula.yaml";
     image = ./wallpaper.png;
     cursor = {
       name = "phinger-cursors-light";
@@ -12,4 +12,6 @@
       size = 12;
     };  
   };
+
+  stylix.targets.hyprland.enable = false;
 }
