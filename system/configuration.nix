@@ -140,9 +140,11 @@
     sway.package = pkgs.swayfx;
     sway.extraOptions = [ "--unsupported-gpu" ];
 
-    # xwayland.enable = true;
+    xwayland.enable = true;
     zsh.enable = true;
   };
+
+  programs.xwayland.force_zero_scaling = true;
 
   services.displayManager.ly.enable = true;
   #services.displayManager.sddm.enable = true;  
