@@ -2,10 +2,10 @@
 {
   programs.kitty = {
     enable = true;
-    shell = "/usr/bin/env zsh --interactive --login";
     settings = {
       confirm_os_window_close = 0;
       scrollback_lines = 10000;
+      shell = "/usr/bin/env zsh --interactive --login";
       editor = "/usr/bin/env lvim";
 
       dynamic_background_opacity = true;
