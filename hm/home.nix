@@ -1,4 +1,4 @@
-{ inputs, pkgs, ... }:
+{ lib, inputs, pkgs, ... }:
 {
   programs.home-manager.enable = true;
   home.stateVersion = "24.11"; # DO NOT CHANGE!!!!!!!!!
@@ -15,7 +15,10 @@
     ./hyprpaper
     ./tmux
     ./hacking-tools
+    inputs.stylix.homeManagerModules.stylix
   ];
+
+  stylix.targets.hyprland.enable = lib.mkForce false;
 
   home.packages = with pkgs; [
     python3
