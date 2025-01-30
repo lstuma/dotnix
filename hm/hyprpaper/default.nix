@@ -7,6 +7,8 @@
   services.hyprpaper = {
     enable = true;
     settings = {
+      ipc = true;
+      splash = false;
       preload = [
         "$HOME/.config/hypr/wallpaper.png"
       ];
