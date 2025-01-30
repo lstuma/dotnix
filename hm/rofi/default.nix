@@ -12,7 +12,7 @@
         anchor = "center";
         width = "600px";
         margin = "0px";
-        padding = "0px";
+        padding = "5px";
         border = "0px solid";
         border-radius = "10px";
       };
@@ -99,9 +99,6 @@
         veritcal-align = 0.5;
         horizontal-align = 0.5;
       };
-      
-
-
     };
   };
 }
