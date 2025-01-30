@@ -9,14 +9,15 @@
     shellAliases = {
       ll = "eza --color --icons -l";
     };
-    home = {
-      sessionVariables = {
-        PS1 = "%F{%(#.blue.green)}┌──\${debian_chroot:+($debian_chroot)─}\${VIRTUAL_ENV:+($(basename $VIRTUAL_ENV))─}(%B%F{%(#.red.blue)}%n on %m%b%F{%(#.blue.green)})-[%B%F{reset}%(6~.%-1~/…/%4~.%5~)%b%F{%(#.blue.green)}]
-└─%B%(#.%F{red}#.%F{blue}$)%b%F{reset}";
-      };
+    ohMyZsh = {
+      enable = true;
+      theme = "lstuma"; 
     };
-
     history.size = 10000;
-    
+  };
+
+  home.file."lstuma-zsh-theme" = {
+    source = ./lstuma.zsh-theme;
+    target = ".config/.oh-my-zsh/themes/lstuma.zsh-theme";
   };
 }
