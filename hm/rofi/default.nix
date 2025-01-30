@@ -35,7 +35,7 @@
         enabled = false;
       };
       "#textbox-prompt-colon" = {
-        margin = "5px";
+        margin = "10px";
         expand = false;
         str = "";
       };
