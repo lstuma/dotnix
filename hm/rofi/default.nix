@@ -7,7 +7,7 @@
 
     theme = 
       let
-        inherit (config.home-manager.users.${config.user}.lib.formats.rasi) mkLiteral;
+        inherit (lib.formats.rasi) mkLiteral;
       in
       {
       "#window" = {
