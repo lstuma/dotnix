@@ -18,14 +18,17 @@
       "#mainbox" = {
         spacing = "10px";
         margin = "0px";
+        padding = "30px";
       };
       "#inputbar" = {
         spacing = "10px";
         margin = "0px";
         padding = "0px";
+        border = "0px solid";
+        border-radius = "0px";
       };
       "#prompt" = {
-
+        
       };
       "#textbox-prompt-colon" = {
 
