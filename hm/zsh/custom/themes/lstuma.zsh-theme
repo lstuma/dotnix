@@ -1,12 +1,12 @@
 newline=$'\n'
 reset="%{$reset_color%}"
-bold="%{$fg_bold[white]}"
+bold="%{$fg_bold[white]%}"
 cyan="%{$fg_bold[cyan]%}"
 
 # 256 bit variable-colors
 if [[ $terminfo[colors] -ge 256 ]]; then
   pink="%{$bold%}%{$FG[219]%}"
-  blue="%{$bold%}%{$FG[027]%}"
+  blue="%{$bold%}%{$FG[33]%}"
 else
   pink="%{$fg_bold[red]%}"
   blue="%{$fg_bold[blue]%}"
