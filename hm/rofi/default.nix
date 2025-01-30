@@ -62,12 +62,27 @@
         enabled = true;
       };
       "#listview" = {
+        enabled = true;
+        columns = 1;
+        lines = 8;
+        cycle = true;
+        scrollbar = true;
+        dynamic = true;
+        layout = "vertical";
+        reverse = false;
+        fixed-height = true;
+        fixed-columns = true; 
 
+        spacing = "5px";
+        margin = "0px";
+        padding = "0px";
+        border = "0px solid";
       };
       "#scrollbar" = {
-
+        enabled = true;
       };
       "#element" = {
+        enabled = true;
 
       };
 
