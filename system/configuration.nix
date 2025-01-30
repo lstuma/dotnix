@@ -72,7 +72,7 @@
     layout = "de";
     variant = "";
   };
-  services.xserver.dpi = 60;
+  services.xserver.dpi = 120;
 
   # Configure console keymap
   console.keyMap = "de";
