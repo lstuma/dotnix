@@ -15,7 +15,7 @@ fi
 # themeing
 primary=$cyan
 secondary=$blue
-tertiary=$reset
+tertiary=$cyan
 
 # prompt
 PS1='%{$primary%}┌─(%{$secondary%}%n%{$reset%} 󱄅 %{$secondary%}%m%{$primary%})-[%{$reset%}%~%{$primary%}]'
