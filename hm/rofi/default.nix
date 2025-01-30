@@ -96,8 +96,8 @@
         size = "24px";
       };
       "#element-text" = {
-        veritcal-align = 0.5;
-        horizontal-align = 0.5;
+        veritcal-align = "0.5";
+        horizontal-align = "0.5";
       };
     };
   };
