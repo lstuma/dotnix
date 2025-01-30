@@ -40,7 +40,7 @@
         str = "";
       };
       "#entry" = {
-        padding = "10px 0 10px 15px";
+        padding = lib.mkLiteral "10px 0 10px 15px";
         placeholder = "Search...";
         placeholder-colon = "inherit";
         blink = true;
