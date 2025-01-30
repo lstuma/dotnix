@@ -88,7 +88,7 @@
         enabled = true;
         spacing = "10px";
         margin = "0px";
-        padding = "5px 10px";
+        padding = "10px 20px";
         border = "0px solid";
         border-radius = "10px";
       };
