@@ -25,7 +25,7 @@
         enabled = true;
         spacing = mkLiteral "10px";
         margin = mkLiteral "0px";
-        padding = mkLiteral "30px";
+        padding = mkLiteral "10px";
       };
       "#inputbar" = {
         enabled = true;
@@ -90,7 +90,7 @@
         size = mkLiteral "24px";
       };
       "#element-text" = {
-        veritcal-align = mkLiteral "0.0";
+        veritcal-align = mkLiteral "0.7";
         horizontal-align = mkLiteral "0.0";
       };
     };
