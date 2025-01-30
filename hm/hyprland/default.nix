@@ -12,6 +12,7 @@
 
   wayland.windowManager.hyprland = {
     enable = true;
+    # fix x-apps blurry/low-res
     extraConfig = ''
       xwayland {
         force_zero_scaling = true
