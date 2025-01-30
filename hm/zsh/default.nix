@@ -11,13 +11,15 @@
     };
     oh-my-zsh = {
       enable = true;
-      theme = "lstuma"; 
+      theme = "lstuma";
+      custom = "$HOME/.zsh_custom";
     };
     history.size = 10000;
   };
 
   home.file."lstuma-zsh-theme" = {
-    source = ./lstuma.zsh-theme;
-    target = "$ZSH/themes/lstuma.zsh-theme";
+    source = ./custom;
+    target = ".zsh_custom/";
+    recursive = true;
   };
 }
