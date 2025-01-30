@@ -14,6 +14,7 @@
     ./dunst
     ./kitty
     ./hyprpaper
+    ./cursor
     ./tmux
     ./hacking-tools
   ];
