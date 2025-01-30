@@ -27,14 +27,17 @@
         border = "0px solid";
         border-radius = "0px";
       };
-      "#prompt" = {
-        
+      "#prompt" = { 
       };
       "#textbox-prompt-colon" = {
-
+        padding = "5px";
+        expand = false;
+        str = "";
       };
       "#entry" = {
-
+        padding = "5px 0px";
+        placeholder = "Search...";
+        placeholder-colon = "inherit";
       };
       "#num-filtered-rows" = {
 
