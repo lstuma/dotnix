@@ -6,7 +6,7 @@ cyan="%{$fg_bold[cyan]%}"
 # 256 bit variable-colors
 if [[ $terminfo[colors] -ge 256 ]]; then
   pink="%{$bold%}%{$FG[219]%}"
-  blue="%{$bold%}%{$FG[33]%}"
+  blue="%{$bold%}%{$FG[033]%}"
 else
   pink="%{$fg_bold[red]%}"
   blue="%{$fg_bold[blue]%}"
