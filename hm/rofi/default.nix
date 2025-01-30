@@ -40,9 +40,10 @@
         str = "";
       };
       "#entry" = {
-        padding = "10px 15px";
+        padding = "10px 0 10px 15px";
         placeholder = "Search...";
         placeholder-colon = "inherit";
+        blink = true;
       };
       "#num-filtered-rows" = {
         expand = false;
