@@ -19,8 +19,6 @@
     amass
     evil-winrm
     responder
-    wireshark
-    tshark
     dnsrecon
     theharvester
     bloodhound
@@ -34,7 +32,7 @@
 
     wordlists
 
-    #python312Packages.impacket
-    #python312Packages.scapy
+    python312Packages.impacket
+    python312Packages.scapy
   ];
 }
