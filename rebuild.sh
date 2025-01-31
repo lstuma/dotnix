@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# script for rebuilding nix config
 
 notify() {
   notify-send "rebuild.sh: $1" \
@@ -44,7 +45,7 @@ REBUILD_CMD="nixos-rebuild switch --flake .# --log-format internal-json -v |& no
 set xtrace
 sudo /usr/bin/env bash -p -c "$REBUILD_CMD"
 
-RET=$?
+RET=?
 
 unset xtrace
 if [ $RET -eq 0 ]
