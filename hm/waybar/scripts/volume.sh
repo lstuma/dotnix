@@ -14,10 +14,10 @@ while true; do
         else
         if [[ "$VOLUME" -eq "0" ]] then
             COLOR="$MAGENTA"
-            OUTPUT=" "
+            OUTPUT=""
         elif [[ "$VOLUME" -lt "50" ]] then
             COLOR="$PURPLE"
-            OUTPUT=" "
+            OUTPUT=""
         else
             COLOR="$PURPLE"
             OUTPUT=" "
