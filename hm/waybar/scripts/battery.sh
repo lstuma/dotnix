@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+source "$HOME/.config/hm/waybar/scripts/utils.sh"
 
 TEMP_CLICK_FILE="/tmp/battery_clicked"
 if [ "$1" = "click" ]; then
@@ -18,8 +19,16 @@ PURPLE="#bb9af7"
 LIGHT_GREEN="#b9f27c"
 LIGHT_BLUE="#7da6ff"
 
-output() {
-    echo "{\"text\":\"$TEXT\", \"tooltip\": \"$TOOLTIP_TEXT\"}"
+watch(file, time) {
+    state=$(stat -c %Y "$file")
+    waited=0
+    while [ $waited -lt $time ]; do
+        if [ $state -ne $(stat -c %Y "$file") ]; then
+            break
+        fi
+        sleep 0.1
+        waited=$(($waited + 0.1))
+    done
 }
 
 while true; do
@@ -59,11 +68,11 @@ while true; do
 
     if [ -f "$TEMP_CLICK_FILE" ]; then
         TEXT="<span color=\\\"$COLOR\\\">$TIME_REMAINING remaining $ICON$CHARGE%</span>"
-        output
-        sleep 4
+        output "$TEXT" "$TOOLTIP_TEXT"
+        sleepwatch $TEMP_CLICK_FILE 10
         rm "$TEMP_CLICK_FILE"
     else
-        output
-        sleep 0.5
+        output "$TEXT" "$TOOLTIP_TEXT"
+        sleepwatch $TEMP_CLICK_FILE 2
     fi
 done
