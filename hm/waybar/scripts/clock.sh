@@ -27,11 +27,7 @@ while true; do
     # on click shortly change text to time+date
     if [ -f "$TEMP_CLICK_FILE" ]; then
         TEXT="$ICON $TIME $DATE"
-        output "$TEXT" "$TOOLTIP_TEXT"
-        sleepwatch "$TEMP_CLICK_FILE" 10
-        #rm-exist "$TEMP_CLICK_FILE"
-    else
-        output "$TEXT" "$TOOLTIP_TEXT"
-        sleepwatch "$TEMP_CLICK_FILE" 0.8
-    fi
+        (sleep 5 && rm-exist $TEMP_CLICK_FILE) &
+    output "$TEXT" "$TOOLTIP_TEXT"
+    sleep 0.2
 done
