@@ -19,6 +19,7 @@ TOOLTIP_TEXT="$TOOLTIP_ICON $TIME\n$DATE"
 read -r line
 if [[ "$line" ]]; then
     TEXT="$ICON $TIME $DATE"
+    touch /tmp/clock_clicked_debug
 fi
 
 # format the output
