@@ -56,7 +56,7 @@ while true; do
 
     if [ -f "$CLICK_FILE" ]; then
         TEXT="<span color=\\\"$COLOR\\\">$TIME_REMAINING remaining $ICON$CHARGE%</span>"
-        click-untouch $CLICK_FILE 5
+        click-untouch $CLICK_FILE 10
     fi
     output "$TEXT" "$TOOLTIP_TEXT"
     sleep 0.3
