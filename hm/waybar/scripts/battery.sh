@@ -28,6 +28,7 @@ while true; do
     CHARGING=$(echo "$BATTERY" | grep "Charging")
     FULL=$(echo "$BATTERY" | grep "Full")
     CHARGE=$(echo "$BATTERY" | grep -Eo "[0-9]+")
+    TIME_REMAINING=$(acpi -b | grep -Eo "[0-9][0-9]:[0-9][0-9]:[0-9][0-9]")
     COLOR="$RED"
     ICON="?"
 

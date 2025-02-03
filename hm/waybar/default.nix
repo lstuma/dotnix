@@ -3,6 +3,7 @@
   home.packages = with pkgs; [
     waybar
     sutils
+    acpi
     waybar-mpris
   ];
 
@@ -56,6 +57,7 @@
 
         "custom/battery" = {
           exec = "/usr/bin/env bash $HOME/.config/waybar/scripts/battery.sh";
+          return-type = "json";
           interval = 5;
         };
 
