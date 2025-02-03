@@ -45,7 +45,6 @@
           exec = "/usr/bin/env bash $HOME/.config/waybar/scripts/clock.sh";
           tooltip = true;
           return-type = "json";
-          interval = 1;
           on-click = "echo click";
         };
 
