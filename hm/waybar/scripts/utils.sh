@@ -26,6 +26,7 @@ sleepwatch() {
     waited=0
     while [ $waited -lt $time ]; do
         if [ ! -f "$file" ]; then
+            echo "file $file deleted"
             return
         fi
         sleep 0.1
