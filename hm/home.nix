@@ -1,4 +1,7 @@
 { lib, inputs, pkgs, ... }:
+let
+  nixos-wizard = import ./nixos-wizard { inherit pkgs; };
+in
 {
   programs.home-manager.enable = true;
   home.stateVersion = "24.11"; # DO NOT CHANGE!!!!!!!!!
@@ -29,6 +32,7 @@
 
   home.packages = with pkgs; [
     python3
+    nixos-wizard
     killall
     pferd
     tree
