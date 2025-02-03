@@ -30,4 +30,5 @@ while true; do
         (sleep 5 && rm-exist $TEMP_CLICK_FILE) &
     output "$TEXT" "$TOOLTIP_TEXT"
     sleep 0.2
+    fi
 done
