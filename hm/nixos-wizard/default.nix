@@ -1,6 +1,10 @@
 { pkgs }:
 let
   pythonPackages = pkgs.python3Packages;
+    dependencies = with pythonPackages; [
+        rich
+        pyyaml
+    ];
 in
 pythonPackages.buildPythonPackage rec {
   pname = "nixos-wizard";
@@ -10,4 +14,5 @@ pythonPackages.buildPythonPackage rec {
     sha256 = "7ad58437c6dc90904969697e40173f1da7a8f8324aa5b4576c8b71fe18e9b505";
   };
   doCheck = false;
+  propagatedBuildInputs = dependencies;
 }
