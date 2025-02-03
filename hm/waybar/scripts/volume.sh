@@ -11,7 +11,7 @@ if [[ "$(pamixer --get-mute)" =~ "true"  ]] then
   OUTPUT="󰝟"
   COLOR="$RED"
 else
-  if [[ "$VOLUME" -lt "0" ]] then
+  if [[ "$VOLUME" -eq "0" ]] then
     COLOR="$MAGENTA"
     OUTPUT="󰕿"
   elif [[ "$VOLUME" -lt "50" ]] then
