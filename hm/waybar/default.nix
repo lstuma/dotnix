@@ -27,8 +27,8 @@
           all-outputs = true;
           format = "{icon}";
           format-icons = {
-            default = "󰊠";              # "",
-            active = "";              # "", "", "󰊠", "❄"
+            default = "󱙝";              # "",
+            active = "󰊠";              # "", "", "󰊠", "❄"
           };
           persistent-workspaces = {
             "1" = [];
