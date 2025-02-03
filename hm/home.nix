@@ -17,6 +17,7 @@
     ./zsh
     ./neofetch
     ./zed
+    ./ferdium
   ];
 
   stylix.targets = lib.mkForce {
