@@ -58,7 +58,6 @@
         "custom/battery" = {
           exec = "/usr/bin/env bash $HOME/.config/waybar/scripts/battery.sh";
           return-type = "json";
-          interval = 5;
         };
 
         "custom/conn" = {
