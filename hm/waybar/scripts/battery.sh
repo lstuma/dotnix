@@ -54,7 +54,7 @@ while true; do
         fi
     fi
 
-    TEXT="<span color=\"$COLOR\">$ICON$CHARGE%</span>"
+    TEXT="<span color=\\\"$COLOR\\\">$ICON$CHARGE%</span>"
     TOOLTIP_TEXT="$BATTERY $TIME_REMAINING"
     output
     sleep 1
