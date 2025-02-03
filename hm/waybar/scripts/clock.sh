@@ -1,7 +1,9 @@
 #!/usr/bin/env bash
 
+TEMP_CLICK_FILE="/tmp/clock_clicked"
+
 if [ "$1" = "click" ]; then
-    touch "/tmp/clock_clicked"
+    touch "$TEMP_CLICK_FILE"
     exit 0
 fi
 
@@ -13,8 +15,6 @@ ICON="󰥔"
 COLOR="$WHITE"
 TOOLTIP_ICON="󰥔"
 TOOLTIP_COLOR="$WHITE"
-
-TEMP_CLICK_FILE="/tmp/clock_clicked"
 
 output() {
     echo "{\"text\":\"$TEXT\", \"tooltip\": \"$TOOLTIP_TEXT\"}"
