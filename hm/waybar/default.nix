@@ -20,7 +20,7 @@
         
         modules-left = [ "clock" ];
         modules-center = [ "hyprland/workspaces" ];
-        modules-right = [ "tray" "mpris" "pulseaudio" "custom/battery" "upower"];
+        modules-right = [ "tray" "mpris" "custom/wifi" "pulseaudio" "custom/battery" "upower"];
 
         "hyprland/workspaces" = {
           all-outputs = true;
@@ -46,6 +46,11 @@
           exec = "/usr/bin/env bash $HOME/.config/waybar/scripts/battery.sh";
           interval = 5;
         };
+
+        "custom/conn" = {
+          exec = "/usr/bin/env bash $HOME/.config/waybar/scripts/wifi.sh";
+          interval = 3;
+        }
       };
     };
     style = ''
