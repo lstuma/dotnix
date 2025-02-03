@@ -21,7 +21,7 @@
         system = import ./system/configuration.nix;
       };
 
-      
+
       channelsConfig.allowUnfree = true;
       hosts."lstuma-nix" = {
         system = "x86_64-linux";
@@ -38,5 +38,8 @@
 	        }
 	      ];
       };
+      devShells = {
+        default = pkgs: import ./shell.nix { inherit pkgs; };
+      }
     };
 }
