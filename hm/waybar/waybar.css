@@ -187,6 +187,10 @@ tooltip {
   padding-right: 10px;
 }
 
+#custom-conn {
+  padding: 5px;
+}
+
 /* If workspaces is the leftmost module, omit left margin */
 .modules-left > widget:first-child > #workspaces {
 }

@@ -1,4 +1,7 @@
 #!/usr/bin/env bash
+COLOR_WIFI="#ffb86c"
+COLOR_ETHER="#ff79c6"
+
 # data in colon separated with format: NAME:TYPE\n
 data=$(nmcli -g "NAME,TYPE" -m tabular conn show --active)
 if [[ $1 ]] then
@@ -12,9 +15,9 @@ do
   WIRELESS="$(echo ${conn_data[1]} | grep 'wireless')"
   echo -ne "<span>"
   if [[ $WIRELESS ]] then
-    echo -ne "<span>󰤨 </span>"
+    echo -ne "<span color=\"$COLOR_WIFI\">󰤨 </span>"
   else
-    echo -ne "<span>󱎔 </span>"
+    echo -ne "<span color=\"$COLOR_ETHER\">󱎔 </span>"
   fi
   echo "${conn_data[0]}</span>"
 done
