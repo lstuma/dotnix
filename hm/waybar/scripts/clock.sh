@@ -9,6 +9,8 @@ COLOR="$WHITE"
 TOOLTIP_ICON="󰥔"
 TOOLTIP_COLOR="$WHITE"
 
+TEMP_CLICK_FILE="/tmp/clock_clicked"
+
 while true; do
     TIME=$(date +"%H:%M:%S")
     DATE=$(date +"%A %d %B %Y")
@@ -19,11 +21,9 @@ while true; do
     DELAY="0.5"
 
     # on click shortly change text to time+date
-    read -r line
-    if [ "$line" ]; then
+    if [ -f "$TEMP_CLICK_FILE" ]; then
         TEXT="$ICON $TIME $DATE"
-        touch /tmp/clock_clicked_debug
-        DELAY="5"
+        rm "$TEMP_CLICK_FILE"
     fi
 
     # format the output

@@ -45,7 +45,7 @@
           exec = "/usr/bin/env bash $HOME/.config/waybar/scripts/clock.sh";
           tooltip = true;
           return-type = "json";
-          on-click = "echo click; touch /tmp/click_sim_clock_debug";
+          on-click = "touch /tmp/clock_clicked";
         };
 
         "custom/volume" = {
