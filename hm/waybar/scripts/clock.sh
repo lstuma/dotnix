@@ -4,7 +4,7 @@ source "$SCRIPT_DIR/utils.sh"
 
 TEMP_CLICK_FILE="/tmp/clock_clicked"
 if [ "$1" = "click" ]; then
-    click_touch $TEMP_CLICK_FILE
+    click-touch $TEMP_CLICK_FILE
     exit 0
 fi
 
@@ -27,7 +27,7 @@ while true; do
     # on click shortly change text to time+date
     if [ -f "$TEMP_CLICK_FILE" ]; then
         TEXT="$ICON $TIME $DATE"
-        (sleep 5 && rm-exist $TEMP_CLICK_FILE) &
+        click-untouch $TEMP_CLICK_FILE
     fi
     output "$TEXT" "$TOOLTIP_TEXT"
     sleep 0.2

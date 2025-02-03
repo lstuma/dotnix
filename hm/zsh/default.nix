@@ -8,7 +8,7 @@
     autocd = false;
     shellAliases = {
       ll = "eza --color --icons -l";
-      clearall = "printf '\033[2J\033[3J\033[1;1H'";
+      clearall = "printf '\\033[2J\\033[3J\\033[1;1H'";
       clear = "clearall";
       c = "/usr/bin/env clear"; # old clear command
     };

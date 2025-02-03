@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-click_touch() {
+click-touch() {
     # create or delete file on click
     file=$1
     if [ -f "$file" ]; then
@@ -10,6 +10,13 @@ click_touch() {
         echo "creating $file"
         touch "$file"
     fi
+}
+
+click-untouch() {
+    # create or delete file on click
+    file=$1
+    timeout=$2
+    (echo "$BASHPID" > $file && sleep $timeout && if [ $(cat $file) = $BASHPID ]; then rm $file; fi) &
 }
 
 output() {
