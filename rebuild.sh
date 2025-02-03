@@ -55,6 +55,6 @@ then
   exit 0;
 fi
 
-echo -e "${BLUE}rebuild.sh: ${RED}build failed${NC} $RET"
+echo -e "${BLUE}rebuild.sh: ${RED}build failed${NC} with exit code $RET"
 notify "build failed";
 
