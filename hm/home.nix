@@ -2,10 +2,10 @@
 {
   programs.home-manager.enable = true;
   home.stateVersion = "24.11"; # DO NOT CHANGE!!!!!!!!!
-  
+
   home.keyboard.layout = "de";
 
-  imports = [ 
+  imports = [
     ./waybar
     ./hyprland
     ./rofi
@@ -19,6 +19,7 @@
     ./zed
     ./ferdium
     ./latex
+    ./nixos-wizard
   ];
 
   stylix.targets = lib.mkForce {
