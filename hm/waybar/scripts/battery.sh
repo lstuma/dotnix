@@ -38,7 +38,4 @@ else
     fi
 fi
 
-OUTPUT+="<span color=\"$COLOR\">$ICON $CHARGE%</span>"
-
-
-echo -ne "$OUTPUT"
+echo "<span color=\"$COLOR\">$ICON $CHARGE%</span>"
