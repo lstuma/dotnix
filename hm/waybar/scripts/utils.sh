@@ -1,5 +1,15 @@
 #!/usr/bin/env bash
 
+click_touch() {
+    # create or delete file on click
+    file=$1
+    if [ -f "$file" ]; then
+        rm "$file"
+    else
+        touch "$file"
+    fi
+}
+
 output() {
     text=$1
     tooltip=$2

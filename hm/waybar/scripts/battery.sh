@@ -4,11 +4,7 @@ source "$SCRIPT_DIR/utils.sh"
 
 TEMP_CLICK_FILE="/tmp/battery_clicked"
 if [ "$1" = "click" ]; then
-    if [ -f "$TEMP_CLICK_FILE" ]; then
-        rm "$TEMP_CLICK_FILE"
-    else
-        touch "$TEMP_CLICK_FILE"
-    fi
+    click_touch $TEMP_CLICK_FILE
     exit 0
 fi
 
