@@ -16,8 +16,8 @@
         fixed-center = true;
         # debug
         reload_style_on_change = true;
-        
-        
+
+
         modules-left = [ "clock" ];
         modules-center = [ "hyprland/workspaces" ];
         modules-right = [ "tray" "mpris" "custom/conn" "custom/volume" "custom/battery" "upower"];
@@ -26,7 +26,7 @@
           all-outputs = true;
           format = "{icon}";
           format-icons = {
-            default = "";              # "", 
+            default = "";              # "",
             active = "";              # "", "", "󰊠", "❄"
           };
           persistent-workspaces = {
@@ -43,7 +43,7 @@
         };
         "custom/volume" = {
           exec = "/usr/bin/env bash $HOME/.config/waybar/scripts/volume.sh";
-          interval = 3;
+          interval = 1;
         };
         "custom/battery" = {
           exec = "/usr/bin/env bash $HOME/.config/waybar/scripts/battery.sh";
