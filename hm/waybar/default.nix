@@ -26,7 +26,7 @@
           all-outputs = true;
           format = "{icon}";
           format-icons = {
-            default = "";              # "", 
+            default = "";              # "", 
             active = "";              # "", "", "󰊠", "❄"
           };
           persistent-workspaces = {
