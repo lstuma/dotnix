@@ -17,7 +17,7 @@ click-untouch() {
     # create or delete file on click
     file=$1
     timeout=$2
-    # if theres is already an id in the file, do notthing
+    # if theres is already an id in the file, do nothing
     if [ $(cat $file) ]; then
         return
     fi

@@ -2,9 +2,9 @@
 SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
 source "$SCRIPT_DIR/utils.sh"
 
-TEMP_CLICK_FILE="/tmp/battery_clicked"
+CLICK_FILE="/tmp/battery_clicked"
 if [ "$1" = "click" ]; then
-    click-touch $TEMP_CLICK_FILE
+    click-touch $CLICK_FILE
     exit 0
 fi
 
@@ -51,13 +51,10 @@ while true; do
     TEXT="<span color=\\\"$COLOR\\\">$ICON$CHARGE%</span>"
     TOOLTIP_TEXT="$BATTERY% $TIME_REMAINING"
 
-    if [ -f "$TEMP_CLICK_FILE" ]; then
+    if [ -f "$CLICK_FILE" ]; then
         TEXT="<span color=\\\"$COLOR\\\">$TIME_REMAINING remaining $ICON$CHARGE%</span>"
-        output "$TEXT" "$TOOLTIP_TEXT"
-        sleepwatch $TEMP_CLICK_FILE 10
-        rm-exist $TEMP_CLICK_FILE
-    else
-        output "$TEXT" "$TOOLTIP_TEXT"
-        sleepwatch $TEMP_CLICK_FILE 2
+        click-untouched $CLICK_FILE 5
     fi
+    output "$TEXT" "$TOOLTIP_TEXT"
+    sleep 0.3
 done

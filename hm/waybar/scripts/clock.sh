@@ -2,9 +2,9 @@
 SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
 source "$SCRIPT_DIR/utils.sh"
 
-TEMP_CLICK_FILE="/tmp/clock_clicked"
+CLICK_FILE="/tmp/clock_clicked"
 if [ "$1" = "click" ]; then
-    click-touch $TEMP_CLICK_FILE
+    click-touch $CLICK_FILE
     exit 0
 fi
 
@@ -25,9 +25,9 @@ while true; do
     TOOLTIP_TEXT="$TOOLTIP_ICON $TIME\n$DATE"
 
     # on click shortly change text to time+date
-    if [ -f "$TEMP_CLICK_FILE" ]; then
+    if [ -f "$CLICK_FILE" ]; then
         TEXT="$ICON $TIME $DATE"
-        click-untouch $TEMP_CLICK_FILE 5
+        click-untouch $CLICK_FILE 5
     fi
     output "$TEXT" "$TOOLTIP_TEXT"
     sleep 0.2
