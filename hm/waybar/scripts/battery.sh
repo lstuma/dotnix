@@ -54,4 +54,7 @@ while true; do
     fi
 
     $TEXT="<span color=\"$COLOR\">$ICON$CHARGE%</span>"
+    TOOLTIP_TEXT="$BATTERY"
+    output
+    sleep 1
 done
