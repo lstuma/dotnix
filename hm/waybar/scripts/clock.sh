@@ -28,7 +28,7 @@ while true; do
     if [ -f "$TEMP_CLICK_FILE" ]; then
         TEXT="$ICON $TIME $DATE"
         output "$TEXT" "$TOOLTIP_TEXT"
-        sleepwatch "$TEMP_CLICK_FILE" 10
+        sleepwatch-rm "$TEMP_CLICK_FILE" 10
         #rm-exist "$TEMP_CLICK_FILE"
     else
         output "$TEXT" "$TOOLTIP_TEXT"

@@ -20,24 +20,23 @@ output() {
 }
 
 sleepwatch() {
-    # sleep but break if file is created or deleted
+    # sleep but break if a certain file is deleted
     file=$1
     time=$((time * 10))
-    if [ -f "$file" ]; then
-        state="created"
-    else
-        state="deleted"
-    fi
     waited=0
     while [ $waited -lt $time ]; do
-        if [ -f "$file" ] && [ "$state" = "deleted" ]; then
-            break
-        elif [ ! -f "$file" ] && [ "$state" = "created" ]; then
-            break
+        if [ -f "$file" ]; then
+            return
         fi
         sleep 0.1
         waited=$(($waited + 1))
     done
+}
+
+sleepwatch-rm() {
+    # sleep but break if file is created or deleted and remove file at the end
+    sleepwatch $1 $2
+    rm-exist $1
 }
 
 rm-exist() {
