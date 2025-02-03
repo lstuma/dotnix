@@ -114,6 +114,7 @@
     tmux
     croc
     cowsay
+    cron
     firefox
     nix-output-monitor
     # nvidia-docker

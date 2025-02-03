@@ -29,6 +29,7 @@
     python3
     killall
     pferd
+    tree
     signal-desktop
     obsidian
     git
