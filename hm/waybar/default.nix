@@ -47,17 +47,20 @@
           tooltip = true;
           return-type = "json";
           on-click = "/usr/bin/env bash $HOME/.config/waybar/scripts/clock.sh click";
+          exec-once = true;
         };
 
         "custom/volume" = {
           exec = "/usr/bin/env bash $HOME/.config/waybar/scripts/volume.sh";
           on-click = "/usr/bin/env bash $HOME/.config/hypr/scripts/change-volume.sh mute";
+          exec-once = true;
         };
 
         "custom/battery" = {
           exec = "/usr/bin/env bash $HOME/.config/waybar/scripts/battery.sh";
           return-type = "json";
           on-click = "/usr/bin/env bash $HOME/.config/waybar/scripts/battery.sh click";
+          exec-once = true;
         };
 
         "custom/conn" = {
