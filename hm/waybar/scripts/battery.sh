@@ -64,6 +64,6 @@ while true; do
         rm "$TEMP_CLICK_FILE"
     else
         output
-        sleep 1
+        sleep 0.5
     fi
 done
