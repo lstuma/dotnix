@@ -8,7 +8,8 @@ click-touch() {
         rm "$file"
     else
         echo "creating $file"
-        touch "$file"
+        # ensure the file is empty
+        echo -n "" > $file
     fi
 }
 
@@ -16,6 +17,10 @@ click-untouch() {
     # create or delete file on click
     file=$1
     timeout=$2
+    # if theres is already an id in the file, do notthing
+    if [ -f "$file" ]; then
+        return
+    fi
     (echo "$BASHPID" > $file && sleep $timeout && if [ $(cat $file) = $BASHPID ]; then rm $file; fi) &
 }
 
