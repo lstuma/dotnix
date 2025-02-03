@@ -19,4 +19,4 @@ pkgs.mkShell {
   packages = [
     nixos-wizard-package
   ];
-};
+}
