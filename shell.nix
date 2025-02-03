@@ -19,7 +19,7 @@ in
 pkgs.mkShell {
   buildInputs = with pythonPackages; [
     python
-    types-networkx
+    nixos-wizard
     cowsay
     lolcat
   ] ++ [ pkgs.gnupg ];
