@@ -40,6 +40,6 @@
       };
       devShells = {
         default = pkgs: import ./shell.nix { inherit pkgs; };
-      }
+      };
     };
 }

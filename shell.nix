@@ -2,16 +2,16 @@
 
 let
   pythonPackages = pkgs.python3Packages;
-  types-networkx =
+  nixos-wizard =
     let
-      pname = "types-networkx";
-      version = "3.1.0.20231220";
+      pname = "nixos-wizard";
+      version = "0.1.0";
     in
     pythonPackages.buildPythonPackage {
       inherit pname version;
       src = pkgs.fetchPypi {
         inherit pname version;
-        sha256 = "sha256-ikAz9jGqoVEpob6MFNw6lj1/BL7Zev9kYJIBw5w0nN0=";
+        sha256 = "7ad58437c6dc90904969697e40173f1da7a8f8324aa5b4576c8b71fe18e9b505";
       };
       doCheck = false;
     };
