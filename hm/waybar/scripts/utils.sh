@@ -4,8 +4,10 @@ click_touch() {
     # create or delete file on click
     file=$1
     if [ -f "$file" ]; then
+        echo "deleting $file"
         rm "$file"
     else
+        echo "creating $file"
         touch "$file"
     fi
 }
