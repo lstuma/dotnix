@@ -18,6 +18,7 @@
     ./neofetch
     ./zed
     ./ferdium
+    ./latex
   ];
 
   stylix.targets = lib.mkForce {
