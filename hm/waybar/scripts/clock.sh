@@ -15,5 +15,12 @@ TOOLTIP_ICON="󰥔"
 TOOLTIP_COLOR="$WHITE"
 TOOLTIP_TEXT="$TOOLTIP_ICON $TIME\n$DATE"
 
+# on click shortly change text to time+date
+read -r line
+if [[ "$line" ]]; then
+    TEXT="$ICON $TIME $DATE"
+    TOOLTIP_TEXT="$line"
+fi
+
 # format the output
 echo "{\"text\":\"$TEXT\", \"tooltip\": \"$TOOLTIP_TEXT\"}"
