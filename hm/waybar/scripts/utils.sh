@@ -8,7 +8,7 @@ output() {
 }
 
 sleepwatch() {
-    # check if file is deleted or created
+    # sleep but break if file is created or deleted
     file=$1
     time=$((time * 10))
     if [ ! -f "$file" ]; then
