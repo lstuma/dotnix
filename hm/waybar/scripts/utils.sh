@@ -29,6 +29,7 @@ sleepwatch() {
             echo "file $file deleted" >> /tmp/waybar.log
             return
         fi
+        echo "waiting for $file" >> /tmp/waybar.log
         sleep 0.1
         waited=$(($waited + 1))
     done
