@@ -16,6 +16,10 @@ TOOLTIP_COLOR="$WHITE"
 
 TEMP_CLICK_FILE="/tmp/clock_clicked"
 
+output() {
+    echo "{\"text\":\"$TEXT\", \"tooltip\": \"$TOOLTIP_TEXT\"}"
+}
+
 while true; do
     TIME=$(date +"%H:%M:%S")
     DATE=$(date +"%A %d %B %Y")
@@ -27,12 +31,10 @@ while true; do
     if [ -f "$TEMP_CLICK_FILE" ]; then
         TEXT="$ICON $TIME $DATE"
         rm "$TEMP_CLICK_FILE"
-        DELAY="10"
+        output
+        sleep 10
     else
-        DELAY="0.5"
+        output
+        sleep 0.5
     fi
-
-    # format the output
-    echo "{\"text\":\"$TEXT\", \"tooltip\": \"$TOOLTIP_TEXT\"}"
-    sleep "$DELAY"
 done

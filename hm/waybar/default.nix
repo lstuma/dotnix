@@ -50,6 +50,7 @@
 
         "custom/volume" = {
           exec = "/usr/bin/env bash $HOME/.config/waybar/scripts/volume.sh";
+          on-click = "/usr/bin/env bash $HOME/.config/hypr/scripts/change-volume.sh mute";
           interval = 1;
         };
 
