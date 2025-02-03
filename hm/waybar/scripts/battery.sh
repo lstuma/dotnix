@@ -23,6 +23,9 @@ while true; do
     FULL=$(echo "$BATTERY" | grep "Full")
     CHARGE=$(echo "$BATTERY" | grep -Eo "[0-9]+")
     TIME_REMAINING=$(acpi -b | grep -Eo "[0-9][0-9]:[0-9][0-9]:[0-9][0-9]")
+    if [[ -z "$TIME_REMAINING" ]]; then
+        TIME_REMAINING="??:??:??"
+    fi
     COLOR="$RED"
     ICON="?"
 
@@ -53,7 +56,7 @@ while true; do
 
     if [ -f "$CLICK_FILE" ]; then
         TEXT="<span color=\\\"$COLOR\\\">$TIME_REMAINING remaining $ICON$CHARGE%</span>"
-        click-untouched $CLICK_FILE 5
+        click-untouch $CLICK_FILE 5
     fi
     output "$TEXT" "$TOOLTIP_TEXT"
     sleep 0.3
