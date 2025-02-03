@@ -2,7 +2,7 @@
 let
   pythonPackages = pkgs.python3Packages;
 in
-pythonPackages.buildPythonPackage {
+pythonPackages.buildPythonPackage rec {
   pname = "nixos-wizard";
   version = "0.1.0";
   src = pkgs.fetchPypi {
