@@ -48,9 +48,9 @@
         };
 
         "custom/conn" = {
-          exec = "/usr/bin/env bash $HOME/.config/waybar/scripts/wifi.sh";
+          exec = "/usr/bin/env bash $HOME/.config/waybar/scripts/wifi.sh loopback";
           interval = 3;
-        }
+        };
       };
     };
     style = ''
