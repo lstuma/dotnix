@@ -48,7 +48,7 @@ sudo /usr/bin/env bash -p -c "$REBUILD_CMD"
 RET=?
 
 unset xtrace
-if [[ $RET -eq 0 ]]
+if [[ "$RET" -eq "0" ]]
 then
   echo -e "${BLUE}rebuild.sh: ${GREEN}build finished${NC}";
   notify "build finished";
