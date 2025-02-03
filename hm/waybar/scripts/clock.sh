@@ -23,13 +23,13 @@ while true; do
     TEXT="$ICON $TIME"
     TOOLTIP_TEXT="$TOOLTIP_ICON $TIME\n$DATE"
 
-    DELAY="0.5"
-
     # on click shortly change text to time+date
     if [ -f "$TEMP_CLICK_FILE" ]; then
         TEXT="$ICON $TIME $DATE"
         rm "$TEMP_CLICK_FILE"
-        DELAY="5"
+        DELAY="10"
+    else
+        DELAY="0.5"
     fi
 
     # format the output
