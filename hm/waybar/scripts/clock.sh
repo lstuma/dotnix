@@ -17,7 +17,7 @@ TOOLTIP_TEXT="$TOOLTIP_ICON $TIME\n$DATE"
 
 # on click shortly change text to time+date
 read -r line
-if [[ "$line" ]]; then
+if [ "$line" ]; then
     TEXT="$ICON $TIME $DATE"
     touch /tmp/clock_clicked_debug
 fi
