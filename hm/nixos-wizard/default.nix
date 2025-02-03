@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ lib, config, pkgs, ... }:
 let
   pythonPackages = (python3.withPackages(ps: with ps; [ i3ipc pip ]));
   nixos-wizard-package =
@@ -16,7 +16,9 @@ let
   };
 in
 {
-  home.packages = with pkgs; [
-    nixos-wizard-package
-  ];
+  pkgs.mkShell {
+    packages = [
+      nixos-wizard-package
+    ];
+  };
 }
