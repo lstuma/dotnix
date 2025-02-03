@@ -24,6 +24,6 @@ while true; do
         fi
     fi
     OUTPUT+=" $VOLUME%"
-
     echo "<span color=\"$COLOR\">$OUTPUT</span>"
+    sleep 0.5
 done
