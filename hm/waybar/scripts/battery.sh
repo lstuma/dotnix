@@ -58,7 +58,7 @@ while true; do
     TOOLTIP_TEXT="$BATTERY% $TIME_REMAINING"
 
     if [ -f "$TEMP_CLICK_FILE" ]; then
-        TEXT="<span color=\\\"$COLOR\\\">$ICON$CHARGE% $TIME_REMAINING</span>"
+        TEXT="<span color=\\\"$COLOR\\\">$TIME_REMAINING remaining $ICON$CHARGE%</span>"
         output
         sleep 10
         rm "$TEMP_CLICK_FILE"
