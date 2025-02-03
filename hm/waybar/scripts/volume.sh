@@ -9,7 +9,7 @@ while true; do
     COLOR="#bd93f9";
 
     if [[ "$(pamixer --get-mute)" =~ "true"  ]] then
-        OUTPUT=" "
+        OUTPUT=""
         COLOR="$RED"
         else
         if [[ "$VOLUME" -eq "0" ]] then
@@ -20,7 +20,7 @@ while true; do
             OUTPUT=""
         else
             COLOR="$PURPLE"
-            OUTPUT=" "
+            OUTPUT=""
         fi
     fi
     OUTPUT+=" $VOLUME%"
