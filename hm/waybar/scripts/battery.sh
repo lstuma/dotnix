@@ -60,7 +60,7 @@ while true; do
     if [ -f "$TEMP_CLICK_FILE" ]; then
         TEXT="<span color=\\\"$COLOR\\\">$TIME_REMAINING remaining $ICON$CHARGE%</span>"
         output
-        sleep 10
+        sleep 4
         rm "$TEMP_CLICK_FILE"
     else
         output
