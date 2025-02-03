@@ -13,7 +13,7 @@ CHARGING=$(echo "$BATTERY" | grep "Charging")
 FULL=$(echo "$BATTERY" | grep "Full")
 CHARGE=$(echo "$BATTERY" | grep -Eo "[0-9]+")
 COLOR="$RED"
-ICON="󱐋"
+ICON="?"
 
 
 if [[ $FULL ]] then
@@ -38,4 +38,4 @@ else
     fi
 fi
 
-echo "<span color=\"$COLOR\">$ICON $CHARGE%</span>"
+echo "<span color=\"$COLOR\">$ICON$CHARGE%</span>"
