@@ -15,7 +15,7 @@ CHARGE=$(echo "$BATTERY" | grep -Eo "[0-9]+")
 COLOR="$RED"
 ICON="?"
 
-
+
 if [[ $FULL ]] then
     ICON=""
     COLOR="$GREEN"
