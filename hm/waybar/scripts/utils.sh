@@ -18,7 +18,7 @@ click-untouch() {
     file=$1
     timeout=$2
     # if theres is already an id in the file, do notthing
-    if [ -f "$file" ]; then
+    if [ $(cat $file) ]; then
         return
     fi
     (echo "$BASHPID" > $file && sleep $timeout && if [ $(cat $file) = $BASHPID ]; then rm $file; fi) &
