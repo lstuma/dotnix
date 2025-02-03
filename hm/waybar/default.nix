@@ -18,7 +18,7 @@
         reload_style_on_change = true;
 
 
-        modules-left = [ "clock" ];
+        modules-left = [ "custom/clock" ];
         modules-center = [ "hyprland/workspaces" ];
         modules-right = [ "tray" "mpris" "custom/conn" "custom/volume" "custom/battery" "upower"];
 
@@ -41,12 +41,12 @@
             "9" = [];
           };
         };
-        "custom/closk" = {
+        "custom/clock" = {
           exec = "/usr/bin/env bash $HOME/.config/waybar/scripts/clock.sh";
           tooltip = true;
           return-type = "json";
           interval = 1;
-        }
+        };
 
         "custom/volume" = {
           exec = "/usr/bin/env bash $HOME/.config/waybar/scripts/volume.sh";
