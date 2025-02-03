@@ -17,9 +17,8 @@ TOOLTIP_TEXT="$TOOLTIP_ICON $TIME\n$DATE"
 
 # on click shortly change text to time+date
 read -r line
-if [[ "$line" ]]; then
+if [[ "$line" == "click" ]]; then
     TEXT="$ICON $TIME $DATE"
-    TOOLTIP_TEXT="$line"
 fi
 
 # format the output

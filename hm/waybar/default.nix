@@ -46,6 +46,7 @@
           tooltip = true;
           return-type = "json";
           interval = 1;
+          on-click = "echo click";
         };
 
         "custom/volume" = {
