@@ -21,7 +21,7 @@ else
     COLOR="$PURPLE"
     OUTPUT="󰕾"
   fi
-  OUTPUT+="$VOLUME"
+  OUTPUT="$VOLUME$OUTPUT"
 fi
 
 echo "<span color=\"$COLOR\">$OUTPUT</span>"
