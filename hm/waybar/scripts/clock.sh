@@ -28,7 +28,7 @@ while true; do
     if [ -f "$TEMP_CLICK_FILE" ]; then
         TEXT="$ICON $TIME $DATE"
         (sleep 5 && rm-exist $TEMP_CLICK_FILE) &
+    fi
     output "$TEXT" "$TOOLTIP_TEXT"
     sleep 0.2
-    fi
 done
