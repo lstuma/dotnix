@@ -20,18 +20,6 @@ PURPLE="#bb9af7"
 LIGHT_GREEN="#b9f27c"
 LIGHT_BLUE="#7da6ff"
 
-watch(file, time) {
-    state=$(stat -c %Y "$file")
-    waited=0
-    while [ $waited -lt $time ]; do
-        if [ $state -ne $(stat -c %Y "$file") ]; then
-            break
-        fi
-        sleep 0.1
-        waited=$(($waited + 0.1))
-    done
-}
-
 while true; do
 
     BATTERY=$(battery)
