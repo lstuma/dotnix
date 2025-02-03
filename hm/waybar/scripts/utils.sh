@@ -25,7 +25,7 @@ sleepwatch() {
     time=$((time * 10))
     waited=0
     while [ $waited -lt $time ]; do
-        if [ -f "$file" ]; then
+        if [ ! -f "$file" ]; then
             return
         fi
         sleep 0.1
