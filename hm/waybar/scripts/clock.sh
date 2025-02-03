@@ -29,7 +29,7 @@ while true; do
         TEXT="$ICON $TIME $DATE"
         output "$TEXT" "$TOOLTIP_TEXT"
         sleepwatch "$TEMP_CLICK_FILE" 10
-        rm-exist "$TEMP_CLICK_FILE"
+        #rm-exist "$TEMP_CLICK_FILE"
     else
         output "$TEXT" "$TOOLTIP_TEXT"
         sleepwatch "$TEMP_CLICK_FILE" 0.8
