@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
-source "$HOME/.config/hm/waybar/scripts/utils.sh"
+SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
+source "$SCRIPT_DIR/utils.sh"
 
 TEMP_CLICK_FILE="/tmp/battery_clicked"
 if [ "$1" = "click" ]; then
