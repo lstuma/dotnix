@@ -32,7 +32,6 @@ in
 
   home.packages = with pkgs; [
     python3
-    nixos-wizard
     killall
     pferd
     tree
