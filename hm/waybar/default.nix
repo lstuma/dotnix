@@ -58,6 +58,7 @@
         "custom/battery" = {
           exec = "/usr/bin/env bash $HOME/.config/waybar/scripts/battery.sh";
           return-type = "json";
+          on-click = "/usr/bin/env bash $HOME/.config/waybar/scripts/battery.sh click";
         };
 
         "custom/conn" = {
