@@ -29,6 +29,7 @@ while true; do
     if [ -f "$TEMP_CLICK_FILE" ]; then
         TEXT="$ICON $TIME $DATE"
         rm "$TEMP_CLICK_FILE"
+        DELAY="5"
     fi
 
     # format the output
