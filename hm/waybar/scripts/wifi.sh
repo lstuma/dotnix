@@ -13,11 +13,10 @@ for conn in "${conns[@]}"
 do
   IFS=":" read -ra conn_data <<<"$conn"
   WIRELESS="$(echo ${conn_data[1]} | grep 'wireless')"
-  echo -ne "<span>"
   if [[ $WIRELESS ]] then
-    echo -ne "<span color=\"$COLOR_WIFI\">󰤨 </span>"
+    echo -ne "<span color=\"$COLOR_WIFI\">󰤨 "
   else
-    echo -ne "<span color=\"$COLOR_ETHER\">󱎔 </span>"
+    echo -ne "<span color=\"$COLOR_ETHER\">󱎔 "
   fi
   echo "${conn_data[0]}</span>"
 done
