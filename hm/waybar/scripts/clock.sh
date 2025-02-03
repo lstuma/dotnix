@@ -30,9 +30,9 @@ while true; do
     # on click shortly change text to time+date
     if [ -f "$TEMP_CLICK_FILE" ]; then
         TEXT="$ICON $TIME $DATE"
-        rm "$TEMP_CLICK_FILE"
         output
         sleep 10
+        rm "$TEMP_CLICK_FILE"
     else
         output
         sleep 0.5
