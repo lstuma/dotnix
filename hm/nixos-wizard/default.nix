@@ -15,10 +15,8 @@ let
     doCheck = false;
   };
 in
-{
-  pkgs.mkShell {
-    packages = [
-      nixos-wizard-package
-    ];
-  };
-}
+pkgs.mkShell {
+  packages = [
+    nixos-wizard-package
+  ];
+};
