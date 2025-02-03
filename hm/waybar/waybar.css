@@ -9,15 +9,15 @@
 @define-color bgcolor #222436;  /* background color */
 @define-color alert   #df3320;
 
-@define-color accent1 #ff7a93;
-@define-color accent2 #b9f27c;
-@define-color accent3 #ff9e64;
-@define-color accent4 #bb9af7;
-@define-color accent5 #7da6ff;
-@define-color accent6 #0db9d7;
-@define-color accent7 #f5ec6e;
-@define-color accent8 #ed5fda;
-@define-color accent9 #41d992;
+@define-color accent1 #ff7a93; /* red */
+@define-color accent2 #b9f27c; /* light green */
+@define-color accent3 #ff9e64; /* orange */
+@define-color accent4 #bb9af7; /* purple */
+@define-color accent5 #7da6ff; /* blue */
+@define-color accent6 #0db9d7; /* cyan */
+@define-color accent7 #f5ec6e; /* yellow */
+@define-color accent8 #ed5fda; /* magenta */
+@define-color accent9 #41d992; /* green */
 
 * {
   font-family: "FiraCode Nerd Font";

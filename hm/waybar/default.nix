@@ -41,7 +41,10 @@
             "9" = [];
           };
         };
-
+        "custom/volume" = {
+          exec = "/usr/bin/env bash $HOME/.config/waybar/scripts/volume.sh";
+          interval = 3;
+        };
         "custom/battery" = {
           exec = "/usr/bin/env bash $HOME/.config/waybar/scripts/battery.sh";
           interval = 5;
