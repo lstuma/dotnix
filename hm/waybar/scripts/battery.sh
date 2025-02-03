@@ -55,7 +55,7 @@ while true; do
         TEXT="<span color=\\\"$COLOR\\\">$TIME_REMAINING remaining $ICON$CHARGE%</span>"
         output "$TEXT" "$TOOLTIP_TEXT"
         sleepwatch $TEMP_CLICK_FILE 10
-        rm "$TEMP_CLICK_FILE"
+        rm-exist $TEMP_CLICK_FILE
     else
         output "$TEXT" "$TOOLTIP_TEXT"
         sleepwatch $TEMP_CLICK_FILE 2
