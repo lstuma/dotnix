@@ -186,6 +186,9 @@ tooltip {
 #custom-battery {
     padding-right: 10px;
 }
+#custom-clock {
+    padding-left: 10px;
+}
 
 #custom-conn,
 #custom-volume,
