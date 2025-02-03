@@ -1,5 +1,10 @@
 #!/usr/bin/env bash
 
+if [ "$1" = "click" ]; then
+    touch "/tmp/clock_clicked"
+    exit 0
+fi
+
 GREEN="#41d992"
 WHITE="#f8f8f2"
 YELLOW="#f5ec6e"
