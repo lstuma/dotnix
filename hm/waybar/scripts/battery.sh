@@ -55,7 +55,15 @@ while true; do
     fi
 
     TEXT="<span color=\\\"$COLOR\\\">$ICON$CHARGE%</span>"
-    TOOLTIP_TEXT="$BATTERY $TIME_REMAINING"
-    output
-    sleep 1
+    TOOLTIP_TEXT="$BATTERY% $TIME_REMAINING"
+
+    if [ -f "$TEMP_CLICK_FILE" ]; then
+        TEXT="<span color=\\\"$COLOR\\\">$ICON$CHARGE% $TIME_REMAINING</span>"
+        output
+        sleep 10
+        rm "$TEMP_CLICK_FILE"
+    else
+        output
+        sleep 1
+    fi
 done

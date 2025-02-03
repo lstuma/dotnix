@@ -24,7 +24,7 @@ while true; do
     TIME=$(date +"%H:%M:%S")
     DATE=$(date +"%A %d %B %Y")
 
-    TEXT="$ICON $TIME"
+    TEXT="$ICON $TIME   "
     TOOLTIP_TEXT="$TOOLTIP_ICON $TIME\n$DATE"
 
     # on click shortly change text to time+date
@@ -32,7 +32,7 @@ while true; do
         TEXT="$ICON $TIME $DATE"
         output
         sleep 10
-        #rm "$TEMP_CLICK_FILE"
+        rm "$TEMP_CLICK_FILE"
     else
         output
         sleep 0.5
