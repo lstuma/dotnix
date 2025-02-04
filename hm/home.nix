@@ -29,6 +29,7 @@ in
     hyprland.enable = false;
     kitty.enable = false;
     waybar.enable = false;
+    rofi.enable = false;
     wofi.enable = false;
   };
 
