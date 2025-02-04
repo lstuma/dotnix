@@ -11,7 +11,7 @@ in
   imports = [
     ./waybar
     ./hyprland
-    ./rofi
+    ./wofi
     ./dunst
     ./kitty
     ./hyprpaper

@@ -1,6 +1,6 @@
 { lib, config, ... }:
 {
-  programs.rofi = {
+  programs.wofi = {
     enable = true;
     cycle = true;
     location = "center";
