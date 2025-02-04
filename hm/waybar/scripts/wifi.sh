@@ -79,7 +79,8 @@ while true; do
     # on click shortly change text to network+speed
     if [ -f "$CLICK_FILE" ]; then
         add-speed ${conn_data[2]}
-        click-untouch $CLICK_FILE 5
+        # remove click file (deactivated since I like to keep the speed display on sometimes)
+        #click-untouch $CLICK_FILE 5
     fi
 
     text="<span color=\\\"$color\\\">$icon $output</span>"
