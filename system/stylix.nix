@@ -1,6 +1,11 @@
 { pkgs, ... }:
 {
-  environment.systemPackages = with pkgs; [ base16-schemes ];
+  environment.systemPackages = with pkgs; [
+    base16-schemes
+    breeze-icons
+    papirus-icon-theme
+    adwaita-icon-theme
+  ];
 
   stylix = {
     enable = true;
@@ -10,6 +15,6 @@
       name = "phinger-cursors-light";
       package = pkgs.phinger-cursors;
       size = 16;
-    };  
+    };
   };
 }
