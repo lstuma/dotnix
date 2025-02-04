@@ -1,9 +1,9 @@
 { lib, config, pkgs, ... }:
 {
-  programs.rofi = {
+  programs.wofi = {
     enable = true;
     #package = pkgs.rofi-wayland;
-    theme = ''
+    style = ''
       ${(builtins.readFile ./style.css)}
     '';
   };
