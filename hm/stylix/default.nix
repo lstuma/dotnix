@@ -9,7 +9,7 @@
   stylix = {
     enable = true;
     polarity = "dark";
-    stylix.iconTheme = {
+    iconTheme = {
       name = "breeze"; # You can change this to "Papirus", "Adwaita", etc.
       package = pkgs.breeze-icons; # Ensure the package is installed
     };
