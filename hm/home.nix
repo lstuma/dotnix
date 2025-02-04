@@ -23,7 +23,6 @@ in
     ./ferdium
     ./latex
     ./nixos-wizard
-    ./stylix
     ./dolphin
  ];
 
