@@ -15,7 +15,7 @@
         layer = "bottom";
         position = "top";
         fixed-center = true;
-        margin = "10";
+        margin = "3";
         # debug
         reload_style_on_change = true;
 
