@@ -25,6 +25,7 @@ in
     ./latex
     ./nixos-wizard
     ./dolphin
+    ./steam
  ];
 
   stylix.targets = lib.mkForce {
