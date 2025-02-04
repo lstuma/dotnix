@@ -9,8 +9,8 @@
   stylix = {
     enable = true;
     polarity = "dark";
-    yiconTheme = {
-      package = breeze-icons; # Ensure the package is installed
+    iconTheme = {
+      package = pkgs.breeze-icons; # Ensure the package is installed
     };
   };
 }
