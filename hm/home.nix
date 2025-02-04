@@ -9,6 +9,7 @@ in
   home.keyboard.layout = "de";
 
   imports = [
+    ./stylix
     ./waybar
     ./hyprland
     ./wofi
