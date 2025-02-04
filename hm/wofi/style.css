@@ -35,7 +35,8 @@ color: #f8f8f2;
 } 
 
 #entry.activatable #text {
-color: #282a36;
+/*color: #282a36;*/
+color: #f8f8f2;
 }
 
 #entry > * {

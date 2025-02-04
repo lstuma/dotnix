@@ -1,6 +1,6 @@
 { lib, config, ... }:
 {
-  programs.wofi = {
+  programs.rofi-wayland = {
     enable = true;
     style = ''
       ${(builtins.readFile ./style.css)}
