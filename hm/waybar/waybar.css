@@ -29,12 +29,13 @@
 }
 
 window#waybar {
-    /*    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(0, 0, 0, 0.3);
     color: #ffffff;
     transition-property: background-color;
     transition-duration: 0.5s;
     border-radius: 10px;
-    padding: 10px; */
+    padding: 50px;
+    margin: 500px !important;
 }
 
 window#waybar.hidden {
