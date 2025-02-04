@@ -23,6 +23,7 @@ in
     ./ferdium
     ./latex
     ./nixos-wizard
+    ./stylix
   ];
 
   stylix.targets = lib.mkForce {
