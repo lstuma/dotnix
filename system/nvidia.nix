@@ -54,8 +54,8 @@
   hardware.nvidia.prime = {
     # EITHER use nvidia sync OR offload
     offload = {
-      enable = true;
-      enableOffloadCmd = true;
+      enable = false;
+      enableOffloadCmd = false;
     };
 
     # reverseSync.enable = true;
