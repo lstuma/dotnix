@@ -3,7 +3,7 @@
   programs.rofi = {
     enable = true;
     package = pkgs.rofi-wayland;
-    style = ''
+    theme = ''
       ${(builtins.readFile ./style.css)}
     '';
   };
