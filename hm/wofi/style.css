@@ -42,15 +42,14 @@ window {
 
 #entry > * {
   color: #f8f8f2;
+  border: none;
 }
 
 #entry:selected {
   background-color: #44475a;
-  border: none;
 }
 
 #entry:selected #text {
-  border: none;
   font-weight: bold;
 }
 
