@@ -63,8 +63,8 @@
     LC_NAME = "en_US.UTF-8";
     LC_NUMERIC = "en_US.UTF-8";
     LC_PAPER = "en_US.UTF-8";
-    LC_TELEPHONE = "de_DE.UTF-8";
-    LC_TIME = "de_DE.UTF-8";
+    LC_TELEPHONE = "en_US.UTF-8";
+    LC_TIME = "nl_NL.UTF-8";
   };
 
   # Configure keymap in X11
