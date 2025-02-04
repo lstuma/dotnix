@@ -68,7 +68,7 @@
           exec = "/usr/bin/env bash $HOME/.config/waybar/scripts/wifi.sh loopback";
           return-type = "json";
           exec-once = true;
-          on-click-left = "/usr/bin/env bash $HOME/.config/waybar/scripts/wifi.sh loopback click"
+          on-click = "/usr/bin/env bash $HOME/.config/waybar/scripts/wifi.sh loopback click"
           on-click-right = "/usr/bin/env kitty -e nmtui";
         };
       };
