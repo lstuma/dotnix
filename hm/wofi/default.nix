@@ -1,7 +1,8 @@
-{ lib, config, ... }:
+{ lib, config, pkgs, ... }:
 {
-  programs.rofi-wayland = {
+  programs.rofi = {
     enable = true;
+    package = pkgs.rofi-wayland;
     style = ''
       ${(builtins.readFile ./style.css)}
     '';
