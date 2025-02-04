@@ -21,7 +21,7 @@ ICON_RX=""
 ICON_TX=""
 
 
-get-speed() {
+add-speed() {
   # get string representation of speed (upload and download)
   interface=$1
 
@@ -30,15 +30,15 @@ get-speed() {
   txMB=$((tx / 1024 / 1024))
   rxMB=$((rx / 1024 / 1024))
 
-  return "$ICON_RX $rxMB MB/s $ICON_TX $txMB MB/s"
+  output+=" <span color=\\\"$COLOR_RX\\\">$ICON_RX $rxMB MB/s</span> <span color=\\\"$COLOR_TX\\\">$ICON_TX $txMB MB/s</span>"
 }
 
 while true; do
     # get connection data from nmcli
-    data=$(nmcli -g "NAME,TYPE" -m tabular conn show --active | grep -v "loopback")
+    data=$(nmcli -g "NAME,TYPE,DEVICE" -m tabular conn show --active | grep -v "loopback")
     # only use first connection
     IFS=$'\n' read -rd '' -a conns <<<"$data"
-    IFS=":" read -ra conn_data <<<"$conn[0]"
+    IFS=":" read -ra conn_data <<<"${conns[0]}"
 
     # get icon and color
     if [[ ! $data ]]; then
@@ -48,17 +48,16 @@ while true; do
     elif [[ $(echo ${conn_data[1]} | grep "wireless") ]]; then
         color=$COLOR_WIFI
         icon=$ICON_WIFI
-        output=${conn_data[0]}
+        output="${conn_data[0]}"
     else
         color=$COLOR_ETHER
         icon=$ICON_ETHER
-        output=${conn_data[0]}
+        output="${conn_data[0]}"
     fi
 
     # on click shortly change text to network+speed
     if [ -f "$CLICK_FILE" ]; then
-        speed=$(get-speed ${conn_data[0]})
-        output+=" $speed"
+        add-speed ${conn_data[2]}
     fi
 
     text="<span color=\\\"$color\\\">$icon $output</span>"
