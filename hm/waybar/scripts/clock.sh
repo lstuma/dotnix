@@ -12,10 +12,10 @@ GREEN="#41d992"
 WHITE="#f8f8f2"
 YELLOW="#f5ec6e"
 
-ICON="󰥔"
+ICON=""
 COLOR="$WHITE"
-TOOLTIP_ICON="󰥔"
-TOOLTIP_COLOR="$WHITE"
+TOOLTIP_ICON="$ICON"
+TOOLTIP_COLOR="$COLOR"
 
 while true; do
     TIME=$(date +"%H:%M:%S")
