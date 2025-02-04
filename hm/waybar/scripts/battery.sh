@@ -24,7 +24,7 @@ while true; do
     CHARGE=$(echo "$BATTERY" | grep -Eo "[0-9]+")
     TIME_REMAINING=$(acpi -b | grep -Eo "[0-9][0-9]:[0-9][0-9]:[0-9][0-9]")
     if [[ -z "$TIME_REMAINING" ]]; then
-        TIME_REMAINING="??:??:??"
+        TIME_REMAINING="lots of time"
     fi
     COLOR="$RED"
     ICON="?"

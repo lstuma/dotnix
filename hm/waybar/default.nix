@@ -66,8 +66,10 @@
 
         "custom/conn" = {
           exec = "/usr/bin/env bash $HOME/.config/waybar/scripts/wifi.sh loopback";
-          interval = 3;
-          on-click = "/usr/bin/env kitty -e nmtui";
+          return-type = "json";
+          exec-once = true;
+          on-click-left = "/usr/bin/env bash $HOME/.config/waybar/scripts/wifi.sh loopback click"
+          on-click-right = "/usr/bin/env kitty -e nmtui";
         };
       };
     };
