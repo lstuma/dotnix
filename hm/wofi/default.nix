@@ -2,7 +2,6 @@
 {
   programs.wofi = {
     enable = true;
-    cycle = true;
     location = "center";
     extraConfig = {
       show-icons = true;
