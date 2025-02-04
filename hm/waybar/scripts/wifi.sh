@@ -43,10 +43,10 @@ add-speed() {
   txStr="$txKB KB"
   rxStr="$rxKB KB"
 
-  if [ $txMB -gt 100 ]; then
+  if [ $txMB -gt 5 ]; then
     txStr="$txMB MB"
   fi
-  if [ $rxMB -gt 100 ]; then
+  if [ $rxMB -gt 5 ]; then
     rxStr="$rxMB MB"
   fi
 
