@@ -2,7 +2,7 @@
 SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
 source "$SCRIPT_DIR/utils.sh"
 
-CLICK_FILE="/tmp/clock_clicked"
+CLICK_FILE="/tmp/wifi_clicked"
 if [ "$1" = "click" ]; then
     click-touch $CLICK_FILE
     exit 0
@@ -41,7 +41,7 @@ while true; do
     IFS=":" read -ra conn_data <<<"$conn[0]"
 
     # get icon and color
-    if [[ ! $(data) ]]; then
+    if [[ ! $data ]]; then
         color=$COLOR_DISCONNECTED
         icon=$ICON_DISCONNECTED
         output="No connection"
