@@ -34,7 +34,7 @@ in
     wofi.enable = false;
   };
 
-
+  gtk.enable = true;
 
   home.packages = with pkgs; [
     python3
