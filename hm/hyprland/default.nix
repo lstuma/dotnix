@@ -17,6 +17,8 @@
       xwayland {
         force_zero_scaling = true
       }
+      env = QT_QPA_PLATFORM,wayland
+      env = QT_QPA_PLATFORMTHEME,qt5ct
     '';
     settings = {
       input.kb_layout = "de";
@@ -26,7 +28,7 @@
         "hyprpaper"
         "hyprctl setcursor phinger-cursor-light 16"
       ];
-      "$mod" = "SUPER";  
+      "$mod" = "SUPER";
       bind = [
         # open terminal
         "$mod, RETURN, exec, kitty"
@@ -51,7 +53,7 @@
         "$mod, left, movefocus, l"
         "$mod, right, movefocus, r"
         "$mod, up, movefocus, u"
-        "$mod, down, movefocus, d"  
+        "$mod, down, movefocus, d"
         # super+tab workspace movement
         "$mod, tab, workspace, m+1"
         "$mod SHIFT, tab, workspace, m-1"
@@ -95,7 +97,7 @@
         ", xf86AudioPlayPause, exec, playcerctl play-pause"
         ", xf86AudioNext, exec, playerctl next"
         ", xf86AudioPrev, exec, playerctl previous"
-        # brightness control 
+        # brightness control
         ", xf86MonBrightnessDown, exec, /usr/bin/env bash $HOME/.config/hypr/scripts/change-brightness.sh down 5"
         ", xf86MonBrightnessUp, exec, /usr/bin/env bash $HOME/.config/hypr/scripts/change-brightness.sh up 5"
       ];
@@ -110,7 +112,7 @@
         # resize wirndow with dragging
         "$mod, mouse:272, movewindow"
         "$mod, mouse:273, resizewindow"
-      ];  
+      ];
       general = {
         "gaps_in" = 4;
         "gaps_out" = 6;
