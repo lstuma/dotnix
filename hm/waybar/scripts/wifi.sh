@@ -25,8 +25,16 @@ add-speed() {
   # get string representation of speed (upload and download)
   interface=$1
 
-  tx=$(cat /sys/class/net/$interface/statistics/tx_bytes)
-  rx=$(cat /sys/class/net/$interface/statistics/rx_bytes)
+  # get rx and tx speed in bytes per second
+  rxStart=$(cat /sys/class/net/$interface/statistics/rx_bytes)
+  txStart=$(cat /sys/class/net/$interface/statistics/tx_bytes)
+  sleep 0.5
+  rxEnd=$(cat /sys/class/net/$interface/statistics/rx_bytes)
+  txEnd=$(cat /sys/class/net/$interface/statistics/tx_bytes)
+
+  rx=$(((rxEnd - rxStart) * 2))
+  tx=$(((txEnd - txStart) * 2))
+
   txKB=$((tx / 1024))
   rxKB=$((rx / 1024))
   txMB=$((tx / 1024 / 1024))
@@ -71,6 +79,7 @@ while true; do
     # on click shortly change text to network+speed
     if [ -f "$CLICK_FILE" ]; then
         add-speed ${conn_data[2]}
+        click-untouch $CLICK_FILE 5
     fi
 
     text="<span color=\\\"$color\\\">$icon $output</span>"
