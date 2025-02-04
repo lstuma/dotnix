@@ -15,8 +15,8 @@ ICON_DISCONNECTED="󰤮"
 ICON_WIFI="󰤨"
 ICON_ETHER="󱎔"
 
-COLOR_RX="#ed5fda"
-COLOR_TX="#ff9e64"
+COLOR_RX="#41d992"
+COLOR_TX="#ed5fda"
 ICON_RX=""
 ICON_TX=""
 
