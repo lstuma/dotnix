@@ -2,9 +2,11 @@
 {
   stylix = {
     enable = true;
+    polarity = "dark";
     iconTheme = {
-      name = "Papirus";  # Replace with your preferred icon theme
-      package = pkgs.papirus-icon-theme;  # Ensure the icon theme package is installed
+      package = pkgs.papirus-icon-theme.override { color = "indigo"; };
+      dark = "Papirus-Dark"; # used
+      light = "Papirus-Light"; # unused
     };
   };
 }
