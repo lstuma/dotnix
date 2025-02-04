@@ -27,10 +27,23 @@ add-speed() {
 
   tx=$(cat /sys/class/net/$interface/statistics/tx_bytes)
   rx=$(cat /sys/class/net/$interface/statistics/rx_bytes)
+  txKB=$((tx / 1024))
+  rxKB=$((rx / 1024))
   txMB=$((tx / 1024 / 1024))
   rxMB=$((rx / 1024 / 1024))
 
-  output+=" <span color=\\\"$COLOR_RX\\\">$ICON_RX $rxMB MB/s</span> <span color=\\\"$COLOR_TX\\\">$ICON_TX $txMB MB/s</span>"
+  txStr="$txKB KB"
+  rxStr="$rxKB KB"
+
+  if [ $txKB -gt 4096 ]; then
+    txStr="$txMB MB"
+  fi
+  if [ $rxKB -gt 4096 ]; then
+    rxStr="$rxMB MB"
+  fi
+
+
+  output+=" <span color=\\\"$COLOR_RX\\\">$ICON_RX $rxStr</span> <span color=\\\"$COLOR_TX\\\">$ICON_TX $txStr</span>"
 }
 
 while true; do
