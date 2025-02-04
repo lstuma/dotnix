@@ -124,7 +124,6 @@
     libva
     mesa
     libglvnd
-    libglvnd.override { enable32bit = true; }
     vulkan-tools
     steam
 
