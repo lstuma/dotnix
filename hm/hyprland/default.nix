@@ -33,7 +33,7 @@
         # open terminal
         "$mod, RETURN, exec, kitty"
         # rofi launcher
-        "$mod, D, exec, pkill rofi || rofi -show drun -modi drun,filebrowser,run,window"
+        "$mod, D, exec, pkill wofi || wofi --show drun --allow-images --no-actions"
         # screenshot
         "$mod SHIFT, J, exec, hyprshot -m region --clipboard-only"
         # killactive
