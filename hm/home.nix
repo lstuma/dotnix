@@ -24,7 +24,8 @@ in
     ./latex
     ./nixos-wizard
     ./stylix
-  ];
+    ./dolphin
+ ];
 
   stylix.targets = lib.mkForce {
     hyprland.enable = false;
