@@ -35,16 +35,13 @@ get-speed() {
 
 while true; do
     # get connection data from nmcli
-    data=$(nmcli -g "NAME,TYPE" -m tabular conn show --active)
-    if [[ $1 ]]; then
-        data=$(echo $data | grep -v "$0")
-    fi
+    data=$(nmcli -g "NAME,TYPE" -m tabular conn show --active | grep -v "loopback")
     # only use first connection
     IFS=$'\n' read -rd '' -a conns <<<"$data"
     IFS=":" read -ra conn_data <<<"$conn[0]"
 
     # get icon and color
-    if [[ ${#yconn_data[@]} -eq 0 ]]; then
+    if [[ ! $(data) ]]; then
         color=$COLOR_DISCONNECTED
         icon=$ICON_DISCONNECTED
         output="No connection"
