@@ -35,16 +35,6 @@ window {
 } 
 
 
-#icon-search {
-  expand   : false;
-  filename : "search-symbolic";
-  size     : 14px;
-}
-
-#entry {
-  placeholder: "Search..";
-}
-
 #entry.activatable #text {
   /*color: #282a36;*/
   color: #f8f8f2;
@@ -60,6 +50,7 @@ window {
 }
 
 #entry:selected #text {
+  border: none;
   font-weight: bold;
 }
 
