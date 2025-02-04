@@ -123,6 +123,10 @@
     egl-wayland
     libva
     mesa
+    libglvnd
+    libglvnd.override { enable32bit = true; }
+    vulkan-tools
+    steam
 
     # linuxKernel.packages.linux_6_6.nvidia_x11
     # nvidia-settings
