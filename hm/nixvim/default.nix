@@ -210,7 +210,7 @@
       {
         mode = "n";
         key = "<C-A-Right>";
-        action = "<leader>n";
+        action = "<cmd>BufferLineCycleNext<cr>";
         options = {
           desc = "Alias for <leader>n";
         };
@@ -218,7 +218,7 @@
       {
         mode = "n";
         key = "<C-A-Left>";
-        action = "<leader>p";
+        action = "<cmd>BufferLineCyclePrev<cr>";
         options = {
           desc = "Alias for <leader>p";
         };
