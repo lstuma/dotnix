@@ -25,7 +25,7 @@ in
     ./latex
     ./nixos-wizard
     ./dolphin
-    ./steam
+    ./nixvim
  ];
 
   stylix.targets = lib.mkForce {
