@@ -161,6 +161,70 @@
       }
       {
         mode = "n";
+        key = "<C-w><C-Left>";
+        action = "<cmd>vert wincmd H<cr>";
+        options = {
+          desc = "Move window to left";
+        };
+      }
+      {
+        mode = "n";
+        key = "<C-w><C-Right>";
+        action = "<cmd>vert wincmd L<cr>";
+        options = {
+          desc = "Move window to right";
+        };
+      }
+      {
+        mode = "n";
+        key = "<C-w><C-Up>";
+        action = "<cmd>vert wincmd K<cr>";
+        options = {
+          desc = "Move window up";
+        };
+      }
+      {
+        mode = "n";
+        key = "<C-w><C-Right>";
+        action = "<cmd>vertical resize +1<cr>";
+        options = {
+          desc = "Move window down";
+      };
+      }
+      {
+        mode = "n";
+        key = "<C-w><S-Right>";
+        action = "<cmd>resize +1<cr>";
+        options = {
+          desc = "Horizontally upsize window";
+        };
+      }
+      {
+        mode = "n";
+        key = "<C-w><S-Left>";
+        action = "<cmd>resize -1<cr>";
+        options = {
+          desc = "Horizontally downsize window";
+        };
+      }
+      {
+        mode = "n";
+        key = "<C-w><S-Up>";
+        action = "<cmd>vertical resize +1<cr>";
+        options = {
+          desc = "Vertically upsize window";
+        };
+      }
+      {
+        mode = "n";
+        key = "<C-w><S-Down>";
+        action ="<cmd>vertical resize -1<cr>";
+        options = {
+          desc = "Vertically downsize window";
+        };
+      }
+      {
+        mode = "n";
         key = "<leader>n";
         action = "<cmd>BufferLineCycleNext<cr>";
         options = {
@@ -178,7 +242,7 @@
       {
         mode = "n";
         key = "<leader>x";
-        action = "<cmd>bdelete<cr><cmd>BufferLineCycleNext<cr><cmd>bdelete<cr>";
+        action = "<cmd>bdelete<cr><cmd>BufferLineCycleNext<cr>";
         options = {
           desc = "Delete current puffer and then cycle to next buffer";
         };
