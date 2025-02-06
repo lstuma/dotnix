@@ -234,7 +234,7 @@
         options = {
           desc = "Alias for <leader>n";
         };
-      };
+      }
       {
         mode = "n";
         key = "<C-A-Left>";
