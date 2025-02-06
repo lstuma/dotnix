@@ -117,6 +117,18 @@
                 highlight = "Directory";
                 text_align = "left";
               }
+              {
+                filetype = "copilot-chat";
+                text = "Copilot Chat";
+                highlight = "Directory";
+                text_align = "left";
+              }
+              {
+                filetype="copilot-panel";
+                text = "Copilot Panel";
+                highlight = "Directory";
+                text_align = "left";
+              }
             ];
           };
         };
