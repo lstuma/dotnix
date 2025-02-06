@@ -197,7 +197,7 @@
       }
       {
         mode = "n";
-        key = "<C-w>-";
+        key = "<C-w>+";
         action = "<cmd>vert resize +3<cr>";
         options = {
           desc = "Horizontally upsize window";
