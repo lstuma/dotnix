@@ -247,13 +247,13 @@
           noremap = true;
         };
       }
+      {
         mode = "i";
         key = "<Right>";
         action = "<Esc><Right>i";
         options = {
           noremap = true;
         };
-      {
       }
       {
         mode = "n";
