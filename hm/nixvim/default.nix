@@ -223,11 +223,15 @@
       number = true;
     };
     extraConfigLua = ''
+      function get_mode()
+        local mode = vim.api.nvim.get_mode().mode
+        return mode
+      end
       function wrap_right()
         local col = vim.fn.col('.')
         local line = vim.fn.getline('.')
         if col-1 >= #line then
-          return 'j0'
+          return '<Esc>j0' + get_mode()
         else
           return '<Right>'
         end
@@ -235,7 +239,7 @@
       function wrap_left()
         local col = vim.fn.col('.')
         if col == 1 then
-          return 'k$'
+          return '<Esc>k$' + get_mode()
         else
           return '<Left>'
         end
@@ -243,23 +247,7 @@
       '';
     keymaps = [
       {
-        mode = "i";
-        key = "<Left>";
-        action = "<Esc><Left>i";
-        options = {
-          noremap = true;
-        };
-      }
-      {
-        mode = "i";
-        key = "<Right>";
-        action = "<Esc><Right>i";
-        options = {
-          noremap = true;
-        };
-      }
-      {
-        mode = "n";
+        mode = [ "n" "i" ];
         key = "<Left>";
         action = "v:lua.wrap_left()";
         options = {
@@ -268,7 +256,7 @@
         };
       }
       {
-        mode = "n";
+        mode = [ "n" "i" ];
         key = "<Right>";
         action = "v:lua.wrap_right()";
         options = {
