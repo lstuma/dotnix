@@ -117,6 +117,12 @@
                 highlight = "Directory";
                 text_align = "left";
               }
+              {
+                filetype = "copilot";
+                text = "Copilot";
+                highlight = "Directory";
+                text_align = "right";
+              }
             ];
           };
         };
