@@ -177,7 +177,25 @@
         enable = true;
         settings = {
           autoEnableSources = true;
+          sources =  [
+            { name = "emoji"; }
+            { name = "nvim_lsp"; }
+            { name = "copilot"; }
+            { 
+              name = "path";
+              keywordLength = 3;
+            }
+          ];
         };
+      };
+      cmp-emoji = {
+        enable = true;
+      };
+      cmp-nvim-lsp = {
+        enable = true;
+      };
+      cmp-path = {
+        enable = true;
       };
       copilot-cmp = {
         enable = true;
