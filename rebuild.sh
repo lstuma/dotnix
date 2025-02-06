@@ -41,7 +41,7 @@ fi
 
 echo -e "${BLUE}rebuild.sh: ${YELLOW}rebuilding NixOS Configuration${NC}"
 
-REBUILD_CMD="nixos-rebuild switch --flake .# --log-format internal-json -v |& nom --json"
+REBUILD_CMD="nixos-rebuild switch --flake .# --show-trace --log-format internal-json -v |& nom --json"
 set xtrace
 sudo /usr/bin/env bash -p -c "$REBUILD_CMD"
 
