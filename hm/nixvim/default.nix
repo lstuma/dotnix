@@ -118,11 +118,17 @@
           suggestion = {
             enabled = true;
           };
-        };
-        panel = {
-          enabled = true;
+          panel = {
+            enabled = true;
+          };
         };
       };
+    };
+    options = {
+      tabstop = 2;
+      shiftwidth = 2;
+      softtabstop = 2;
+      expandtab = true;
     };
     extraConfigLua = ''
       vim.g.mapleader = " "
