@@ -162,7 +162,7 @@
       {
         mode = "n";
         key = "<C-w><C-Left>";
-        action = "<cmd>vert wincmd H<cr>";
+        action = "<C-w>H";
         options = {
           desc = "Move window to left";
         };
@@ -170,26 +170,10 @@
       {
         mode = "n";
         key = "<C-w><C-Right>";
-        action = "<cmd>vert wincmd L<cr>";
+        action = "<C-w>L";
         options = {
           desc = "Move window to right";
         };
-      }
-      {
-        mode = "n";
-        key = "<C-w><C-Up>";
-        action = "<cmd>vert wincmd K<cr>";
-        options = {
-          desc = "Move window up";
-        };
-      }
-      {
-        mode = "n";
-        key = "<C-w><C-Down>";
-        action = "<cmd>vert wincmd J<cr>";
-        options = {
-          desc = "Move window down";
-      };
       }
       {
         mode = "n";
@@ -209,22 +193,6 @@
       }
       {
         mode = "n";
-        key = "<C-w><S-Up>";
-        action = "<cmd>vertical resize +1<cr>";
-        options = {
-          desc = "Vertically upsize window";
-        };
-      }
-      {
-        mode = "n";
-        key = "<C-w><S-Down>";
-        action ="<cmd>vertical resize -1<cr>";
-        options = {
-          desc = "Vertically downsize window";
-        };
-      }
-      {
-        mode = "n";
         key = "<leader>n";
         action = "<cmd>BufferLineCycleNext<cr>";
         options = {
@@ -237,6 +205,22 @@
         action = "<cmd>BufferLineCyclePrev<cr>";
         options = {
           desc = "Cycle to previous buffer";
+        };
+      }
+      {
+        mode = "n";
+        key = "<C-A-Right>";
+        action = "<leader>n";
+        options = {
+          desc = "Alias for <leader>n";
+        };
+      }
+      {
+        mode = "n";
+        key = "<C-A-Left>";
+        action = "<leader>p";
+        options = {
+          desc = "Alias for <leader>p";
         };
       }
       {
