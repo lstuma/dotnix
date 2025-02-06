@@ -51,6 +51,9 @@
             expanderHighlight = "NeoTreeExpander";
           };
         };
+        window = {
+          width = 30;
+        };
       };
       navic = {
         enable = true;
@@ -160,6 +163,9 @@
         settings = {
           auto_insert_mode = true;
           auto_follow_cursor = false;
+          window = {
+            width = 70;
+          };
         };
       };
     };
