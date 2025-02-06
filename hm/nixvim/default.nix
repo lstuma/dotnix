@@ -117,12 +117,6 @@
                 highlight = "Directory";
                 text_align = "left";
               }
-              {
-                filetype = "copilot";
-                text = "Copilot";
-                highlight = "Directory";
-                text_align = "right";
-              }
             ];
           };
         };
@@ -153,7 +147,7 @@
         enable = true;
         settings = {
           auto_insert_mode = true;
-
+          auto_follow_cursor = false;
         };
       };
     };
@@ -218,7 +212,7 @@
         key = "<leader>p";
         action = "<cmd>BufferLineCyclePrev<cr>";
         options = {
-          desc = "Cycle to previous buffer";
+          desc = "Cycle to previous buffer"; 
         };
       }
       {
@@ -256,9 +250,9 @@
       {
         mode = "n";
         key = "<leader>ct";
-        action = "<cmd>CopilotChatToggle<cr>";
+        action = "<cmd>Copilot panel<cr>";
         options = {
-          desc = "Toggle copilot chat window";
+          desc = "Open Copilot panel in current window";
         };
       }
     ];
