@@ -6,6 +6,10 @@ let
     });
 in
 {
+  home.packages = with pkgs; [
+    nixvim
+  ];
+
   programs.nixvim = {
     enable = true;
     defaultEditor = true;
