@@ -229,7 +229,7 @@
       '';
     keymaps = [
       {
-        mode = ["n", "v"];
+        mode = ["i" "n" "v"];
         key = "<Left>";
         action = "v:lua.wrap_left()";
         options = {
@@ -238,7 +238,7 @@
         };
       }
       {
-        mode = ["i", "n", "v"];
+        mode = ["i" "n" "v"];
         key = "<Right>";
         action = "v:lua.wrap_right()";
         options = {
