@@ -9,6 +9,7 @@ in
   home.keyboard.layout = "de";
 
   imports = [
+    inputs.nixvim.homeManagerModules.nixvim  # Import nixvim module
     ./stylix
     ./waybar
     ./hyprland
