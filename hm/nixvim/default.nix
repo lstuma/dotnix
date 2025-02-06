@@ -370,6 +370,7 @@
       {
         mode = "i";
         key = "<C-e>";
+        action = "cmp#close()";
         options = {
           expr = true;
           silent = true;
