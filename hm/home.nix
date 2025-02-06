@@ -9,6 +9,7 @@ in
   home.keyboard.layout = "de";
 
   imports = [
+    inputs.nixvim.homeManagerModules.nixvim
     ./stylix
     ./waybar
     ./hyprland
@@ -27,7 +28,6 @@ in
     ./dolphin
     #./nixvim
  ];
-
   nixvim = {
     enable = true;
   };
