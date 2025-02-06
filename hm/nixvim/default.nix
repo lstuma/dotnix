@@ -136,11 +136,16 @@
       };
       copilot-chat = {
         enable = true;
+        settings = {
+          auto_insert_mode = true;
+
+        };
       };
     };
     globals = {
       mapleader = " ";
       maplocalleader = " ";
+      copilot_chat_position = "right";
     };
     opts = {
       number = true;
