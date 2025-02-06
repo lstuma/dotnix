@@ -93,6 +93,12 @@
           };
         };
       };
+      web-devicons = {
+        enable = true;
+      };
+      transparent = {
+        enable = true;
+      };
       bufferline = {
         enable = true;
         settings = {
@@ -161,12 +167,14 @@
       copilot-chat = {
         enable = true;
         settings = {
-          auto_insert_mode = true;
           auto_follow_cursor = false;
           window = {
             width = 70;
           };
         };
+      };
+      copilot-cmp = {
+        enable = true;
       };
     };
     globals = {
@@ -176,7 +184,42 @@
     opts = {
       number = true;
     };
+    extraConfigLua = ''
+      function wrap_right()
+        local col = vim.fn.col('.')
+        local line = vim.fn.getline('.')
+        if col > #line then
+          return 'j0'
+        else
+          return '<Right>'
+        end
+      end
+      function wrap_left()
+        local col = vim.fn.col('.')
+        if col == 1 then
+          return 'k$'
+        else
+          return '<Left>'
+        end
+      end
+      '';
     keymaps = [
+      {
+        key = "<Left>";
+        action = "v:lua.wrap_left()";
+        options = {
+          expr = true;
+          noremap = true;
+        };
+      }
+      {
+        key = "<Right>";
+        action = "v:lua.wrap_right()";
+        options = {
+          expr = true;
+          noremap = true;
+        };
+      }
       {
         mode = "n";
         key = "<leader>e";
@@ -204,7 +247,7 @@
       {
         mode = "n";
         key = "<C-w>+";
-        action = "<cmd>vert resize +5<cr>";
+        action = "<cmd>vert resize +8<cr>";
         options = {
           desc = "Horizontally upsize window";
         };
@@ -212,7 +255,7 @@
       {
         mode = "n";
         key = "<C-w>-";
-        action = "<cmd>vert resize -5<cr>";
+        action = "<cmd>vert resize -8<cr>";
         options = {
           desc = "Horizontally downsize window";
         };
