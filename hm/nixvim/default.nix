@@ -100,7 +100,16 @@
             close_icon = "󰅚 ";
             buffer_close_icon = " ";
             modified_icon =" ";
+
+            show_buffer_icons = true;
+            show_buffer_close_icons = true;
+            show_close_icon = ture;
+            show_tab_indicators = ture;
             
+            seperator_style = "thin";
+            enfore_regular_tabs = false;
+            always_show_bufferline = true;
+
             offsets = [
               {
                 filetype = "neo-tree";
@@ -145,7 +154,6 @@
     globals = {
       mapleader = " ";
       maplocalleader = " ";
-      copilot_chat_position = "right";
     };
     opts = {
       number = true;
