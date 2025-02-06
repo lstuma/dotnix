@@ -193,7 +193,7 @@
             "<C-e>" = "cmp.mapping.abort()";
             "<C-b>" = "cmp.mapping.scroll_docs(-4)";
             "<C-f>" = "cmp.mapping.scroll_docs(4)";
-            "<C-Space>" = "cmp.mapping.complete()";
+            "<Tab>" = "cmp.mapping.complete()";
             "<C-CR>" = "cmp.mapping.confirm({ select = true })";
             "<S-CR>" = "cmp.mapping.confirm({ behavior = cmp.ConfirmBehavior.Replace, select = true })";
           };
@@ -224,7 +224,7 @@
         local col = vim.fn.col('.')
         local line = vim.fn.getline('.')
         if col-1 >= #line then
-          return '<Esc>j0'
+          return 'j0'
         else
           return '<Right>'
         end
@@ -232,7 +232,7 @@
       function wrap_left()
         local col = vim.fn.col('.')
         if col == 1 then
-          return '<Esc>k$'
+          return 'k$'
         else
           return '<Left>'
         end
@@ -240,7 +240,23 @@
       '';
     keymaps = [
       {
-        mode = ["i" "n" "v"];
+        mode = "i";
+        key = "<Left>";
+        action = "<Esc><Left>i";
+        options = {
+          noremap = true;
+        };
+      }
+        mode = "i";
+        key = "<Right>";
+        action = "<Esc><Right>i";
+        options = {
+          noremap = true;
+        };
+      {
+      }
+      {
+        mode = "n";
         key = "<Left>";
         action = "v:lua.wrap_left()";
         options = {
@@ -249,7 +265,7 @@
         };
       }
       {
-        mode = ["i" "n" "v"];
+        mode = "n";
         key = "<Right>";
         action = "v:lua.wrap_right()";
         options = {
