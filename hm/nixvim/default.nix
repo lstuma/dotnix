@@ -198,7 +198,7 @@
       {
         mode = "n";
         key = "<C-w>-";
-        action = "<cmd>vert resize +1<cr>";
+        action = "<cmd>vert resize +3<cr>";
         options = {
           desc = "Horizontally upsize window";
         };
@@ -206,7 +206,7 @@
       {
         mode = "n";
         key = "<C-w>-";
-        action = "<cmd>vert resize -1<cr>";
+        action = "<cmd>vert resize -3<cr>";
         options = {
           desc = "Horizontally downsize window";
         };
@@ -262,7 +262,7 @@
       {
         mode = "n";
         key = "<leader>ct";
-        action = "<cmd>CopilotChatToggle<cr>";
+        action = "<cmd>Neotree toggle<cr><cmd>CopilotChatToggle<cr><cmd>Neotree toggle<cr>";
         options = {
           desc = "Toggle Copilot Chat Window";
         };
