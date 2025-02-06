@@ -135,10 +135,13 @@
         };
       };
     };
-    extraConfigLua = ''
-      vim.g.mapleader = " "
-      vim.g.maplocalleader = " "
-    '';
+    globals = {
+      mapleader = " ";
+      maplocalleader = " ";
+    };
+    opts = {
+      number = true;
+    };
     keymaps = [
       {
         mode = "n";
