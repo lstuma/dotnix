@@ -1,6 +1,6 @@
 { lib, config, pkgs, ... }:
 {
-  programs.nixvim = {
+  nixvim = {
     enable = true;
     defaultEditor = true;
     
