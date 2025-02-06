@@ -6,7 +6,7 @@ let
     });
 in
 {
-  programs.nixvim = {
+  nixvim = {
     enable = true;
     defaultEditor = true;
     

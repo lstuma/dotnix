@@ -11,9 +11,6 @@
 
     stylix.url = "github:danth/stylix";
     stylix.inputs.nixpkgs.follows = "nixpkgs";
-
-    nixvim.url = "github:nix-community/nixvim";
-    nixvim.inputs.nixpkgs.follows = "nixpkgs";
   };
 
   outputs = inputs@{ self, nixpkgs, utils, home-manager, ... }:
@@ -31,7 +28,6 @@
       	modules = [
 	        self.nixosModules.system
           inputs.stylix.nixosModules.stylix
-          inputs.nixvim.nixosModules.nixvim
 	        home-manager.nixosModules.home-manager
 	        {
 	          home-manager.useGlobalPkgs = true;
