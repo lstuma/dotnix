@@ -113,14 +113,14 @@
         };
       };
       copilot-lua = {
-        enable = true;
+        enabled = true;
         settings = {
           suggestion = {
             enable = true;
           };
         };
         panel = {
-          enable = true;
+          enabled = true;
         };
       };
     };
