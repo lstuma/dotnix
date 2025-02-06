@@ -28,6 +28,9 @@ in
     ./dolphin
     #./nixvim
  ];
+  programs.nixvim = {
+    enable = true;
+  };
   stylix.targets = lib.mkForce {
     hyprland.enable = false;
     kitty.enable = false;
