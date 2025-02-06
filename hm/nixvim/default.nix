@@ -185,8 +185,8 @@
       }
       {
         mode = "n";
-        key = "<C-w><C-Right>";
-        action = "<cmd>vertical resize +1<cr>";
+        key = "<C-w><C-Down>";
+        action = "<cmd>vert wincmd J<cr>";
         options = {
           desc = "Move window down";
       };
