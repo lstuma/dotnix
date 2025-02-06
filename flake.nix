@@ -31,7 +31,7 @@
       	modules = [
 	        self.nixosModules.system
           inputs.stylix.nixosModules.stylix
-          inputs.nixvim.homeManagerModules.nixvim
+          #inputs.nixvim.homeManagerModules.nixvim
 	        home-manager.nixosModules.home-manager
 	        {
 	          home-manager.useGlobalPkgs = true;
