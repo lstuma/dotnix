@@ -103,8 +103,8 @@
 
             show_buffer_icons = true;
             show_buffer_close_icons = true;
-            show_close_icon = ture;
-            show_tab_indicators = ture;
+            show_close_icon = true;
+            show_tab_indicators = true;
             
             seperator_style = "thin";
             enfore_regular_tabs = false;
