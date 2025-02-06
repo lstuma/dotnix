@@ -112,6 +112,11 @@
           };
         };
       };
+      copilot-lua = {
+        enable = true;
+        suggestion.enable = true;
+        panel.enable = true;
+      };
     };
     extraConfigLua = ''
       vim.g.mapleader = " "
@@ -142,7 +147,14 @@
           desc = "Delete current puffer and then cycle to next buffer";
         };
       }
-
+      {
+        mode = "n";
+        key = "<leader>cp";
+        action = "<cmd>Copilot toggle<cr>";
+        options = {
+          desc = "Toggle copilot completions";
+        };
+      }
     ];
   };
 }
