@@ -262,9 +262,9 @@
       {
         mode = "n";
         key = "<leader>ct";
-        action = "<cmd>Copilot panel<cr>";
+        action = "<cmd>CopilotChatToggle<cr>";
         options = {
-          desc = "Open Copilot panel in current window";
+          desc = "Toggle Copilot Chat Window";
         };
       }
     ];
