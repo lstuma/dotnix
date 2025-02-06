@@ -212,7 +212,7 @@
       function wrap_right()
         local col = vim.fn.col('.')
         local line = vim.fn.getline('.')
-        if col > #line then
+        if col-1 >= #line then
           return 'j0'
         else
           return '<Right>'
@@ -229,6 +229,7 @@
       '';
     keymaps = [
       {
+        mode = ["i", "n", "v"];
         key = "<Left>";
         action = "v:lua.wrap_left()";
         options = {
@@ -237,6 +238,7 @@
         };
       }
       {
+        mode = ["i", "n", "v"];
         key = "<Right>";
         action = "v:lua.wrap_right()";
         options = {
@@ -270,7 +272,7 @@
       }
       {
         mode = "n";
-        key = "<C-w>+";
+        key = "<C-w><C-+>";
         action = "<cmd>vert resize +8<cr>";
         options = {
           desc = "Horizontally upsize window";
@@ -278,7 +280,7 @@
       }
       {
         mode = "n";
-        key = "<C-w>-";
+        key = "<C-w><C-->";
         action = "<cmd>vert resize -8<cr>";
         options = {
           desc = "Horizontally downsize window";
@@ -354,6 +356,23 @@
         action = "<cmd>Neotree toggle<cr><cmd>CopilotChatToggle<cr><cmd>Neotree toggle<cr>";
         options = {
           desc = "Toggle Copilot Chat Window";
+        };
+      }
+      {
+        mode = "i";
+        key = "<Tab>";
+        action = "copilot#Accept('<Tab>')";
+        options = {
+          expr = true;
+          silent = true;
+        };
+      }
+      {
+        mode = "i";
+        key = "<C-e>";
+        options = {
+          expr = true;
+          silent = true;
         };
       }
     ];
