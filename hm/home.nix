@@ -26,11 +26,8 @@ in
     ./latex
     ./nixos-wizard
     ./dolphin
-    #./nixvim
+    ./nixvim
  ];
-  programs.nixvim = {
-    enable = true;
-  };
   stylix.targets = lib.mkForce {
     hyprland.enable = false;
     kitty.enable = false;
