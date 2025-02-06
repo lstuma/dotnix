@@ -145,6 +145,14 @@
     keymaps = [
       {
         mode = "n";
+        key = "<leader>e";
+        action = "<cmd>Neotree toggle<cr>";
+        options = {
+          desc = "Toggle Neo-tree file explorer";
+        };
+      }
+      {
+        mode = "n";
         key = "<leader>n";
         action = "<cmd>BufferLineCycleNext<cr>";
         options = {
