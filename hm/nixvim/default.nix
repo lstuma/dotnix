@@ -157,7 +157,7 @@
         enable = true;
         settings = {
           suggestion = {
-            enabled = true;
+            enabled = false;
           };
           panel = {
             enabled = false;
