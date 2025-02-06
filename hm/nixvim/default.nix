@@ -213,7 +213,7 @@
         local col = vim.fn.col('.')
         local line = vim.fn.getline('.')
         if col-1 >= #line then
-          return 'j0'
+          return '<Esc>j0'
         else
           return '<Right>'
         end
@@ -221,7 +221,7 @@
       function wrap_left()
         local col = vim.fn.col('.')
         if col == 1 then
-          return 'k$'
+          return '<Esc>k$'
         else
           return '<Left>'
         end
