@@ -229,7 +229,7 @@
       '';
     keymaps = [
       {
-        mode = ["i", "n", "v"];
+        mode = ["n", "v"];
         key = "<Left>";
         action = "v:lua.wrap_left()";
         options = {
