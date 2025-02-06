@@ -160,7 +160,7 @@
             enabled = true;
           };
           panel = {
-            enabled = true;
+            enabled = false;
           };
         };
       };
