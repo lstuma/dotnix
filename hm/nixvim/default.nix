@@ -181,7 +181,7 @@
       }
       {
         mode = "n";
-        key = "<C-w><C-Left>";
+        key = "<cmd>Neotree toggle<cr><C-w><C-Left><cmd>Neotree toggle<cr>";
         action = "<C-w>H";
         options = {
           desc = "Move window to left";
@@ -190,23 +190,23 @@
       {
         mode = "n";
         key = "<C-w><C-Right>";
-        action = "<C-w>L";
+        action = "<cmd>Neotree toggle<cr><C-w>L<cmd>Neotree toggle<cr>";
         options = {
           desc = "Move window to right";
         };
       }
       {
         mode = "n";
-        key = "<C-w><S-Right>";
-        action = "<cmd>resize +1<cr>";
+        key = "<C-w>-";
+        action = "<cmd>vert resize +1<cr>";
         options = {
           desc = "Horizontally upsize window";
         };
       }
       {
         mode = "n";
-        key = "<C-w><S-Left>";
-        action = "<cmd>resize -1<cr>";
+        key = "<C-w>-";
+        action = "<cmd>vert resize -1<cr>";
         options = {
           desc = "Horizontally downsize window";
         };
