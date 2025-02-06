@@ -134,6 +134,9 @@
           };
         };
       };
+      copilot-chat = {
+        enable = true;
+      };
     };
     globals = {
       mapleader = " ";
@@ -181,6 +184,14 @@
         action = "<cmd>Copilot toggle<cr>";
         options = {
           desc = "Toggle copilot completions";
+        };
+      }
+      {
+        mode = "n";
+        key = "<leader>ct";
+        action = "<cmd>CopilotChatToggle<cr>";
+        options = {
+          desc = "Toggle copilot chat window";
         };
       }
     ];
