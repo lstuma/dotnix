@@ -227,17 +227,17 @@
         local col = vim.fn.col('.')
         local line = vim.fn.getline('.')
         if col-1 >= #line then
-          return '<Esc>j0'
+          return 'j0'
         else
-          return '<Esc><Right>'
+          return '<Right>'
         end
       end
       function wrap_left()
         local col = vim.fn.col('.')
         if col == 1 then
-          return '<Esc>k$'
+          return 'k$'
         else
-          return '<Esc><Left>'
+          return '<Left>'
         end
       end
       '';
@@ -245,16 +245,15 @@
       {
         mode = "i";
         key = "<Left>";
-        action = "<Left>i";
+        action = "<Esc><Left>i";
         options = {
           noremap = true;
-          expr = true;
         };
       }
       {
         mode = "i";
         key = "<Right>";
-        action = "<Right>i";
+        action = "<Esc><Right>i";
         options = {
           noremap = true;
         };
