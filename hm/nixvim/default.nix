@@ -224,7 +224,7 @@
     };
     extraConfigLua = ''
       function get_mode()
-        local mode = vim.api.nvim.get_mode().mode
+        local mode = vim.api.nvim_get_mode().mode
         return mode
       end
       function wrap_right()
