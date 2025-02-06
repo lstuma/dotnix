@@ -181,8 +181,8 @@
       }
       {
         mode = "n";
-        key = "<cmd>Neotree toggle<cr><C-w><C-Left><cmd>Neotree toggle<cr>";
-        action = "<C-w>H";
+        key = "<C-w><C-Left>";
+        action = "<cmd>Neotree toggle<cr><C-w>H<cmd>Neotree toggle<cr>";
         options = {
           desc = "Move window to left";
         };
