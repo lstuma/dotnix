@@ -1,7 +1,7 @@
 { lib, inputs, pkgs, ... }:
 let
   nixos-wizard = import ./nixos-wizard { inherit pkgs; };
-in
+in 
 {
   programs.home-manager.enable = true;
   home.stateVersion = "24.11"; # DO NOT CHANGE!!!!!!!!!
@@ -9,7 +9,6 @@ in
   home.keyboard.layout = "de";
 
   imports = [
-    inputs.nixvim.homeManagerModules.nixvim  # Import nixvim module
     ./stylix
     ./waybar
     ./hyprland
