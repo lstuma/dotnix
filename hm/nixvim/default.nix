@@ -173,6 +173,12 @@
           };
         };
       };
+      cmp = {
+        enable = true;
+        settings = {
+          autoEnableSources = true;
+        };
+      };
       copilot-cmp = {
         enable = true;
       };
