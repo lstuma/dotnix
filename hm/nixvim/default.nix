@@ -198,7 +198,7 @@
       {
         mode = "n";
         key = "<C-w>+";
-        action = "<cmd>vert resize +3<cr>";
+        action = "<cmd>vert resize +5<cr>";
         options = {
           desc = "Horizontally upsize window";
         };
@@ -206,7 +206,7 @@
       {
         mode = "n";
         key = "<C-w>-";
-        action = "<cmd>vert resize -3<cr>";
+        action = "<cmd>vert resize -5<cr>";
         options = {
           desc = "Horizontally downsize window";
         };
@@ -229,10 +229,26 @@
       }
       {
         mode = "n";
+        key = "<C-A-S-Right>";
+        action = "<cmd>BufferLineMoveNext<cr>";
+        options = {
+          desc = "Move tab to the right";
+        };
+      }
+      {
+        mode = "n";
+        key = "<C-A-S-Left>";
+        action = "<cmd>BufferLineMovePrev<cr>";
+        options = {
+          desc = "Move tab to the left";
+        };
+      }
+      {
+        mode = "n";
         key = "<C-A-Right>";
         action = "<cmd>BufferLineCycleNext<cr>";
         options = {
-          desc = "Alias for <leader>n";
+          desc = "Cycle to next buffer";
         };
       }
       {
@@ -240,7 +256,7 @@
         key = "<C-A-Left>";
         action = "<cmd>BufferLineCyclePrev<cr>";
         options = {
-          desc = "Alias for <leader>p";
+          desc = "Cycle to previous buffer";
         };
       }
       {
