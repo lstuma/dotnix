@@ -40,7 +40,7 @@
         filesystem = {
           bindToCwd = false;
           followCurrentFile = {
-            enabled = true;
+            enabled = false;
           };
         };
         defaultComponentConfigs = {
