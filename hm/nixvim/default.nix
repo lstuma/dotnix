@@ -358,24 +358,6 @@
           desc = "Toggle Copilot Chat Window";
         };
       }
-      {
-        mode = "i";
-        key = "<Tab>";
-        action = "copilot#Accept('<Tab>')";
-        options = {
-          expr = true;
-          silent = true;
-        };
-      }
-      {
-        mode = "i";
-        key = "<C-e>";
-        action = "cmp#close()";
-        options = {
-          expr = true;
-          silent = true;
-        };
-      }
     ];
   };
 }
