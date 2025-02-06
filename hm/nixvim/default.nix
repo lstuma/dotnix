@@ -113,5 +113,36 @@
         };
       };
     };
+    extraConfigLua = ''
+      vim.g.mapleader = " "
+      vim.g.maplocalleader = " "
+    '';
+    keymaps = [
+      {
+        mode = "n";
+        key = "<leader>n";
+        action = "<cmd>BufferLineCycleNext<cr>";
+        options = {
+          desc = "Cycle to next buffer";
+        };
+      }
+      {
+        mode = "n";
+        key = "<leader>p";
+        action = "<cmd>BufferLineCyclePrev<cr>";
+        options = {
+          desc = "Cycle to previous buffer";
+        };
+      }
+      {
+        mode = "n";
+        key = "<leader>x";
+        action = "<cmd>bdelete<cr><cmd>BufferLineCycleNext<cr><cmd>bdelete<cr>";
+        options = {
+          desc = "Delete current puffer and then cycle to next buffer";
+        };
+      }
+
+    ];
   };
 }
