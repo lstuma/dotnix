@@ -27,26 +27,26 @@ while true; do
         TIME_REMAINING="lots of time"
     fi
     COLOR="$RED"
-    ICON="?"
+    ICON="? "
 
     if [[ $FULL ]] then
         ICON=" "
         COLOR="$GREEN"
     elif [[ $CHARGING ]] then
-        ICON="󱐋"
+        ICON="󱐋 "
         COLOR="$LIGHT_BLUE"
     else
         if [[ "$CHARGE" -lt "20" ]] then
             ICON=" "
             COLOR="$RED"
         elif [[ "$CHARGE" -lt "50" ]] then
-            ICON="󰁽"
+            ICON="󰁽 "
             COLOR="$ORANGE"
         elif [[ "$CHARGE" -lt "80" ]] then
-            ICON="󰂀"
+            ICON="󰂀 "
             COLOR="$YELLOW"
         else
-            ICON="󱈑"
+            ICON="󱈑 "
             COLOR="$LIGHT_GREEN"
         fi
     fi
