@@ -27,6 +27,7 @@ in
     ./nixos-wizard
     ./dolphin
     ./nixvim
+    ./steam
  ];
   stylix.targets = lib.mkForce {
     hyprland.enable = false;
