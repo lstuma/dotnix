@@ -125,6 +125,7 @@
     mesa
     libglvnd
     vulkan-tools
+    libGL
 
     # linuxKernel.packages.linux_6_6.nvidia_x11
     # nvidia-settings
