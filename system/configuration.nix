@@ -126,6 +126,7 @@
     libglvnd
     vulkan-tools
     libGL
+    xorg.libxcb
 
     # linuxKernel.packages.linux_6_6.nvidia_x11
     # nvidia-settings
