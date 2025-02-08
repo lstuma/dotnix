@@ -122,6 +122,7 @@
     wayland-utils
     egl-wayland
     libva
+    libcef # chromium embedded framework
     mesa # open source OpenGL
     #libglvnd
     #vulkan-tools
