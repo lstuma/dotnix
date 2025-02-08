@@ -122,27 +122,16 @@
     wayland-utils
     egl-wayland
     libva
-    mesa
+    mesa # open source OpenGL
     libglvnd
     vulkan-tools
     libGL
-    libdrm
+    #libdrm
     xorg.libxcb
-
-    # linuxKernel.packages.linux_6_6.nvidia_x11
-    # nvidia-settings
-    # nvidia-persistenced
-    # nmap
-    # neo4j
-    # dirb
-    # gobuster
-    # fuff
-    # wfuzz
   ];
 
   # Enable progams here :)
   programs = {
-    # i3.enable = true;
     hyprland.enable = true;
     sway.enable = true;
     sway.package = pkgs.swayfx;
@@ -151,9 +140,7 @@
     zsh.enable = true;
     steam.enable = true;
   };
-
   services.displayManager.ly.enable = true;
-  #services.displayManager.sddm.enable = true;
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
@@ -169,9 +156,6 @@
   #services.xserver.windowManage.i3.enable = true;
   #services.xserver.desktopManager.gnome.enable = true;
   #services.xserver.desktopManager.plasma5.enable = true;
-
-  # services.xserver.dpi = 110;
-  # environment.variables = { GDK_SCALE = "0.3"; };
 
   # List services that you want to enable:
 
