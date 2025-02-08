@@ -129,6 +129,9 @@
     libGL
     libdrm
     xorg.libxcb
+
+    xdg-desktop-portal-gtk
+    xdg-desktop-portal-wlr
   ];
 
   # Enable progams here :)
@@ -145,7 +148,7 @@
 
   services.dbus.enable = true;
   xdg.portal.enable = true;
-  xdg.portal.extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
+  xdg.portal.extraPortals = [ pkgs.xdg-desktop-portal-gtk pkgs.xdg-desktop-portal-wlr ];
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
