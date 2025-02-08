@@ -123,11 +123,11 @@
     egl-wayland
     libva
     mesa # open source OpenGL
-    libglvnd
-    vulkan-tools
-    libGL
+    #libglvnd
+    #vulkan-tools
+    #libGL
     #libdrm
-    xorg.libxcb
+    #xorg.libxcb
   ];
 
   # Enable progams here :)
