@@ -124,11 +124,11 @@
     libva
     libcef # chromium embedded framework
     mesa # open source OpenGL
-    #libglvnd
-    #vulkan-tools
-    #libGL
-    #libdrm
-    #xorg.libxcb
+    libglvnd
+    vulkan-tools
+    libGL
+    libdrm
+    xorg.libxcb
   ];
 
   # Enable progams here :)
