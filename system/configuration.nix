@@ -126,6 +126,7 @@
     libglvnd
     vulkan-tools
     libGL
+    libdrm
     xorg.libxcb
 
     # linuxKernel.packages.linux_6_6.nvidia_x11
@@ -151,7 +152,7 @@
   };
 
   services.displayManager.ly.enable = true;
-  #services.displayManager.sddm.enable = true;  
+  #services.displayManager.sddm.enable = true;
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
