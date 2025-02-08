@@ -1,7 +1,7 @@
 { lib, inputs, pkgs, ... }:
 let
   nixos-wizard = import ./nixos-wizard { inherit pkgs; };
-in 
+in
 {
   programs.home-manager.enable = true;
   home.stateVersion = "24.11"; # DO NOT CHANGE!!!!!!!!!
@@ -27,7 +27,6 @@ in
     ./nixos-wizard
     ./dolphin
     ./nixvim
-    ./steam
  ];
   stylix.targets = lib.mkForce {
     hyprland.enable = false;
