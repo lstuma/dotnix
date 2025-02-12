@@ -51,6 +51,7 @@ in
     rofi
     lunarvim
     eza
+    (import ../packages/sioyek.nix { inherit pkgs; })
     keepassxc
   ];
 }
