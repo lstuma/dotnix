@@ -51,6 +51,7 @@ in
     rofi
     lunarvim
     eza
+    python312Packages.hatchling
     (import ./packages/sioyek.nix { inherit pkgs; })
     keepassxc
   ];
