@@ -22,7 +22,7 @@
 
         modules-left = [ "custom/clock" ];
         modules-center = [ "hyprland/workspaces" ];
-        modules-right = [ "tray" "mpris" "custom/ollama" "custom/conn" "custom/volume" "custom/battery" "upower"];
+        modules-right = [ "tray" "custom/ollama" "custom/conn" "custom/volume" "custom/battery" "upower"];
 
         "hyprland/workspaces" = {
           all-outputs = true;
