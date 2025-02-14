@@ -156,8 +156,8 @@ while true; do
     fi
 
     out="<span color=\\\"$color\\\">$icon$text</span>"
-    tooltip="Ollama: $(llm status ollama), OpenWebUI: $(llm satus webui), Automatic: $(llm status automatic)"
+    tooltip="$(llm status 'all')"
 
-    output "$text" "$tooltip"
+    output "$out" "$tooltip"
     sleep 0.5
 done
