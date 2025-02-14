@@ -14,6 +14,7 @@
 #      "${
 #        (builtins.fetchTarball { url = "https://github.com/numtide/nixos-facter-modules/"; })
 #      }/modules/nixos/facter.nix"
+      ./docker.nix
       ./ollama.nix
       ./stylix.nix
     ];
@@ -133,10 +134,7 @@
 
     xdg-desktop-portal-gtk
     xdg-desktop-portal-wlr
-    docker
   ];
-
-  virtualisation.docker.enable = true;
 
   # Enable progams here :)
   programs = {
