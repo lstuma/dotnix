@@ -14,7 +14,12 @@ get-status() {
 }
 
 if [ "$1" = "click" ]; then
-    click-touch /tmp/ollama_clicked
+    if [ "$(get-status)" = "active" ]; then
+        http://localhost:8080/
+    else
+        systemctl start open-webui.service
+        systemctl start ollama.service
+    fi
     exit 0
 fi
 
