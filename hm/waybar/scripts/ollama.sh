@@ -22,8 +22,8 @@ get-status-automatic() {
 
 get-status() {
     # get status of the service
-    ollama_stat="$(systemctl is-active open-webui.service)"
-    openwebui_stat="$(systemctl is-active open-webui.service)"
+    ollama_stat="$(get-status-ollama)"
+    openwebui_stat="$(get-status-openwebui)"
     if [ "$ollama_stat" = "$openwebui_stat" ]; then
         echo "$ollama_stat"
         return
