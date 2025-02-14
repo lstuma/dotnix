@@ -29,7 +29,6 @@ in
     ./nixvim
     ./intellij
     ./ollama
-    ./open-webui
  ];
   stylix.targets = lib.mkForce {
     hyprland.enable = false;
