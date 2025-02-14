@@ -1,11 +1,11 @@
 { config, pkgs, ... }:
 let
-  pkgs = import (builtins.fetchFromGitHub {
-      owner = "dyscorv";
-      repo = "nix-comfyui";
-      rev = "0.1.2"; # Replace with the latest version from the repository
-    })
-    .nix-comfyui.overlays.default;
+  pkgs = import inputs.nixpkgs {
+    system = "x86_64-linux";
+    overlays = [
+      inputs.nix-comfyui.overlays.default
+    ];
+  };
 in
 {
   services.ollama = {
