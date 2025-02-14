@@ -2,6 +2,24 @@
 SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
 source "$SCRIPT_DIR/utils.sh"
 
+get-status-openwebui() {
+    # get status of openwebui
+    stat="systemctl is-active open-webui.service)"
+    echo "$stat"
+}
+
+get-status-ollama() {
+    # get status of ollama
+    stat="systemctl is-active ollama.service)"
+    echo "$stat"
+}
+
+get-status-automatic() {
+    # get status of automatic1111
+    stat="systemctl is-active automatic.service)"
+    echo "$stat"
+}
+
 get-status() {
     # get status of the service
     ollama_stat="$(systemctl is-active open-webui.service)"
@@ -53,6 +71,9 @@ while true; do
     fi
 
     text="<span color=\\\"$color\\\">$icon</span>"
+
+    tooltip="Ollama: $(get-status-ollama), OpenWebUI: $(get-status-openwebui), Automatic: $(get-status-automatic)"
+
     output "$text" "$ai_status"
     sleep 0.5
 done
