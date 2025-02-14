@@ -22,7 +22,7 @@
 
         modules-left = [ "custom/clock" ];
         modules-center = [ "hyprland/workspaces" ];
-        modules-right = [ "tray" "mpris" "custom/conn" "custom/volume" "custom/battery" "upower"];
+        modules-right = [ "tray" "mpris" "custom/ollama" "custom/conn" "custom/volume" "custom/battery" "upower"];
 
         "hyprland/workspaces" = {
           all-outputs = true;
@@ -43,6 +43,12 @@
             "9" = [];
           };
         };
+        "custom/ollama" = {
+          exec = "/usr/bin/env bash $HOME/.config/waybar/scripts/ollama.sh";
+          return-type = "json";
+          on-click = "/usr/bin/env bash $HOME/.config/waybar/scripts/ollama.sh click";
+          exec-once = true;
+        }
         "custom/clock" = {
           exec = "/usr/bin/env bash $HOME/.config/waybar/scripts/clock.sh";
           tooltip = true;
