@@ -49,13 +49,13 @@ PURPLE="#bb9af7"
 LIGHT_GREEN="#b9f27c"
 LIGHT_BLUE="#7da6ff"
 
-ICON_OFF="󱚡 "
+ICON_OFF="󱚧 "
 ICON_ON="󱚣 "
-ICON_UNKNOWN="󱚟 "
+ICON_UNKNOWN="󱚢 "
 
 COLOR_OFF="$RED"
 COLOR_ON="$GREEN"
-COLOR_UNKNOWN="$PURPLE"
+COLOR_UNKNOWN="$YELLOW"
 
 while true; do
     ai_status="$(get-status)"
