@@ -1,9 +1,11 @@
 { config, pkgs, ... }:
 {
-  virtualisation.docker.daemon = {
+  virtualisation.docker = {
     enable = true;
-    settings = {
-      data-root = "/docker-root/";
+    daemon = {
+      settings = {
+        data-root = "/docker-root/";
+      };
     };
   };
   environment.systemPackages = with pkgs; [
