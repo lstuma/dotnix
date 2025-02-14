@@ -4,19 +4,19 @@ source "$SCRIPT_DIR/utils.sh"
 
 get-status-openwebui() {
     # get status of openwebui
-    stat="systemctl is-active open-webui.service)"
+    stat="$(systemctl is-active open-webui.service)"
     echo "$stat"
 }
 
 get-status-ollama() {
     # get status of ollama
-    stat="systemctl is-active ollama.service)"
+    stat="$(systemctl is-active ollama.service)"
     echo "$stat"
 }
 
 get-status-automatic() {
     # get status of automatic1111
-    stat="systemctl is-active automatic.service)"
+    stat="$(systemctl is-active automatic.service)"
     echo "$stat"
 }
 
