@@ -48,7 +48,7 @@
           return-type = "json";
           on-click = "/usr/bin/env bash $HOME/.config/waybar/scripts/ollama.sh click";
           exec-once = true;
-        }
+        };
         "custom/clock" = {
           exec = "/usr/bin/env bash $HOME/.config/waybar/scripts/clock.sh";
           tooltip = true;
