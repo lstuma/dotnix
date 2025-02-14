@@ -1,5 +1,20 @@
 #!/usr/bin/env bash
 
+notify-info() {
+    # send a notification
+    notify-send -i "$1" "$2" "$3"
+}
+
+notify-error() {
+    # send a notification
+    notify-send -i "$1" "$2" "$3" -u critical
+}
+
+notify-warning() {
+    # send a notification
+    notify-send -i "$1" "$2" "$3" -u normal
+}
+
 click-touch() {
     # create or delete file on click
     file=$1
