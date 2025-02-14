@@ -28,6 +28,7 @@ in
     ./dolphin
     ./nixvim
     ./intellij
+    ./ollama
  ];
   stylix.targets = lib.mkForce {
     hyprland.enable = false;
