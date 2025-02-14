@@ -48,7 +48,7 @@ while true; do
         color="$COLOR_UNKNOWN"
     fi
 
-    text="<span color=\\\"$color\\\">$icon</span>"
+    text="<span color=\\\"$color\\\">$icon </span>"
     output "$text" "$text"
     sleep 0.5
 done
