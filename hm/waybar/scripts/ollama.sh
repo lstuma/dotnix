@@ -10,7 +10,7 @@ DOCKER_AUTOMATIC="automatic1111"
 # check if a specific docker container is active
 docker-get-status() {
     # get status of a docker container
-    stat="$(docker ps -q -f name=\"$1\")"
+    stat=$(docker ps -q -f name="$1")
     if [ -z "$stat" ]; then
         echo "inactive"
     else
@@ -99,19 +99,23 @@ get-status() {
 # click event
 if [ "$1" = "click" ]; then
     if [ "$(llm status 'overall')" = "active" ]; then
+        # open the webui
         firefox "http://localhost:8080/"
     else
+        status_ollama="$(llm-status ollama)"
+        status_webui="$(llm-status webui)"
+        status_automatic="$(llm-status automatic)"
         # start the services
-        if [ "$(llm status 'ollama')" = "inactive" ]; then
-            notify-info "info" "starting ollama" "this may take a while"
+        if [ "$status_ollama" != "active" ]; then
+            notify-info "info" "starting ollama ($status_ollama)" "this may take a while"
             llm start 'ollama'
         fi
-        if [ "$(llm status 'webui')" = "inactive" ]; then
-            notify-info "info" "starting webui" "this may take a while"
+        if [ "$status_webui" != "active" ]; then
+            notify-info "info" "starting webui ($status_webui)" "this may take a while"
             llm start 'webui'
         fi
-        if [ "$(llm status 'automatic')" = "inactive" ]; then
-            notify-info "info" "starting automatic1111" "this may take a while"
+        if [ "$status_automatic" != "active" ]; then
+            notify-info "info" "starting automatic1111 ($status_automatic)" "this may take a while"
             llm start 'automatic'
         fi
     fi
