@@ -6,15 +6,15 @@ get-status() {
     # get status of the service
     ollama_stat="$(systemctl is-active open-webui.service)"
     openwebui_stat="$(systemctl is-active open-webui.service)"
-    if [ ollama_stat == "active" ] && [ openwebui_stat == "active" ]; then
+    if [ ollama_stat -eq "active" ] && [ openwebui_stat -eq "active" ]; then
         return "active"
-    elif [ ollama_stat == "inactive" ] && [ openwebui_stat == "inactive" ]; then
+    elif [ ollama_stat -eq "inactive" ] && [ openwebui_stat -eq "inactive" ]; then
         return "inactive"
     fi
     return "unknown"
 }
 
-if [ "$1" == "click" ]; then
+if [ "$1" = "click" ]; then
     click-touch /tmp/ollama_clicked
     exit 0
 fi
@@ -37,10 +37,10 @@ COLOR_UNKNOWN="$PURPLE"
 
 while true; do
     status="$(get-status)"
-    if [ "$status" == "active" ]; then
+    if [ "$status" -eq "active" ]; then
         icon="$ICON_ON"
         color="$COLOR_ON"
-    elif [ "$status" == "inactive" ]; then
+    elif [ "$status" -eq "inactive" ]; then
         icon="$ICON_OFF"
         color="$COLOR_OFF"
     else
