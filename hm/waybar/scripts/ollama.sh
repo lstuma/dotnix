@@ -2,9 +2,15 @@
 SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
 source "$SCRIPT_DIR/utils.sh"
 
+get-docker-status() {
+    # get status of a docker container
+    stat="$(docker ps )"
+    echo "$stat"
+}
+
 get-status-openwebui() {
     # get status of openwebui
-    stat="$(systemctl is-active open-webui.service)"
+    stat="$(a)"
     echo "$stat"
 }
 
@@ -18,6 +24,45 @@ get-status-automatic() {
     # get status of automatic1111
     stat="$(systemctl is-active automatic.service)"
     echo "$stat"
+}
+
+DOCKER_OLLAMA="ollama/ollama"
+DOCKER_WEBUI=
+
+start-openwebui() {
+    # build open-webui (if non-existent) and start the container
+    docker run -d -p 3000:8080 \
+        --add-host=host.docker.internal:host-gateway \
+        -e AUTOMATIC1111_BASE_URL=http://host.docker.internal:7860/ \
+        -e ENABLE_IMAGE_GENERATION=True \
+        -v open-webui:/app/backend/data \
+        --name open-webui \
+        --restart always ghcr.io/open-webui/open-webui:main || \
+    docker start open-webui
+}
+
+kill-openwebui() {
+    docker stop open-webui
+}
+
+start-ollama() {
+    # build ollama (if non-existent) and start the container
+    docker run -d -v ollama:/root/.ollama -p 11434:11434 --name ollama ollama/ollama || \
+    docker start ollama
+}
+
+kill-ollama() {
+    docker stop ollama
+}
+
+start-automatic() {
+    # build automatic1111 (if non-existent) and start the container
+    docker run -d -p 7860:7860 \
+        --add-host=host.docker.internal:host-gateway \
+        -v automatic1111:/app/backend/data \
+        --name automatic1111 \
+        --restart always ghcr.io/automatic1111/automatic1111:main || \
+    docker start automatic1111
 }
 
 get-status() {

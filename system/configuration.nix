@@ -132,6 +132,7 @@
     libdrm
     xorg.libxcb
 
+    gparted
     xdg-desktop-portal-gtk
     xdg-desktop-portal-wlr
   ];
