@@ -15,6 +15,7 @@ in
     ./hyprland
     ./wofi
     ./dunst
+    ./yad
     ./kitty
     ./hyprpaper
     ./tmux

@@ -79,7 +79,13 @@ llm() {
         fi
         llm-status $2
     elif [ "$1" = "start" ]; then
-        llm-start $2
+        if [ "$2" = "all" ]; then
+            llm-start 'ollama'
+            llm-start 'webui'
+            llm-start 'automatic'
+        else
+            llm-start $2
+        fi
     elif [ "$1" = "stop" ]; then
         llm-stop $2
     fi
@@ -102,24 +108,13 @@ if [ "$1" = "click" ]; then
         # open the webui
         firefox "http://localhost:8080/"
     else
-        status_ollama="$(llm-status ollama)"
-        status_webui="$(llm-status webui)"
-        status_automatic="$(llm-status automatic)"
-        # start the services
-        if [ "$status_ollama" != "active" ]; then
-            notify-info "info" "starting ollama ($status_ollama)" "this may take a while"
-            llm start 'ollama'
-        fi
-        if [ "$status_webui" != "active" ]; then
-            notify-info "info" "starting webui ($status_webui)" "this may take a while"
-            llm start 'webui'
-        fi
-        if [ "$status_automatic" != "active" ]; then
-            notify-info "info" "starting automatic1111 ($status_automatic)" "this may take a while"
-            llm start 'automatic'
-        fi
+        notify-error "error" "ollama is not active" "start the service first"
     fi
     exit 0
+fi
+
+if ["$1" = "right-click" ]; then
+    # use yad to show a menu
 fi
 
 GREEN="#41d992"
