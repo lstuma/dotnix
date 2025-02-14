@@ -74,6 +74,6 @@ while true; do
 
     tooltip="Ollama: $(get-status-ollama), OpenWebUI: $(get-status-openwebui), Automatic: $(get-status-automatic)"
 
-    output "$text" "$ai_status"
+    output "$text" "$tooltip"
     sleep 0.5
 done
