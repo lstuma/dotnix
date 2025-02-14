@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ inputs, config, pkgs, ... }:
 let
   pkgs = import inputs.nixpkgs {
     system = "x86_64-linux";
