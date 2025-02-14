@@ -10,6 +10,6 @@
   };
   environment.systemPackages = with pkgs; [
     docker
-    nvidia-docker
+    nvidia-container-toolkit
   ];
 }
