@@ -1,7 +1,9 @@
 { config, pkgs, ... }:
 {
+  hardware.nvidia-container-toolkit.enable = true;
   virtualisation.docker = {
     enable = true;
+    enableNvidia = true;
     daemon = {
       settings = {
         data-root = "/docker-root/";
