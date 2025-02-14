@@ -32,6 +32,6 @@ in
     };
   };
   environment.systemPackages = with pkgs; [
-    comfyui
+    comfyuiPackages.comfyui
   ];
 }
