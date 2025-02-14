@@ -15,7 +15,7 @@ get-status() {
 
 if [ "$1" = "click" ]; then
     if [ "$(get-status)" = "active" ]; then
-        http://localhost:8080/
+        firefox "http://localhost:8080/"
     else
         systemctl start open-webui.service
         systemctl start ollama.service
