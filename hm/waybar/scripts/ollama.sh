@@ -26,9 +26,9 @@ PURPLE="#bb9af7"
 LIGHT_GREEN="#b9f27c"
 LIGHT_BLUE="#7da6ff"
 
-ICON_OFF="󱚡"
-ICON_ON="󱚣"
-ICON_UNKNOWN="󱚟"
+ICON_OFF="󱚡 "
+ICON_ON="󱚣 "
+ICON_UNKNOWN="󱚟 "
 
 COLOR_OFF="$RED"
 COLOR_ON="$GREEN"
@@ -47,7 +47,7 @@ while true; do
         color="$COLOR_UNKNOWN"
     fi
 
-    text="<span color=\\\"$color\\\">$icon </span>"
-    output "$text" "$text"
+    text="<span color=\\\"$color\\\">$icon</span>"
+    output "$text" "$ai_status"
     sleep 0.5
 done
