@@ -30,26 +30,26 @@ llm-status() {
 llm-start() {
     if [ "$1" = "ollama" ]; then
         # build ollama (if non-existent) and start the container
-        docker run -d -v ollama:/root/.ollama -p 11434:11434 --name $DOCKER_OLLAMA ollama/ollama || \
-        docker start $DOCKER_OLLAMA
+        (docker run -d -v ollama:/root/.ollama -p 11434:11434 --name $DOCKER_OLLAMA ollama/ollama || \
+        docker start $DOCKER_OLLAMA)&
     elif [ "$1" = "webui" ]; then
-    # build open-webui (if non-existent) and start the container
-    docker run -d -p 3000:8080 \
-        --add-host=host.docker.internal:host-gateway \
-        -e AUTOMATIC1111_BASE_URL=http://host.docker.internal:7860/ \
-        -e ENABLE_IMAGE_GENERATION=True \
-        -v open-webui:/app/backend/data \
-        --name $DOCKER_WEBUI \
-        --restart always ghcr.io/open-webui/open-webui:main || \
-    docker start $DOCKER_WEBUI
+        # build open-webui (if non-existent) and start the container
+        (docker run -d -p 3000:8080 \
+            --add-host=host.docker.internal:host-gateway \
+            -e AUTOMATIC1111_BASE_URL=http://host.docker.internal:7860/ \
+            -e ENABLE_IMAGE_GENERATION=True \
+            -v open-webui:/app/backend/data \
+            --name $DOCKER_WEBUI \
+            --restart always ghcr.io/open-webui/open-webui:main || \
+        docker start $DOCKER_WEBUI)&
     elif [ "$1" = "automatic" ]; then
         # build automatic1111 (if non-existent) and start the container
-        docker run -d -p 7860:7860 \
+        (docker run -d -p 7860:7860 \
             --add-host=host.docker.internal:host-gateway \
             -v automatic1111:/app/backend/data \
             --name $DOCKER_AUTOMATIC \
             --restart always ghcr.io/automatic1111/automatic1111:main || \
-        docker start $DOCKER_AUTOMATIC
+        docker start $DOCKER_AUTOMATIC)&
     fi
 }
 llm-stop() {
