@@ -136,6 +136,8 @@
     docker
   ];
 
+  virtualisation.docker.enable = true;
+
   # Enable progams here :)
   programs = {
     hyprland.enable = true;
