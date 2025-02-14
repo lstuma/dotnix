@@ -14,8 +14,8 @@
 #      "${
 #        (builtins.fetchTarball { url = "https://github.com/numtide/nixos-facter-modules/"; })
 #      }/modules/nixos/facter.nix"
-      ./docker.nix
-      ./ollama.nix
+      ./docker
+      ./ollama
       ./stylix.nix
     ];
 
