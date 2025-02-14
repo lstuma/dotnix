@@ -9,12 +9,12 @@ let
 in
 {
   # open-webui docker
-  pkgs.dockerTools.pullImage{
-    imageName = "ghcr.io/open-webui/open-webui:main";
-    finalImageTag = "2.0";
-    imageDigest = "sha256:632268d5fd9ca87169c65353db99be8b4e2eb41833b626e09688f484222e860f";
-    sha256 = "1x00ks05cz89k3wc460i03iyyjr7wlr28krk7znavfy2qx5a0hfd";
-  };
+  #pkgs.dockerTools.pullImage{
+  #  imageName = "ghcr.io/open-webui/open-webui:main";
+  #  finalImageTag = "2.0";
+  #  imageDigest = "sha256:632268d5fd9ca87169c65353db99be8b4e2eb41833b626e09688f484222e860f";
+  #  sha256 = "1x00ks05cz89k3wc460i03iyyjr7wlr28krk7znavfy2qx5a0hfd";
+  #};
 
 
   services.ollama = {
