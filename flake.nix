@@ -14,6 +14,9 @@
 
     nixvim.url = "github:nix-community/nixvim";
     nixvim.inputs.nixpkgs.follows = "nixpkgs";
+
+    nix-comfyui.url = "github:dyscorv/nix-comfyui";
+    nix-comfyui.inputs.nixpkgs.follows = "nixpkgs";
   };
 
   outputs = inputs@{ self, nixpkgs, utils, home-manager, ... }:
