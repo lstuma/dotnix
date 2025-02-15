@@ -57,7 +57,6 @@ _llm_docker_start() {
     elif [ "$1" = "open-webui" ]; then
         # build open-webui (if non-existent) and start the container
         (docker run -d -p 7777:8080 \
-            ° \
             -e AUTOMATIC1111_BASE_URL=http://localhost:7860/ \
             -e ENABLE_IMAGE_GENERATION=True \
             --net=host \
