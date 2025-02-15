@@ -147,6 +147,7 @@
     cargo
     libgcc
     gcc
+    openssl
   ];
 
   # Enable progams here :)
