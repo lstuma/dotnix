@@ -58,18 +58,21 @@ _llm_docker_start() {
         # build open-webui (if non-existent) and start the container
         (docker run -d -p 7777:8080 \
             ° \
-            -e AUTOMATIC1111_BASE_URL=http://host.docker.internal:7860/ \
+            -e AUTOMATIC1111_BASE_URL=http://localhost:7860/ \
             -e ENABLE_IMAGE_GENERATION=True \
+            --net=host \
             -v open-webui:/app/backend/data \
             --name $WEBUI \
             --restart always ghcr.io/open-webui/open-webui:main || \
         docker start $WEBUI)&
     elif [ "$1" = "automatic" ]; then
         # build automatic1111 (if non-existent) and start the container
-        (docker run --gpus all -t -i -p 3000:3000 -p 8888:8888 \
-        -e JUPYTER_PASSWORD='password' -v /home/lstuma/models/outputs/ --name "automatic1111" --privileged \
-        -d --runtime=nvidia runpod/stable-diffusion:web-automatic-1.5 \
-            --restart always ghcr.io/automatic1111/automatic1111:main || \
+        (docker run -d --name automatic1111 \
+          --restart always --gpus all -p "7860:7860" --runtime=nvidia \
+          -e WEBUI_ARGS="--api --listen" \
+          -e WEB_ENABLE_AUTH="false" \
+          -e CF_QUICK_TUNNELS="false" \
+          ghcr.io/ai-dock/stable-diffusion-webui:cuda-11.8.0-base-22.04 || \
         docker start $AUTOMATIC)&
     fi
 }
