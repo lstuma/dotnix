@@ -21,15 +21,15 @@ _llm_healthcheck() {
     if [ "$1" = "all" ]; then
         # display health status of all services
         for service in "${SERVICES[@]}"; do
-            status=$(_llm-status $service)
-            echo "$service: $status"
+            service_status=$(_llm_status $service)
+            echo "$service: $service_status"
         done
         return
     elif [ "$1" = "overall" ]; then
         # display overall health status
         for service in "${SERVICES[@]}"; do
-            status=$(_llm-status $service)
-            if [ "$status" = "inactive" ]; then
+            service_status=$(_llm_status $service)
+            if [ "$service_status" = "inactive" ]; then
                 echo "inactive"
                 return
             fi
@@ -37,8 +37,8 @@ _llm_healthcheck() {
         echo "active"
     fi
     # display health status of a specific service
-    status=$(_llm_status $1)
-    echo "$status"
+    service_status=$(_llm_status $1)
+    echo "$service_status"
 }
 
 _llm_docker_start() {

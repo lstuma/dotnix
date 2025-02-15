@@ -24,7 +24,7 @@ in
     ./neofetch
     ./zed
     ./ferdium
-    ./latex
+    #./latex
     ./nixos-wizard
     ./dolphin
     ./nixvim
