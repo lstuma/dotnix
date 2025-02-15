@@ -148,6 +148,7 @@
     libgcc
     gcc
     openssl
+    openssl.dev
   ];
 
   # Enable progams here :)
