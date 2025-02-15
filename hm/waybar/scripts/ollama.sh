@@ -79,8 +79,8 @@ while true; do
 
     out="<span color=\\\"$color\\\">$icon$text</span>"
     tooltip="$(llm health 'all')"
-    # replace \n with <br> for syntax
-    tooltip="${tooltip//$'\n'/<br>}"
+    # replace linebraks with ', ' for syntax
+    tooltip="${tooltip//$'\n'/, }"
 
     output "$out" "$tooltip"
     sleep 0.5
