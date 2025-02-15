@@ -141,6 +141,7 @@
     gparted
     xdg-desktop-portal-gtk
     xdg-desktop-portal-wlr
+    cudaPackages.cuda_nvcc
   ];
 
   # Enable progams here :)
