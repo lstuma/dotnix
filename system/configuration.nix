@@ -146,6 +146,7 @@
     rustc
     cargo
     libgcc
+    gcc
   ];
 
   # Enable progams here :)
