@@ -35,6 +35,7 @@ _llm_healthcheck() {
             fi
         done
         echo "active"
+        return
     fi
     # display health status of a specific service
     service_status=$(_llm_status $1)

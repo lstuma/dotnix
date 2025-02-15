@@ -44,11 +44,5 @@
 	        }
 	      ];
       };
-      devShells.default = nixpkgs.legacyPackages.x86_64-linux.mkShell {
-        buildInputs = [ nixpkgs.openssl.dev ];
-        shellHook = ''
-          export PKG_CONFIG_PATH="${nixpkgs.openssl.dev}/lib/pkgconfig:$PKG_CONFIG_PATH"
-        '';
-      };
     };
 }
