@@ -142,6 +142,10 @@
     xdg-desktop-portal-gtk
     xdg-desktop-portal-wlr
     cudaPackages.cuda_nvcc
+
+    rustc
+    cargo
+    libgcc
   ];
 
   # Enable progams here :)

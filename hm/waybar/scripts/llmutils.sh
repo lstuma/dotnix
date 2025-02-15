@@ -51,12 +51,12 @@ _llm_docker_start() {
     if [ "$1" = "ollama" ]; then
         # build ollama (if non-existent) and start the container
         (docker run -d -v ollama:/root/.ollama -p 11434:11434 \
-        --name $OLLAMA ollama/ollama --restart allways || \
+        --name $OLLAMA --restart always ollama/ollama || \
         docker start $OLLAMA)&
     elif [ "$1" = "open-webui" ]; then
         # build open-webui (if non-existent) and start the container
-        (docker run -d -p 3000:8080 \
-            --add-host=host.docker.internal:host-gateway \
+        (docker run -d -p 7777:8080 \
+            ° \
             -e AUTOMATIC1111_BASE_URL=http://host.docker.internal:7860/ \
             -e ENABLE_IMAGE_GENERATION=True \
             -v open-webui:/app/backend/data \
@@ -65,10 +65,9 @@ _llm_docker_start() {
         docker start $WEBUI)&
     elif [ "$1" = "automatic" ]; then
         # build automatic1111 (if non-existent) and start the container
-        (docker run -d -p 7860:7860 \
-            --add-host=host.docker.internal:host-gateway \
-            -v automatic1111:/app/backend/data \
-            --name $AUTOMATIC \
+        (docker run --gpus all -t -i -p 3000:3000 -p 8888:8888 \
+        -e JUPYTER_PASSWORD='password' -v /home/lstuma/models/outputs/ --name "automatic1111" --privileged \
+        -d --runtime=nvidia runpod/stable-diffusion:web-automatic-1.5 \
             --restart always ghcr.io/automatic1111/automatic1111:main || \
         docker start $AUTOMATIC)&
     fi
