@@ -147,6 +147,7 @@
     cargo
     libgcc
     gcc
+    pkg-config
     openssl
     openssl.dev
   ];
