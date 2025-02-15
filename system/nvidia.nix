@@ -8,7 +8,7 @@
 
   # Load nvidia driver for Xorg and Wayland
   services.xserver.videoDrivers = ["nvidia"];
-  
+
   # Kernel parameters
   boot.kernelParams = [
     "nvidia-drm.modeset=1"
@@ -39,13 +39,13 @@
     # feature, but sometimes fixes this)
     powerManagement.enable = false;
     powerManagement.finegrained = false;
-    
+
     # don't use open source drivers (proprietary instead)
-    open = true;
+    open = false;
 
     # allow running nvidia-settings cmd
     nvidiaSettings = true;
-    
+
     # might/should fix screen tearing issues
     forceFullCompositionPipeline = true;
   };

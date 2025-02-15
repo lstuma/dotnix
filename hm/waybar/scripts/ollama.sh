@@ -1,120 +1,44 @@
 #!/usr/bin/env bash
 SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
-source "$SCRIPT_DIR/utils.sh"
+LLMUTILS_PATH="$SCRIPT_DIR/llmutils.sh"
+source "$LLMUTILS_PATH"
+LLMUTILS_EXEC="/usr/bin/env bash $LLMUTILS_PATH"
 
-# names of the docker containers
-DOCKER_OLLAMA="ollama"
-DOCKER_WEBUI="open-webui"
-DOCKER_AUTOMATIC="automatic1111"
-
-# check if a specific docker container is active
-docker-get-status() {
-    # get status of a docker container
-    stat=$(docker ps -q -f name="$1")
-    if [ -z "$stat" ]; then
-        echo "inactive"
-    else
-        echo "active"
-    fi
-}
-
-llm-status() {
-    if [ "$1" = "ollama" ]; then
-        echo "$(docker-get-status $DOCKER_OLLAMA)"
-    elif [ "$1" = "webui" ]; then
-        echo "$(docker-get-status $DOCKER_WEBUI)"
-    elif [ "$1" = "automatic" ]; then
-        echo "$(docker-get-status $DOCKER_AUTOMATIC)"
-    fi
-}
-llm-start() {
-    if [ "$1" = "ollama" ]; then
-        # build ollama (if non-existent) and start the container
-        (docker run -d -v ollama:/root/.ollama -p 11434:11434 --name $DOCKER_OLLAMA ollama/ollama || \
-        docker start $DOCKER_OLLAMA)&
-    elif [ "$1" = "webui" ]; then
-        # build open-webui (if non-existent) and start the container
-        (docker run -d -p 3000:8080 \
-            --add-host=host.docker.internal:host-gateway \
-            -e AUTOMATIC1111_BASE_URL=http://host.docker.internal:7860/ \
-            -e ENABLE_IMAGE_GENERATION=True \
-            -v open-webui:/app/backend/data \
-            --name $DOCKER_WEBUI \
-            --restart always ghcr.io/open-webui/open-webui:main || \
-        docker start $DOCKER_WEBUI)&
-    elif [ "$1" = "automatic" ]; then
-        # build automatic1111 (if non-existent) and start the container
-        (docker run -d -p 7860:7860 \
-            --add-host=host.docker.internal:host-gateway \
-            -v automatic1111:/app/backend/data \
-            --name $DOCKER_AUTOMATIC \
-            --restart always ghcr.io/automatic1111/automatic1111:main || \
-        docker start $DOCKER_AUTOMATIC)&
-    fi
-}
-llm-stop() {
-    if [ "$1" = "ollama" ]; then
-        docker stop $DOCKER_OLLAMA
-    elif [ "$1" = "webui" ]; then
-        docker stop $DOCKER_WEBUI
-    elif [ "$1" = "automatic" ]; then
-        docker stop $DOCKER_AUTOMATIC
-    fi
-}
-llm() {
-    if [ "$1" = "status" ]; then
-        if [ "$2" = "all" ]; then
-            echo "ollama: $(llm-status ollama), open-webui: $(llm-status webui), automatic1111: $(llm-status automatic)"
-        elif [ "$2" = "overall" ]; then
-            status_ollama="$(llm-status ollama)"
-            status_webui="$(llm-status webui)"
-            status_automatic="$(llm-status automatic)"
-            if [ "$status_ollama" = "$status_webui" ] && [ "$status_webui" = "$status_automatic" ]; then
-                echo "$status_ollama"
-            else
-                echo "unknown"
-            fi
-        else
-            llm-status $2
-        fi
-        llm-status $2
-    elif [ "$1" = "start" ]; then
-        if [ "$2" = "all" ]; then
-            llm-start 'ollama'
-            llm-start 'webui'
-            llm-start 'automatic'
-        else
-            llm-start $2
-        fi
-    elif [ "$1" = "stop" ]; then
-        llm-stop $2
-    fi
-}
-
-get-status() {
-    # get status of the service
-    ollama_stat="$(get-status-ollama)"
-    openwebui_stat="$(get-status-openwebui)"
-    if [ "$ollama_stat" = "$openwebui_stat" ]; then
-        echo "$ollama_stat"
-        return
-    fi
-    echo "unknown"
-}
 
 # click event
 if [ "$1" = "click" ]; then
-    if [ "$(llm status 'overall')" = "active" ]; then
+    if [ "$(llm health overall)" = "active" ]; then
         # open the webui
         firefox "http://localhost:8080/"
     else
         notify-error "error" "ollama is not active" "start the service first"
     fi
     exit 0
-fi
-
-if ["$1" = "right-click" ]; then
+elif [ "$1" = "right-click" ]; then
     # use yad to show a menu
+    # show status of all services, buttons to start/stop dependent on status
+    options=()
+    for service in "${SERVICES[@]}"; do
+        status=$(_llm_status $service)
+        if [ "$status" = "active" ]; then
+            color="$GREEN"
+        elif [ "$status" = "inactive" ]; then
+            color="$RED"
+        else
+            color="$YELLOW"
+        fi
+        options+=("$service $status")
+    done
+
+    chosen=$(yad --title="Ollama" --button=yad-cancel:1 --button="Toggle Status":0 --list --column="Service" --column="Status" ${options[@]})
+    # toggle service status
+    # get the service name (split at |)
+    service=$(echo $chosen | cut -d'|' -f1)
+    if [ -z "$service" ]; then
+        exit 0
+    fi
+    llm docker toggle $service
+    exit 0
 fi
 
 GREEN="#41d992"
