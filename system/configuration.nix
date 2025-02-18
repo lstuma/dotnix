@@ -150,6 +150,7 @@
     pkg-config
     openssl
     openssl.dev
+    proxychains
   ];
 
   # Enable progams here :)
