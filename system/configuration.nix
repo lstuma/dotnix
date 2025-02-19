@@ -160,7 +160,7 @@
     sway.extraOptions = [ "--unsupported-gpu" ];
 
     zsh.enable = true;
-    steam.enable = true;
+    #steam.enable = true;
   };
   services.displayManager.ly.enable = true;
 
