@@ -140,7 +140,6 @@
     gparted
     xdg-desktop-portal-gtk
     xdg-desktop-portal-wlr
-    #cudaPackages.cuda_nvcc
 
     rustc
     cargo
@@ -150,6 +149,9 @@
     openssl
     openssl.dev
     proxychains
+
+    thefuck
+
   ];
 
   # Enable progams here :)
