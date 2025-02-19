@@ -140,7 +140,7 @@
     gparted
     xdg-desktop-portal-gtk
     xdg-desktop-portal-wlr
-    cudaPackages.cuda_nvcc
+    #cudaPackages.cuda_nvcc
 
     rustc
     cargo
