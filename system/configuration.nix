@@ -149,9 +149,6 @@
     openssl
     openssl.dev
     proxychains
-
-    thefuck
-
   ];
 
   # Enable progams here :)
@@ -162,6 +159,7 @@
     sway.extraOptions = [ "--unsupported-gpu" ];
 
     zsh.enable = true;
+    gamescope.enable = true;
     steam = {
       enable = true;
       gamescopeSession.enable = true;
