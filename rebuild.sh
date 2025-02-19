@@ -40,7 +40,7 @@ then
 fi
 
 echo -e "${BLUE}rebuild.sh: ${YELLOW}rebuilding NixOS Configuration${NC}"
-echo -e "${BLUE}rebuild.sh: ${YELLOW}args: $1 $2 $3 $4"
+echo -e "${BLUE}rebuild.sh: ${YELLOW}args: $1 $2 $3 $4${NC}"
 
 REBUILD_CMD="nixos-rebuild switch --flake .# --show-trace --log-format internal-json -v $1 $2 $3 $4 |& nom --json"
 set xtrace
