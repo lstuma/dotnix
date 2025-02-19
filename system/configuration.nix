@@ -159,12 +159,12 @@
     sway.extraOptions = [ "--unsupported-gpu" ];
 
     zsh.enable = true;
-    gamescope.enable = true;
-    steam = {
-      enable = true;
-      gamescopeSession.enable = true;
-      protontricks.enable = true;
-    };
+    #gamescope.enable = true;
+    #steam = {
+    #  enable = true;
+    #  gamescopeSession.enable = true;
+    #  protontricks.enable = true;
+    #};
   };
   services.displayManager.ly.enable = true;
 
