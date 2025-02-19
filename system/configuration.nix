@@ -128,14 +128,14 @@
     wayland
     wayland-utils
     egl-wayland
-    libva
-    libcef # chromium embedded framework
-    mesa # open source OpenGL
-    libglvnd
-    vulkan-tools
-    libGL
-    libdrm
-    xorg.libxcb
+    #libva
+    #libcef # chromium embedded framework
+    #mesa # open source OpenGL
+    #libglvnd
+    #vulkan-tools
+    #libGL
+    #libdrm
+    #xorg.libxcb
 
     gparted
     xdg-desktop-portal-gtk
@@ -144,11 +144,11 @@
 
     rustc
     cargo
-    libgcc
+    #libgcc
     gcc
-    pkg-config
-    openssl
-    openssl.dev
+    #pkg-config
+    #openssl
+    #openssl.dev
     proxychains
   ];
 
