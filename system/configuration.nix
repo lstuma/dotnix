@@ -15,7 +15,6 @@
 #        (builtins.fetchTarball { url = "https://github.com/numtide/nixos-facter-modules/"; })
 #      }/modules/nixos/facter.nix"
       ./docker
-      ./ollama
       ./stylix.nix
     ];
 
@@ -161,7 +160,7 @@
     sway.extraOptions = [ "--unsupported-gpu" ];
 
     zsh.enable = true;
-    steam.enable = true;
+    steam.enable = false;#true;
   };
   services.displayManager.ly.enable = true;
 
