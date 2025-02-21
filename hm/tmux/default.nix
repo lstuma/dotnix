@@ -39,6 +39,9 @@
       # tab switching
       bind-key -r C-Right next-window
       bind-key -r C-Left previous-window
+
+      # launch zsh as default shell (instead of bash)
+      set -g default-shell "/usr/bin/env zsh"
     '';
   };
 }
