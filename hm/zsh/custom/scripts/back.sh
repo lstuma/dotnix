@@ -38,7 +38,7 @@ __back_debug() {
 __back_change_dir() {
   local dir="$(realpath $@)";
   local cwd="$(pwd)";
-  if [ ! -d "$dir" && ! -f "$dir" ]; then
+  if [ ! -d "$dir" ]; then
     echo "no such file or directory: $dir";
     return;
   fi
