@@ -5,6 +5,9 @@
     enableCompletion = true;
     autosuggestion.enable = true;
     syntaxHighlighting.enable = true;
+    initExtra = ''
+    [[ ! -f ${~/.zsh_custom/scripts/back.sh;} ]] || source ${~/.zsh_custom/scripts/back.sh}
+    '';
     autocd = false;
     shellAliases = {
       ll = "eza --color --icons -l";
