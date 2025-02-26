@@ -35,7 +35,7 @@ __back_debug() {
     fi
 }
 
-__back_change_dir() {
+back_change_dir() {
   local dir="$(realpath $@)";
   local cwd="$(pwd)";
   if [ ! -d "$dir" ]; then
@@ -62,5 +62,7 @@ __back_back() {
   fi
 }
 
-alias cd="__back_change_dir";
+alias cd="back_change_dir";
 alias back="__back_back";
+
+zstyle ':completion:*:*:cd:*' file-sort size
