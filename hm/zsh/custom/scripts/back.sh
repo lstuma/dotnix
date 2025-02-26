@@ -49,7 +49,7 @@ back_change_dir() {
     __back_debug "CD 󰶻 $dir";
   fi
 }
-__back_back() {
+back_back() {
   if [ "$1" -eq "-l" ]; then
     # list the directories separated by \n
     echo "$DIRS" | sed 's/^;//';
@@ -64,7 +64,7 @@ __back_back() {
     fi
     local n="$1";
     for i in $(seq 1 $n); do
-      __back_back;
+      back_back;
     done
     return;
   fi
@@ -82,6 +82,6 @@ __back_back() {
 }
 
 alias cd="back_change_dir";
-alias back="__back_back";
+alias back="back_back";
 
 zstyle ':completion:*:*:cd:*' file-sort size
