@@ -50,6 +50,25 @@ back_change_dir() {
   fi
 }
 __back_back() {
+  if [ "$1" -eq "-l" ]; then
+    # list the directories separated by \n
+    echo "$DIRS" | sed 's/^;//';
+    return;
+  elif [[ "$1" =~ ^[0-9]+$ ]]; then
+    # if $1 is a number, go back n times
+    # first check if the number is greater than the number of directories (count the number of ;)
+    local dircount="$(echo "$DIRS" | grep -o ";" | wc -l)";
+    if [ "$1" -gt "$dircount" ]; then
+      echo "no more directories to go to, only $dircount";
+      return;
+    fi
+    local n="$1";
+    for i in $(seq 1 $n); do
+      __back_back;
+    done
+    return;
+  fi
+
   local last="$(__back_dirs_peek)";
   __back_dirs_pop;
 
