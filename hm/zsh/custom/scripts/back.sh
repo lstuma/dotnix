@@ -38,6 +38,10 @@ __back_debug() {
 __back_change_dir() {
   local dir="$(realpath $@)";
   local cwd="$(pwd)";
+  if [ ! -d "$dir" && ! -f "$dir" ]; then
+    echo "no such file or directory: $dir";
+    return;
+  fi
   builtin cd "$@";
   if [ $? -eq 0 ]; then
     __back_dirs_push "$cwd";
@@ -54,7 +58,7 @@ __back_back() {
     __back_debug "BACK 󰶻 $last";
     __back_debug "DIRS 󰶻 $DIRS";
   else
-    echo "No more directories to go to";
+    echo "no more directories to go to";
   fi
 }
 
