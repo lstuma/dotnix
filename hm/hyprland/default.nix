@@ -8,6 +8,7 @@
     pavucontrol
     hyprlock
     hyprshot
+    wdisplays
   ];
 
   wayland.windowManager.hyprland = {

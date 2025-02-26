@@ -7,7 +7,7 @@
   programs.tmux = {
     enable = true;
     clock24 = true;
-    shell = "\${pkgs.zsh}/bin/zsh";
+    #shell = "\${pkgs.zsh}/bin/zsh";
     plugins = with pkgs; [
       {
         plugin = tmuxPlugins.tmux-nova;
