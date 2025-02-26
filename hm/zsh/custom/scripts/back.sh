@@ -52,7 +52,7 @@ back_change_dir() {
 back_back() {
   if [[ "$1" = "-l" ]]; then
     # if $1 == -l list the directories separated by \n
-    echo "$DIRS" | sed 's/^;//';
+    echo "$DIRS" | sed 's/^;//' | tr ';' '\n';
     return;
   elif [[ "$1" =~ ^[0-9]+$ ]]; then
     # if $1 is a number, go back n times
