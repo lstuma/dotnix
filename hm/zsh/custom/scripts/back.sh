@@ -22,7 +22,7 @@ __back_dirs_peek() {
 __back_dirs_push() {
     # push a directory to the stack only if it is not equal to the last element
     local dir="$1";
-    local last="$(dirs_peek)";
+    local last="$(__back_dirs_peek)";
     if [ "$dir" = "$last" ]; then
         return;
     fi
