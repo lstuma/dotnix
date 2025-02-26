@@ -6,7 +6,7 @@
     autosuggestion.enable = true;
     syntaxHighlighting.enable = true;
     initExtra = ''
-    [[ ! -f ${~/.zsh_custom/scripts/back.sh;} ]] || source ${~/.zsh_custom/scripts/back.sh}
+      [[ ! -f "$HOME/.zsh_custom/scripts/back.sh" ]] || source "$HOME/.zsh_custom/scripts/back.sh"
     '';
     autocd = false;
     shellAliases = {
