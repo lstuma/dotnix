@@ -50,8 +50,8 @@ back_change_dir() {
   fi
 }
 back_back() {
-  if [ "$1" -eq "-l" ]; then
-    # list the directories separated by \n
+  if [[ "$1" = "-l" ]]; then
+    # if $1 == -l list the directories separated by \n
     echo "$DIRS" | sed 's/^;//';
     return;
   elif [[ "$1" =~ ^[0-9]+$ ]]; then
