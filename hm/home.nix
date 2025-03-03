@@ -30,6 +30,7 @@ in
     ./nixvim
     ./intellij
     ./ollama
+    ./ladybird
  ];
   stylix.targets = lib.mkForce {
     hyprland.enable = false;
