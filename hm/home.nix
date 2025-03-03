@@ -38,6 +38,7 @@ in
     kitty.enable = false;
     waybar.enable = false;
     wofi.enable = false;
+    gtk.enable = true;
   };
 
   gtk.enable = true;
