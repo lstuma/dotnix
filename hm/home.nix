@@ -31,7 +31,8 @@ in
     ./intellij
     ./ollama
     #./ladybird
-    ./qutebrowser
+    #./qutebrowser
+    ./floorp
  ];
   stylix.targets = lib.mkForce {
     hyprland.enable = false;
