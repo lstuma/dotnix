@@ -2,7 +2,7 @@
 {
   environment.systemPackages = with pkgs; [
     base16-schemes
-    breeze-icons
+    kdePackages.breeze-icons
     papirus-icon-theme
     adwaita-icon-theme
   ];
