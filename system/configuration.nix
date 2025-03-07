@@ -149,6 +149,8 @@
     openssl
     openssl.dev
     proxychains
+    winetricks
+    wine
   ];
 
   # Enable progams here :)
