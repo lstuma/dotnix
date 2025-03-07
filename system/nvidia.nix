@@ -22,7 +22,7 @@
     "nvidia_drm"
   ];
 
-  hardware.nvidia.package = config.boot.kernelPackages.nvidiaPackages.latest;
+  hardware.nvidia.package = config.boot.kernelPackages.nvidiaPackages.production;
 
 
   # might help with üproblems when booting to text mode
