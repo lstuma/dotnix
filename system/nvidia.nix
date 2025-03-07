@@ -22,6 +22,7 @@
     "nvidia_drm"
   ];
 
+  # https://github.com/NixOS/nixpkgs/blob/10069ef4cf863633f57238f179a0297de84bd8d3/pkgs/os-specific/linux/nvidia-x11/default.nix#L75
   hardware.nvidia.package = config.boot.kernelPackages.nvidiaPackages.production;
 
 
