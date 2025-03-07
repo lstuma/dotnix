@@ -140,6 +140,8 @@
     gparted
     xdg-desktop-portal-gtk
     xdg-desktop-portal-wlr
+    xdg-desktop-portal-hyprland
+
 
     rustc
     cargo
@@ -172,7 +174,7 @@
 
   services.dbus.enable = true;
   xdg.portal.enable = true;
-  xdg.portal.extraPortals = [ pkgs.xdg-desktop-portal-gtk pkgs.xdg-desktop-portal-wlr ];
+  xdg.portal.extraPortals = [ pkgs.xdg-desktop-portal-gtk pkgs.xdg-desktop-portal-wlrpkgs.xdg-desktop-portal-hyprland ];
 
   environment.sessionVariables = {
     PKG_CONFIG_PATH = "${pkgs.openssl.dev}/lib/pkgconfig";
