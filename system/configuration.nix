@@ -153,6 +153,8 @@
     proxychains
     winetricks
     wine
+
+    jdk17
   ];
 
   # Enable progams here :)
