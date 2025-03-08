@@ -154,7 +154,7 @@
     winetricks
     wine
 
-    jdk17
+    jre17
   ];
 
   # Enable progams here :)
