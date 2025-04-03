@@ -59,5 +59,6 @@ in
     lunarvim
     eza
     keepassxc
+    php
   ];
 }
