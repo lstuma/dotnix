@@ -60,5 +60,6 @@ in
     eza
     keepassxc
     php
+    neomutt
   ];
 }
