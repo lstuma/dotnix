@@ -3,6 +3,7 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
+    nixpgs-master.url = "github:NixOS/nixpgs/master";
 
     utils.url = "github:gytis-ivaskevicius/flake-utils-plus";
 
@@ -24,6 +25,11 @@
         system = import ./system/configuration.nix;
       };
 
+      channels.nixpkgs.overlaysBuilder = channels: [
+        (final: prev: {
+          master = inputs.nixpkgs-master.legacyPackages.${prev.system};
+        })
+      ];
 
       channelsConfig.allowUnfree = true;
       hosts."lstuma-nix" = {
