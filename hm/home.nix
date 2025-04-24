@@ -33,6 +33,7 @@ in
     #./ladybird
     #./qutebrowser
     ./floorp
+    ./pferd
  ];
   stylix.targets = lib.mkForce {
     hyprland.enable = false;
