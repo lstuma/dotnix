@@ -47,7 +47,6 @@ in
   home.packages = with pkgs; [
     python3
     killall
-    pferd
     tree
     signal-desktop
     obsidian
