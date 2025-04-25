@@ -47,6 +47,8 @@ in
 
   home.packages = with pkgs; [
     python3
+    poetry
+    pipx
     killall
     tree
     signal-desktop

@@ -155,11 +155,6 @@
     wine
 
     jdk17
-
-    (pkgs.python3.withPackages (ps: with ps; [
-      requests
-      PFERD
-    ]))
   ];
 
   # Enable progams here :)
