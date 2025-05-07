@@ -11,14 +11,14 @@
       ./hardware-configuration.nix
       # ./wayland.nix
       ./nvidia.nix
-#      "${
-#        (builtins.fetchTarball { url = "https://github.com/numtide/nixos-facter-modules/"; })
-#      }/modules/nixos/facter.nix"
+    #      "${
+    #        (builtins.fetchTarball { url = "https://github.com/numtide/nixos-facter-modules/"; })
+    #      }/modules/nixos/facter.nix"
       ./docker
       ./stylix.nix
     ];
 
-#  config.facter.reportPath = ./facter.json;
+    #  config.facter.reportPath = ./facter.json;
 
   # fonts
   fonts.enableDefaultPackages = true;
@@ -114,6 +114,7 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
+    keyd
     #neovim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
     wget
     kitty
@@ -180,6 +181,21 @@
 
   environment.sessionVariables = {
     PKG_CONFIG_PATH = "${pkgs.openssl.dev}/lib/pkgconfig";
+  };
+
+  services.keyd = {
+    enable = true;
+    keyboards = {
+      default = {
+        ids = ["*"];
+        settings = {
+
+        };
+        extraConfig = ''
+          # extra config stuff ...
+        '';
+      };
+    };
   };
 
   # Some programs need SUID wrappers, can be configured further or are
