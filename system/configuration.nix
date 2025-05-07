@@ -189,7 +189,8 @@
       default = {
         ids = ["*"];
         settings = {
-
+          main = {};
+          otherLayer = {};
         };
         extraConfig = ''
           # extra config stuff ...
