@@ -43,6 +43,7 @@
         "$mod, F, togglefloating"
         # fullscreen
         "$mod, SPACE, fullscreen, 0"
+        "$mod SHIFT, SPACE, fullscreen 0"
         # lockscreen
         "$mod, L, exec, pidof hyprlock || hyprlock -q"
         # alt-tab window control
