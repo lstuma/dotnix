@@ -48,7 +48,7 @@
           return-type = "json";
           on-click = "/usr/bin/env bash $HOME/.config/waybar/scripts/pferd.sh run";
           exec-once = true;
-        }
+        };
         "custom/ollama" = {
           exec = "/usr/bin/env bash $HOME/.config/waybar/scripts/ollama.sh";
           return-type = "json";

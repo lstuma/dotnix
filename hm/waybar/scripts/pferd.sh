@@ -2,7 +2,7 @@
 SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
 source "$SCRIPT_DIR/utils.sh"
 TEMP_FILE="/tmp/pferd.lock"
-INFO_FILE="/tmp/pferd.info"
+INFO_FILE="$HOME/.pferd.last-update.info"
 
 pferd-force() {
     touch "$TEMP_FILE"
@@ -27,6 +27,10 @@ pferd-status() {
     else
         # if it does not exist, do nothing
         now=$(date +%s)
+        if [ ! -f "$INFO_FILE" ]; then
+            echo "old"
+            return
+        fi
         then=$(cat "$INFO_FILE")
         delta=$((now - then))
         if [ $delta -lt 2400 ]; then
@@ -39,6 +43,7 @@ pferd-status() {
             # if the delta is greater than 120 seconds, do nothing
             echo "old"
         fi
+        return
     fi
 }
 
