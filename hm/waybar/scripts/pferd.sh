@@ -64,23 +64,23 @@ pferd-waybar() {
         color="$RED"
         case "$status" in
             "running")
-                out="$UPDATE_ICON A"
+                out="$UPDATE_ICON"
                 color="$YELLOW"
                 ;;
             "fresh")
-                out="$PFERD_ICON B"
+                out="$PFERD_ICON"
                 color="$GREEN"
                 ;;
             "stale")
-                out="$PFERD_ICON C"
+                out="$PFERD_ICON"
                 color="$ORANGE"
                 ;;
             "old")
-                out="$PFERD_ICON D"
+                out="$PFERD_ICON"
                 color="$RED"
                 ;;
         esac
-        out="<span color=\\\"$color\\\">$icon</span>"
+        out="<span color=\\\"$color\\\">$out</span>"
         tooltip="Pferd is $status"
         output "$out" "$tooltip"
         sleep 0.4
