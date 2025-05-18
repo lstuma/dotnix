@@ -64,19 +64,19 @@ pferd-waybar() {
         color="$RED"
         case "$status" in
             "running")
-                out="$PFERD_ICON"
+                out="$UPDATE_ICON A"
                 color="$YELLOW"
                 ;;
             "fresh")
-                out="$PFERD_ICON"
+                out="$PFERD_ICON B"
                 color="$GREEN"
                 ;;
             "stale")
-                out="$PFERD_ICON"
+                out="$PFERD_ICON C"
                 color="$ORANGE"
                 ;;
             "old")
-                out="$PFERD_ICON"
+                out="$PFERD_ICON D"
                 color="$RED"
                 ;;
         esac
