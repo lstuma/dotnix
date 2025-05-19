@@ -89,7 +89,7 @@ pferd-waybar() {
 
     GREEN="#41d992"
     GREEN_2="#41d84b"
-    GREEN_3="#7da6ff"
+    GREEN_3="#76d841"
     GREEN_4="#97d841"
     GREEN_5="#c4d841"
     YELLOW="#f5ec6e"
