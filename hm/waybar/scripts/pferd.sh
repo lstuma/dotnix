@@ -20,16 +20,6 @@ pferd-run() {
     pferd-force
 }
 
-pferd-last-update() {
-    # if it does not exist, do nothing
-    if [ ! -f "$INFO_FILE" ]; then
-        echo "never"
-        return
-    fi
-    then=$(cat "$INFO_FILE")
-    echo $(date -d @$then +%H:%M:%S)
-}
-
 pferd-delta() {
     # if it does not exist, do nothing
     now=$(date +%s)
@@ -40,6 +30,24 @@ pferd-delta() {
     then=$(cat "$INFO_FILE")
     delta=$((now - then))
     echo $delta
+}
+
+pferd-time-since() {
+    # if it does not exist, do nothing
+    if [ ! -f "$INFO_FILE" ]; then
+        echo "never happened"
+        return
+    fi
+    then=$(pferd-delta)
+    if [ $then -lt 60 ]; then
+        echo "$then seconds ago"
+    elif [ $then -lt 3600 ]; then
+        echo "$((then / 60)) minutes ago"
+    elif [ $then -lt 86400 ]; then
+        echo "$((then / 3600)) hours ago"
+    else
+        echo "$((then / 86400)) days ago"
+    fi
 }
 
 pferd-status() {
@@ -128,7 +136,7 @@ pferd-waybar() {
                 ;;
         esac
         out="<span color=\\\"$color\\\">$out</span>"
-        tooltip="Last update: $(pferd-last-update) ($status)"
+        tooltip="Last update $(pferd-time-since) ($status)"
         output "$out" "$tooltip"
         sleep 0.4
     done
