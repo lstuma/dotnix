@@ -91,11 +91,11 @@ pferd-waybar() {
     GREEN_2="#41d84b"
     GREEN_3="#76d841"
     GREEN_4="#97d841"
-    GREEN_5="#c4d841"
     YELLOW="#f5ec6e"
     ORANGE="#ff9e64"
     RED="#ff7a93"
     PURPLE="#bb9af7"
+    BLUE="#7da6ff"
 
     while true; do
         status=$(pferd-status)
@@ -104,7 +104,7 @@ pferd-waybar() {
         case "$status" in
             "running")
                 out="$UPDATE_ICON"
-                color="$YELLOW"
+                color="$BLUE"
                 ;;
             "fresh")
                 out="$PFERD_ICON"
@@ -124,7 +124,7 @@ pferd-waybar() {
                 ;;
             "fresh+4")
                 out="$PFERD_ICON"
-                color="$GREEN_5"
+                color="$YELLOW"
                 ;;
             "stale")
                 out="$PFERD_ICON"
