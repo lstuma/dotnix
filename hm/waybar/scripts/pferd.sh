@@ -47,7 +47,7 @@ pferd-status() {
         # if it exists, do nothing
         echo "running"
     else
-        $delta=$(pferd-delta)
+        delta=$(pferd-delta)
         if [ $delta -lt 1200 ]; then
             # delta is less than 20 minutes
             echo "fresh"
@@ -128,7 +128,7 @@ pferd-waybar() {
                 ;;
         esac
         out="<span color=\\\"$color\\\">$out</span>"
-        $tooltip+="\nLast update: $(pferd-last-update)"
+        tooltip="\nLast update: $(pferd-last-update)"
         output "$out" "$tooltip"
         sleep 0.4
     done
