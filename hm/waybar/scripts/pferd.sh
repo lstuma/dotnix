@@ -128,7 +128,7 @@ pferd-waybar() {
                 ;;
         esac
         out="<span color=\\\"$color\\\">$out</span>"
-        tooltip="\nLast update: $(pferd-last-update)"
+        tooltip="Last update: $(pferd-last-update) ($status)"
         output "$out" "$tooltip"
         sleep 0.4
     done
