@@ -20,19 +20,34 @@ pferd-run() {
     pferd-force
 }
 
+pferd-last-update() {
+    # if it does not exist, do nothing
+    if [ ! -f "$INFO_FILE" ]; then
+        echo "never"
+        return
+    fi
+    then=$(cat "$INFO_FILE")
+    echo $(date -d @$then +%H:%M:%S)
+}
+
+pferd-delta() {
+    # if it does not exist, do nothing
+    now=$(date +%s)
+    if [ ! -f "$INFO_FILE" ]; then
+        echo "old"
+        return
+    fi
+    then=$(cat "$INFO_FILE")
+    delta=$((now - then))
+    echo $delta
+}
+
 pferd-status() {
     if [ -f "$TEMP_FILE" ]; then
         # if it exists, do nothing
         echo "running"
     else
-        # if it does not exist, do nothing
-        now=$(date +%s)
-        if [ ! -f "$INFO_FILE" ]; then
-            echo "old"
-            return
-        fi
-        then=$(cat "$INFO_FILE")
-        delta=$((now - then))
+        $delta=$(pferd-delta)
         if [ $delta -lt 1200 ]; then
             # delta is less than 20 minutes
             echo "fresh"
@@ -113,7 +128,7 @@ pferd-waybar() {
                 ;;
         esac
         out="<span color=\\\"$color\\\">$out</span>"
-        tooltip="Pferd is $status"
+        $tooltip+="\nLast update: $(pferd-last-update)"
         output "$out" "$tooltip"
         sleep 0.4
     done
