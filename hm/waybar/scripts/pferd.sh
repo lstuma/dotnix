@@ -33,9 +33,21 @@ pferd-status() {
         fi
         then=$(cat "$INFO_FILE")
         delta=$((now - then))
-        if [ $delta -lt 2400 ]; then
-            # delta is less than 40 minutes
+        if [ $delta -lt 1200 ]; then
+            # delta is less than 20 minutes
             echo "fresh"
+        elif [ $delta -lt 2400 ]; then
+            # delta is less than 40 minutes
+            echo "fresh+1"
+        elif [ $delta -lt 3600 ]; then
+            # delta is less than 1 hour
+            echo "fresh+2"
+        elif [ $delta -lt 7200 ]; then
+            # delta is less than 2 hours
+            echo "fresh+3"
+        elif [ $delta -lt 14400 ]; then
+            # delta is less than 4 hours
+            echo "fresh+4"
         elif [ $delta -lt 86400 ]; then
             # delta is less than 1 day
             echo "stale"
@@ -53,6 +65,10 @@ pferd-waybar() {
     ERROR_ICON=""
 
     GREEN="#41d992"
+    GREEN_2="#41d84b"
+    GREEN_3="#7da6ff"
+    GREEN_4="#97d841"
+    GREEN_5="#c4d841"
     YELLOW="#f5ec6e"
     ORANGE="#ff9e64"
     RED="#ff7a93"
@@ -70,6 +86,22 @@ pferd-waybar() {
             "fresh")
                 out="$PFERD_ICON"
                 color="$GREEN"
+                ;;
+            "fresh+1")
+                out="$PFERD_ICON"
+                color="$GREEN_2"
+                ;;
+            "fresh+2")
+                out="$PFERD_ICON"
+                color="$GREEN_3"
+                ;;
+            "fresh+3")
+                out="$PFERD_ICON"
+                color="$GREEN_4"
+                ;;
+            "fresh+4")
+                out="$PFERD_ICON"
+                color="$GREEN_5"
                 ;;
             "stale")
                 out="$PFERD_ICON"
