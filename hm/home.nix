@@ -63,5 +63,6 @@ in
     keepassxc
     php
     neomutt
+    tor
   ];
 }
