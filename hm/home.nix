@@ -63,6 +63,6 @@ in
     keepassxc
     php
     neomutt
-    tor
+    tor-browser
   ];
 }
