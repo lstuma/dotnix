@@ -32,6 +32,16 @@ pferd-delta() {
     echo $delta
 }
 
+pferd-stale-percentage() {
+    time=$(pferd-delta)
+    if [ $time -ew "old" ]; then
+        echo 100
+        return
+    fi
+    percentage=(($time / 86400))
+    echo $percentage
+}
+
 pferd-time-since() {
     # if it does not exist, do nothing
     if [ ! -f "$INFO_FILE" ]; then
@@ -59,18 +69,6 @@ pferd-status() {
         if [ $delta -lt 1200 ]; then
             # delta is less than 20 minutes
             echo "fresh"
-        elif [ $delta -lt 2400 ]; then
-            # delta is less than 40 minutes
-            echo "fresh+1"
-        elif [ $delta -lt 3600 ]; then
-            # delta is less than 1 hour
-            echo "fresh+2"
-        elif [ $delta -lt 7200 ]; then
-            # delta is less than 2 hours
-            echo "fresh+3"
-        elif [ $delta -lt 14400 ]; then
-            # delta is less than 4 hours
-            echo "fresh+4"
         elif [ $delta -lt 86400 ]; then
             # delta is less than 1 day
             echo "stale"
@@ -109,22 +107,8 @@ pferd-waybar() {
             "fresh")
                 out="$PFERD_ICON"
                 color="$GREEN"
-                ;;
-            "fresh+1")
-                out="$PFERD_ICON"
-                color="$GREEN_2"
-                ;;
-            "fresh+2")
-                out="$PFERD_ICON"
-                color="$GREEN_3"
-                ;;
-            "fresh+3")
-                out="$PFERD_ICON"
-                color="$GREEN_4"
-                ;;
-            "fresh+4")
-                out="$PFERD_ICON"
-                color="$YELLOW"
+                percentage=$(pferd-stale-percentage)
+                color="$($SCRIPT_DIR/color-mix.sh $GREEN $YELLOW $percentage)"
                 ;;
             "stale")
                 out="$PFERD_ICON"
