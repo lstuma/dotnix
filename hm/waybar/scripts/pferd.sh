@@ -38,7 +38,7 @@ pferd-stale-percentage() {
         echo 100
         return
     fi
-    percentage=(($time / 86400))
+    percentage=$(($time / 86400))
     echo $percentage
 }
 
