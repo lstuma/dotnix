@@ -38,7 +38,7 @@ pferd-stale-percentage() {
         echo 100
         return
     fi
-    percentage=$(($time / 86400))
+    percentage=$(($time / 14400))
     echo $percentage
 }
 
@@ -66,7 +66,7 @@ pferd-status() {
         echo "running"
     else
         delta=$(pferd-delta)
-        if [ $delta -lt 1200 ]; then
+        if [ $delta -lt 14400 ]; then
             # delta is less than 20 minutes
             echo "fresh"
         elif [ $delta -lt 86400 ]; then
