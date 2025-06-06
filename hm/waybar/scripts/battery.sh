@@ -32,10 +32,12 @@ while true; do
     fi
     COLOR="$RED"
     ICON="? "
+    DELAY=0.3
 
     if [[ $LOW_POWER_MODE ]] then
-        ICON="󰂊 "
-        COLOR="$YELLOW"
+        ICON="󰂃 "
+        COLOR="$PURPLE"
+        DELAY=2
     elif [[ $FULL ]] then
         ICON=" "
         COLOR="$GREEN"
@@ -66,5 +68,5 @@ while true; do
         click-untouch $CLICK_FILE 10
     fi
     output "$TEXT" "$TOOLTIP_TEXT"
-    sleep 0.3
+    sleep $DELAY
 done
