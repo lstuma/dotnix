@@ -6,6 +6,9 @@ CLICK_FILE="/tmp/battery_clicked"
 if [ "$1" = "click" ]; then
     click-touch $CLICK_FILE
     exit 0
+elif [ "$1" = "right-click" ]; then
+    toggle-low-power-mode
+    exit 0
 fi
 
 GREEN="#41d992"
@@ -20,6 +23,7 @@ while true; do
 
     BATTERY=$(battery)
     CHARGING=$(echo "$BATTERY" | grep "Charging")
+    LOW_POWER_MODE=$(is-low-power-mode)
     FULL=$(echo "$BATTERY" | grep "Full")
     CHARGE=$(echo "$BATTERY" | grep -Eo "[0-9]+")
     TIME_REMAINING=$(acpi -b | grep -Eo "[0-9][0-9]:[0-9][0-9]:[0-9][0-9]")
@@ -29,7 +33,10 @@ while true; do
     COLOR="$RED"
     ICON="? "
 
-    if [[ $FULL ]] then
+    if [[ $LOW_POWER_MODE ]] then
+        ICON="󰂊 "
+        COLOR="$YELLOW"
+    elif [[ $FULL ]] then
         ICON=" "
         COLOR="$GREEN"
     elif [[ $CHARGING ]] then

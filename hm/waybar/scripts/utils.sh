@@ -51,3 +51,23 @@ rm-exist() {
         rm "$file"
     fi
 }
+
+is-low-power-mode() {
+    # check if low power mode is enabled
+    if [ -f "$LOW_POWER_MODE_FILE" ]; then
+        return 0  # true
+    else
+        return 1  # false
+    fi
+}
+
+LOW_POWER_MODE_FILE="/tmp/low_power_mode"
+toggle-low-power-mode() {
+    if [ -f "$LOW_POWER_MODE_FILE" ]; then
+        rm "$LOW_POWER_MODE_FILE"
+        notify-info "Low Power Mode" "Disabled" "Your system is now in normal mode."
+    else
+        touch "$LOW_POWER_MODE_FILE"
+        notify-warning "Low Power Mode" "Enabled" "Your system is now in low power mode."
+    fi
+}

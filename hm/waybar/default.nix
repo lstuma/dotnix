@@ -74,6 +74,7 @@
           exec = "/usr/bin/env bash $HOME/.config/waybar/scripts/battery.sh";
           return-type = "json";
           on-click = "/usr/bin/env bash $HOME/.config/waybar/scripts/battery.sh click";
+          on-click-right = "/usr/bin/env bash $HOME/.config/waybar/scripts/battery.sh right-click";
           exec-once = true;
         };
 
