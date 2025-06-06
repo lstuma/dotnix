@@ -55,9 +55,9 @@ rm-exist() {
 is-low-power-mode() {
     # check if low power mode is enabled
     if [ -f "$LOW_POWER_MODE_FILE" ]; then
-        return 0  # true
+        echo "true"
     else
-        return 1  # false
+        echo "false"  # false
     fi
 }
 

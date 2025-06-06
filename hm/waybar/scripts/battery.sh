@@ -23,7 +23,7 @@ while true; do
 
     BATTERY=$(battery)
     CHARGING=$(echo "$BATTERY" | grep "Charging")
-    LOW_POWER_MODE=$(is-low-power-mode)
+    LOW_POWER_MODE=$(is-low-power-mode | grep "true")
     FULL=$(echo "$BATTERY" | grep "Full")
     CHARGE=$(echo "$BATTERY" | grep -Eo "[0-9]+")
     TIME_REMAINING=$(acpi -b | grep -Eo "[0-9][0-9]:[0-9][0-9]:[0-9][0-9]")
