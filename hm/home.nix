@@ -64,5 +64,6 @@ in
     php
     neomutt
     tor-browser
+    gdlauncher-carbon
   ];
 }
