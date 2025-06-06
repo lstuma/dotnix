@@ -99,6 +99,12 @@ pferd-waybar() {
         status=$(pferd-status)
         out="$ERROR_ICON"
         color="$RED"
+        LOW_POWER=$(is-low-power-mode | grep "true")
+
+        if [ $LOW_POWER ]; then
+            sleep 2
+        fi
+
         case "$status" in
             "running")
                 out="$UPDATE_ICON"

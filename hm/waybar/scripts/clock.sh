@@ -12,6 +12,11 @@ GREEN="#41d992"
 WHITE="#f8f8f2"
 YELLOW="#f5ec6e"
 
+DELAY=0.2
+if [ $(is-low-power-mode | grep "true") ]; then
+    DELAY=2
+fi
+
 ICON=""
 COLOR="$WHITE"
 TOOLTIP_ICON="$ICON"
