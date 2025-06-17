@@ -108,6 +108,8 @@
     #jack.enable = true;
   };
 
+  hardware.pulseaudio.support32Bit = true;
+
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
