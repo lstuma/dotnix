@@ -156,7 +156,6 @@
     proxychains
     winetricks
     wine
-    proton-ge-bin
 
     jdk17
   ];
