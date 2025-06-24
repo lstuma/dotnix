@@ -65,6 +65,5 @@ in
     neomutt
     tor-browser
     gdlauncher-carbon
-    proton-ge-bin
   ];
 }
