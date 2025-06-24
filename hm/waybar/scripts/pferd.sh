@@ -6,7 +6,7 @@ INFO_FILE="$HOME/.pferd.last-update.info"
 
 pferd-force() {
     touch "$TEMP_FILE"
-    pferd
+    $SCRIPT_DIR/multipferd.sh
     echo $(date +%s) > "$INFO_FILE"
     rm "$TEMP_FILE"
 }
